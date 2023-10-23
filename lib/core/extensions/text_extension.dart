@@ -2,30 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/Theme/text_theme.dart';
 
 extension TextHelper on BuildContext {
-  TextTheme get DarkTextTheme => CustomTextTheme.customDarkTextTheme;
-  TextTheme get LightTextTheme => CustomTextTheme.customLightTextTheme;
+  TextTheme get darkTextTheme => CustomTextTheme.customDarkTextTheme;
+  TextTheme get lightTextTheme => CustomTextTheme.customLightTextTheme;
 
-  TextStyle? get displayLargeDark => DarkTextTheme.displayLarge;
-  TextStyle? get displayMediumDark => DarkTextTheme.displayMedium;
-  TextStyle? get displaySmallDark => DarkTextTheme.displaySmall;
-  TextStyle? get headlineMediumDark => DarkTextTheme.headlineMedium;
-  TextStyle? get headlineSmallDark => DarkTextTheme.headlineSmall;
-  TextStyle? get titleLargeDark => DarkTextTheme.titleLarge;
-  TextStyle? get subtitle1Dark => DarkTextTheme.titleMedium;
-  TextStyle? get subtitle2Dark => DarkTextTheme.titleSmall;
-  TextStyle? get bodyText1Dark => DarkTextTheme.bodyLarge;
-  TextStyle? get bodyText2Dark => DarkTextTheme.bodyMedium;
-  TextStyle? get captionDark => DarkTextTheme.bodySmall;
-  TextStyle? get buttonDark => DarkTextTheme.labelLarge;
-  TextStyle? get overlineDark => DarkTextTheme.labelSmall;
+  TextStyle? get displayLargeDark => darkTextTheme.displayLarge;
+  TextStyle? get displayMediumDark => darkTextTheme.displayMedium;
+  TextStyle? get displaySmallDark => darkTextTheme.displaySmall;
+  TextStyle? get headlineMediumDark => darkTextTheme.headlineMedium;
+  TextStyle? get headlineSmallDark => darkTextTheme.headlineSmall;
+  TextStyle? get titleLargeDark => darkTextTheme.titleLarge;
+  TextStyle? get subtitle1Dark => darkTextTheme.titleMedium;
+  TextStyle? get subtitle2Dark => darkTextTheme.titleSmall;
+  TextStyle? get bodyText1Dark => darkTextTheme.bodyLarge;
+  TextStyle? get bodyText2Dark => darkTextTheme.bodyMedium;
+  TextStyle? get captionDark => darkTextTheme.bodySmall;
+  TextStyle? get buttonDark => darkTextTheme.labelLarge;
+  TextStyle? get overlineDark => darkTextTheme.labelSmall;
 
   //Light Theme getters
 
-  TextStyle? get displayLargeLight => LightTextTheme.displayLarge;
-  TextStyle? get titleSmallLight => LightTextTheme.titleSmall;
+  TextStyle? get displayLargeLight => lightTextTheme.displayLarge;
+  TextStyle? get titleSmallLight => lightTextTheme.titleSmall;
 //   TextStyle? get displaySmallDark => LightTextTheme.displaySmall;
 
-  TextStyle? get headlineMediumLight => LightTextTheme.headlineMedium;
+  TextStyle? get headlineMediumLight => lightTextTheme.headlineMedium;
 }
 
 TextStyle? getCustomHeadlineMediumLight(BuildContext context, Color color) {

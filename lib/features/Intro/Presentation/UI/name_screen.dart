@@ -55,7 +55,7 @@ class NameScreen extends StatelessWidget {
                   imagePath: mobileLogo,
                 ),
                 buildCustomFabButton(
-                  BuildContext: BuildContext,
+                  context: BuildContext,
                   label: "Next",
                   isReversed: false,
                   isLeft: false,
