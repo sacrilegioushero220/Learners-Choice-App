@@ -12,65 +12,69 @@ class NameScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 44.0,
-              ),
-              Container(
-                width: 134,
-                height: 57,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(choiceLogo),
-                    fit: BoxFit.contain,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 44.0,
+                ),
+                Container(
+                  width: 134,
+                  height: 57,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(choiceLogo),
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 24.0,
-              ),
-              SizedBox(
-                width: 291,
-                child: buildRichTextTitle(
-                    titleNameScreen1, titleNameScreen2, context),
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 7.5),
-                child: Text(
-                  smallTitleNameScreen,
-                  style: context.titleSmallLight,
+                const SizedBox(
+                  height: 24.0,
                 ),
-              ),
-              const SizedBox(
-                height: 36.0,
-              ),
-              NameTextField(),
-              const SizedBox(
-                height: 105.0,
-              ),
-              Container(
-                width: 316,
-                height: 263.39,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(mobileLogo),
-                    fit: BoxFit.contain,
+                SizedBox(
+                  width: 291,
+                  child: buildRichTextTitle(
+                      titleNameScreen1, titleNameScreen2, context),
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 7.5),
+                  child: Text(
+                    smallTitleNameScreen,
+                    style: context.titleSmallLight,
                   ),
                 ),
-              ),
-              buildCustomFabButton(
-                BuildContext: BuildContext,
-                label: "Next",
-                isReversed: false,
-                isLeft: false,
-                onPressed: () {},
-              )
-            ],
+                const SizedBox(
+                  height: 36.0,
+                ),
+                NameTextField(),
+                const SizedBox(
+                  height: 105.0,
+                ),
+                Container(
+                  width: 316,
+                  height: 263.39,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        mobileLogo,
+                      ),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+                buildCustomFabButton(
+                  BuildContext: BuildContext,
+                  label: "Next",
+                  isReversed: false,
+                  isLeft: false,
+                  onPressed: () {},
+                )
+              ],
+            ),
           ),
         ),
       ),
