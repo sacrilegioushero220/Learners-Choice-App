@@ -19,15 +19,10 @@ class NameScreen extends StatelessWidget {
                 const SizedBox(
                   height: 44.0,
                 ),
-                Container(
+                buildImageWidget(
                   width: 134,
                   height: 57,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(choiceLogo),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
+                  imagePath: choiceLogo,
                 ),
                 const SizedBox(
                   height: 24.0,
@@ -50,21 +45,14 @@ class NameScreen extends StatelessWidget {
                 const SizedBox(
                   height: 36.0,
                 ),
-                NameTextField(),
+                nameTextField(),
                 const SizedBox(
                   height: 105.0,
                 ),
-                Container(
+                buildImageWidget(
                   width: 316,
                   height: 263.39,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        mobileLogo,
-                      ),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
+                  imagePath: mobileLogo,
                 ),
                 buildCustomFabButton(
                   BuildContext: BuildContext,
@@ -103,7 +91,7 @@ Text buildRichTextTitle(String title1, String title2, BuildContext context) {
   );
 }
 
-Widget NameTextField() {
+Widget nameTextField() {
   return TextField(
     decoration: InputDecoration(
       contentPadding: const EdgeInsets.only(top: 8, left: 16, bottom: 8),
@@ -119,6 +107,23 @@ Widget NameTextField() {
         fontWeight: FontWeight.w400,
         height: 0.09,
         letterSpacing: 0.50,
+      ),
+    ),
+  );
+}
+
+Widget buildImageWidget({
+  required double width,
+  required double height,
+  required String imagePath,
+}) {
+  return Container(
+    width: width,
+    height: height,
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage(imagePath),
+        fit: BoxFit.contain,
       ),
     ),
   );
