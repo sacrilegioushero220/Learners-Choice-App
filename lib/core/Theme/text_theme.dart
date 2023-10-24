@@ -86,9 +86,9 @@ class CustomTextTheme {
   static TextTheme customLightTextTheme = TextTheme(
     displayLarge: GoogleFonts.roboto(
       color: Colors.black,
-      fontSize: 57.0,
-      fontWeight: FontWeight.w400,
-      letterSpacing: -0.25,
+      fontSize: 36,
+      fontWeight: FontWeight.w600,
+      height: 0.01,
     ),
     displayMedium: GoogleFonts.roboto(
       color: Colors.black,

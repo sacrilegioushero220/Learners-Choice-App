@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
+import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/features/Intro/Presentation/widgets/custom_fab_button.dart';
 
@@ -45,7 +46,7 @@ class NameScreen extends StatelessWidget {
                 const SizedBox(
                   height: 36.0,
                 ),
-                nameTextField(),
+                nameTextField(context),
                 const SizedBox(
                   height: 105.0,
                 ),
@@ -54,12 +55,15 @@ class NameScreen extends StatelessWidget {
                   height: 263.39,
                   imagePath: mobileLogo,
                 ),
-                buildCustomFabButton(
-                  context: BuildContext,
-                  label: "Next",
-                  isReversed: false,
-                  isLeft: false,
-                  onPressed: () {},
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(212, 70, 20, 0),
+                  child: buildCustomFabButton(
+                    context: BuildContext,
+                    label: "Next",
+                    // isReversed: false,
+
+                    onPressed: () {}, isReversed: false,
+                  ),
                 )
               ],
             ),
@@ -82,7 +86,7 @@ Text buildRichTextTitle(String title1, String title2, BuildContext context) {
           text: title2,
           style: getCustomHeadlineMediumLight(
             context,
-            const Color(0xFF00639B),
+            context.primary,
           ),
         ),
       ],
@@ -91,7 +95,7 @@ Text buildRichTextTitle(String title1, String title2, BuildContext context) {
   );
 }
 
-Widget nameTextField() {
+Widget nameTextField(BuildContext context) {
   return TextField(
     decoration: InputDecoration(
       contentPadding: const EdgeInsets.only(top: 8, left: 16, bottom: 8),
@@ -100,8 +104,8 @@ Widget nameTextField() {
         borderSide: const BorderSide(width: 2, color: Color(0xFF00639B)),
       ),
       hintText: 'Name',
-      hintStyle: const TextStyle(
-        color: Color(0xFF201A19),
+      hintStyle: TextStyle(
+        color: context.onSurface,
         fontSize: 16,
         fontFamily: 'Roboto',
         fontWeight: FontWeight.w400,

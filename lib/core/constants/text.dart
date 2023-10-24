@@ -13,3 +13,8 @@ String titleNameScreen1 = 'Hi, Welcome to ';
 String titleNameScreen2 = 'Learner’s Choice';
 String smallTitleNameScreen = 'What should we call you';
 String mobileLogo = "assets/Images/namescreen/mobile.png";
+
+//ImageScreen
+String imageAvatar = "assets/Images/imagescreen/ImageAvatar.png";
+String imageTitle = "Image";
+String imageSubtitle = "Lets set image of you";
