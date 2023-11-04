@@ -18,3 +18,7 @@ String mobileLogo = "assets/Images/namescreen/mobile.png";
 String imageAvatar = "assets/Images/imagescreen/ImageAvatar.png";
 String imageTitle = "Image";
 String imageSubtitle = "Lets set image of you";
+
+//HomeScreen
+String carHomePage = "assets/Images/homescreen/car.png";
+String appBarTitle = "Learner's Choice";
