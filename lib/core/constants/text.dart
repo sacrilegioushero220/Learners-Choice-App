@@ -22,3 +22,4 @@ String imageSubtitle = "Lets set image of you";
 //HomeScreen
 String carHomePage = "assets/Images/homescreen/car.png";
 String appBarTitle = "Learner's Choice";
+String avatar1Path = "assets/avatars/1.png";

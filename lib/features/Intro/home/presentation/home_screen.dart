@@ -18,14 +18,14 @@ class HomeScreen extends StatelessWidget {
         }),
         title: Text(appBarTitle),
         centerTitle: true,
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.only(right: 16.0),
+            padding: const EdgeInsets.only(right: 16.0),
             child: SizedBox(
               width: 30,
               height: 30,
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/avatar.png"),
+                backgroundImage: AssetImage(avatar1Path),
               ),
             ),
           ),
@@ -36,11 +36,11 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const SizedBox(
-              height: 30,
+              height: 15,
             ),
             buildImageWidget(
-              width: 298,
-              height: 158,
+              width: 278,
+              height: 138,
               imagePath: carHomePage,
             )
           ],

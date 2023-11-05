@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/Theme/color_schemes.g.dart';
 import 'package:learners_choice_app/core/Theme/text_theme.dart';
 
-import 'package:learners_choice_app/features/Intro/home/presentation/home_screen.dart';
+import 'package:learners_choice_app/features/Intro/home/presentation/home.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
           textTheme: CustomTextTheme.customDarkTextTheme),
       // darkTheme: ThemeData(useMaterial3: true, colorScheme: da rkColorScheme),
       home: const Scaffold(
-        body: HomeScreen(),
+        body: Home(),
       ),
       debugShowCheckedModeBanner: false,
     );
