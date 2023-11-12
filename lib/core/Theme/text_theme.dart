@@ -79,8 +79,9 @@ class CustomTextTheme {
     labelSmall: GoogleFonts.roboto(
       color: Colors.white,
       fontSize: 14.0,
-      fontWeight: FontWeight.w400,
-      letterSpacing: 0.25,
+      fontWeight: FontWeight.w500,
+      height: 0.10,
+      letterSpacing: 0.10,
     ),
   );
   static TextTheme customLightTextTheme = TextTheme(
@@ -104,9 +105,9 @@ class CustomTextTheme {
     ),
     headlineMedium: GoogleFonts.roboto(
       color: Colors.black,
-      fontSize: 19.0,
-      fontWeight: FontWeight.w700,
-      height: 0.06,
+      fontSize: 14.0,
+      fontWeight: FontWeight.w600,
+      height: 0.10,
       letterSpacing: 0.10,
     ),
     headlineSmall: GoogleFonts.roboto(
@@ -159,10 +160,11 @@ class CustomTextTheme {
       letterSpacing: 0.5,
     ),
     labelSmall: GoogleFonts.roboto(
-      color: Colors.white,
+      color: Colors.black,
       fontSize: 14.0,
-      fontWeight: FontWeight.w400,
-      letterSpacing: 0.25,
+      fontWeight: FontWeight.w500,
+      height: 0.10,
+      letterSpacing: 0.10,
     ),
   );
 

@@ -23,9 +23,8 @@ extension TextHelper on BuildContext {
 
   TextStyle? get displayLargeLight => lightTextTheme.displayLarge;
   TextStyle? get titleSmallLight => lightTextTheme.titleSmall;
-//   TextStyle? get displaySmallDark => LightTextTheme.displaySmall;
-
   TextStyle? get headlineMediumLight => lightTextTheme.headlineMedium;
+  TextStyle? get overlineLight => lightTextTheme.labelSmall;
 }
 
 TextStyle? getCustomHeadlineMediumLight(BuildContext context, Color color) {

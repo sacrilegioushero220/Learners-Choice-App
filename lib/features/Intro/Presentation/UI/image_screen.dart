@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
+import 'package:learners_choice_app/core/widgets/customButtons/custom_fab_button.dart';
 import 'package:learners_choice_app/features/Intro/Presentation/UI/name_screen.dart';
-import 'package:learners_choice_app/features/Intro/Presentation/widgets/custom_fab_button.dart';
 
 //
 class ImageScreen extends StatelessWidget {
