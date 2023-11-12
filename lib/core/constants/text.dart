@@ -38,3 +38,19 @@ String gridViewItemlabel3 = "Hazard Signs";
 String gridViewItemlabel4 = "Codes";
 String gridViewItemlabel5 = "Hand Signals";
 String gridViewItemlabel6 = "LL Test QnA";
+
+//DocsScreen
+
+String learningIconPath = "assets/Images/docsscreen/learning.jpg";
+String actsIconPath = "assets/Images/docsscreen/acts.png";
+String carIconPath = "assets/Images/docsscreen/car.png";
+String infoIconPath = "assets/Images/docsscreen/info.jpg";
+String tipsIconPath = "assets/Images/docsscreen/tips.jpg";
+
+String tipsIconlabel = "Tips for Beginner Drivers";
+String infoIconlabel1 = "Important Information";
+String infoIconlabel2 = "regarding DL Test";
+String actsIconlabel1 = "Important Acts for all";
+String actsIconlabel2 = "Drivers";
+String carIconlabel1 = "Important Speed Limit of";
+String carIconlabel2 = "Indian Roads";

@@ -20,7 +20,7 @@ Widget buildCustomRoundedButton({
       onTap: onPressed,
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.only(top: 19),
+        padding: const EdgeInsets.only(top: 13),
         child: Text(
           'Start',
           textAlign: TextAlign.center,

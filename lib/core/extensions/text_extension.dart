@@ -25,6 +25,7 @@ extension TextHelper on BuildContext {
   TextStyle? get titleSmallLight => lightTextTheme.titleSmall;
   TextStyle? get headlineMediumLight => lightTextTheme.headlineMedium;
   TextStyle? get overlineLight => lightTextTheme.labelSmall;
+  TextStyle? get buttonLight => lightTextTheme.labelLarge;
   TextStyle? get captionLight => lightTextTheme.bodySmall;
 }
 

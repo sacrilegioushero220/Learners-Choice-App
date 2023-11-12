@@ -80,7 +80,7 @@ class CustomTextTheme {
       color: Colors.white,
       fontSize: 14.0,
       fontWeight: FontWeight.w500,
-      height: 0.10,
+      height: 1,
       letterSpacing: 0.10,
     ),
   );
@@ -155,16 +155,17 @@ class CustomTextTheme {
       letterSpacing: 0.50,
     ),
     labelLarge: GoogleFonts.roboto(
-      color: Colors.white,
-      fontSize: 16.0,
-      fontWeight: FontWeight.w400,
-      letterSpacing: 0.5,
+      color: Colors.black.withOpacity(0.7599999904632568),
+      fontSize: 11.0,
+      fontWeight: FontWeight.w500,
+      height: 0.13,
+      letterSpacing: 0.50,
     ),
     labelSmall: GoogleFonts.roboto(
       color: Colors.black,
       fontSize: 14.0,
       fontWeight: FontWeight.w500,
-      height: 0.10,
+      height: 1.5,
       letterSpacing: 0.10,
     ),
   );
