@@ -148,10 +148,11 @@ class CustomTextTheme {
       letterSpacing: 0.5,
     ),
     bodySmall: GoogleFonts.roboto(
-      color: Colors.white,
+      color: Colors.black,
       fontSize: 11.0,
       fontWeight: FontWeight.w500,
-      letterSpacing: 0.5,
+      height: 1.10,
+      letterSpacing: 0.50,
     ),
     labelLarge: GoogleFonts.roboto(
       color: Colors.white,

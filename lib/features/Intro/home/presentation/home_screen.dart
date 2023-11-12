@@ -3,6 +3,7 @@ import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/features/Intro/Presentation/UI/name_screen.dart';
+import 'package:learners_choice_app/features/Intro/Presentation/widgets/custom_grid_view_item.dart';
 import 'package:learners_choice_app/features/Intro/Presentation/widgets/ll_tile.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -60,7 +61,40 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 25,
               ),
-              buildLLTile(context)
+              buildLLTile(context),
+              const SizedBox(
+                height: 35,
+              ),
+              Text(
+                "Keep Learning",
+                style: context.lightTextTheme.headlineMedium,
+              ),
+              const SizedBox(
+                height: 25,
+              ),
+              SizedBox(
+                height: 250,
+                width: 330,
+                child: GridView.count(
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  crossAxisCount: 3,
+                  children: [
+                    buildCustomGridViewItem(
+                        gridViewItemIcon1, gridViewItemlabel1, context),
+                    buildCustomGridViewItem(
+                        gridViewItemIcon2, gridViewItemlabel2, context),
+                    buildCustomGridViewItem(
+                        gridViewItemIcon3, gridViewItemlabel3, context),
+                    buildCustomGridViewItem(
+                        gridViewItemIcon4, gridViewItemlabel4, context),
+                    buildCustomGridViewItem(
+                        gridViewItemIcon5, gridViewItemlabel5, context),
+                    buildCustomGridViewItem(
+                        gridViewItemIcon6, gridViewItemlabel6, context)
+                  ],
+                ),
+              )
             ],
           ),
         ),
