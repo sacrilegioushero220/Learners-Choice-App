@@ -25,6 +25,9 @@ flutter:
     - assets/Images/homescreen/
     - assets/avatars/
     - assets/Images/docsscreen/
+    - assets/Images/
+    - assets/icons/
+   
 
     
     

@@ -54,3 +54,9 @@ String actsIconlabel1 = "Important Acts for all";
 String actsIconlabel2 = "Drivers";
 String carIconlabel1 = "Important Speed Limit of";
 String carIconlabel2 = "Indian Roads";
+
+//InfoScreen
+String choiceIconPath = "assets/Images/choicelogo.png";
+String settingsIcon = "assets/icons/settings.png";
+String locationIcon = "assets/icons/location.png";
+String phoneIcon = "assets/icons/phone.png";
