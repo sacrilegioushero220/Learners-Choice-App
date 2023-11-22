@@ -151,7 +151,7 @@ class CustomTextTheme {
       color: Colors.black,
       fontSize: 11.0,
       fontWeight: FontWeight.w500,
-      height: 1.10,
+      height: 1.30,
       letterSpacing: 0.50,
     ),
     labelLarge: GoogleFonts.roboto(

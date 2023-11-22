@@ -63,5 +63,6 @@ String phoneIcon = "assets/icons/phone.png";
 String services = "LMV, MCWG, MCWOG, HMV , Vehicle Insurance";
 String mailId = "choicemdsvpr6669@gmail.com";
 String location = "assets/icons/phone.png";
-String choiceDescription = "assets/icons/phone.png";
+String choiceDescription =
+    "Choice Driving School has been providing driving lessons for over 40 years in Vandiperiyar, Idukki District of Kerala. We offer driving lessons for LMV (Light Motor Vehicle) and MCWG (Motor Cycle with Gear and without Gear), as well as services related to License and Vehicle Related Services.";
 String address = 'Vandiperiyar, Idukki District, Kerala, \npin code: 685509';
