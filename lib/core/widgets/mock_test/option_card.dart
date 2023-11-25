@@ -10,7 +10,7 @@ class OptionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 80,
+      height: 65,
       clipBehavior: Clip.antiAlias,
       decoration: ShapeDecoration(
         color: const Color(0xFFFFF8F6),
@@ -44,7 +44,8 @@ class OptionCard extends StatelessWidget {
           const VerticalDivider(
             color: Color(0xFFD8C2BC),
           ),
-          SizedBox(
+          Container(
+            padding: const EdgeInsets.only(bottom: 5, top: 5),
             width: 235,
             child: Expanded(
                 child: Text(
@@ -54,7 +55,7 @@ class OptionCard extends StatelessWidget {
                 fontSize: 11,
                 fontFamily: 'Roboto',
                 fontWeight: FontWeight.w400,
-                height: 1.5,
+                height: 1.3,
               ),
               textAlign: TextAlign.justify,
             )),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
-import 'package:learners_choice_app/core/widgets/mock_test/mock_test_cards.dart';
+import 'package:learners_choice_app/core/widgets/mock_test/question_card.dart';
 import 'package:learners_choice_app/core/widgets/mock_test/option_card.dart';
 
 class MockTestScreen extends StatelessWidget {
@@ -26,7 +26,28 @@ class MockTestScreen extends StatelessWidget {
                   ),
                   OptionCard(
                     optionDescription: option,
-                    optionNumber: "1",
+                    optionNumber: "1.",
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  OptionCard(
+                    optionDescription: option,
+                    optionNumber: "2.",
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  OptionCard(
+                    optionDescription: option,
+                    optionNumber: "3.",
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  OptionCard(
+                    optionDescription: option,
+                    optionNumber: "4.",
                   )
                 ],
               ),
