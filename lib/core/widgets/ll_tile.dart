@@ -27,6 +27,7 @@ Widget buildLLTile(BuildContext context) {
             buildCustomRoundedButton(
               context: context,
               color: const Color(0xFF410002),
+              label: "Start",
               onPressed: () {},
             ),
           ],

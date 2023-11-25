@@ -48,6 +48,14 @@ class MockTestScreen extends StatelessWidget {
                   OptionCard(
                     optionDescription: option,
                     optionNumber: "4.",
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    height: 80,
+                    width: MediaQuery.of(context).size.width,
+                    padding: const EdgeInsets.all(5.0),
                   )
                 ],
               ),

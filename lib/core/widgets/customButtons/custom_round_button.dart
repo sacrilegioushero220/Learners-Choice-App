@@ -5,6 +5,7 @@ Widget buildCustomRoundedButton({
   required BuildContext context,
   required Color color,
   required void Function() onPressed,
+  required String label,
 }) {
   return Container(
     width: 80,
@@ -22,7 +23,7 @@ Widget buildCustomRoundedButton({
         width: double.infinity,
         padding: const EdgeInsets.only(top: 13),
         child: Text(
-          'Start',
+          label,
           textAlign: TextAlign.center,
           style: context.overlineDark,
         ),
