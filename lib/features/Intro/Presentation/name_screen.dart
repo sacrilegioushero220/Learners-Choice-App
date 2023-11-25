@@ -36,12 +36,9 @@ class NameScreen extends StatelessWidget {
                 const SizedBox(
                   height: 25,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 7.5),
-                  child: Text(
-                    smallTitleNameScreen,
-                    style: context.titleSmallLight,
-                  ),
+                Text(
+                  smallTitleNameScreen,
+                  style: context.titleSmallLight,
                 ),
                 const SizedBox(
                   height: 36.0,
@@ -91,7 +88,7 @@ Text buildRichTextTitle(String title1, String title2, BuildContext context) {
         ),
       ],
     ),
-    textAlign: TextAlign.center,
+    textAlign: TextAlign.left,
   );
 }
 
