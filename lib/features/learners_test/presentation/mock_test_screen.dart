@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
+import 'package:learners_choice_app/core/widgets/customButtons/custom_fab_button.dart';
+import 'package:learners_choice_app/core/widgets/customButtons/custom_round_button.dart';
 import 'package:learners_choice_app/core/widgets/mock_test/question_card.dart';
 import 'package:learners_choice_app/core/widgets/mock_test/option_card.dart';
+import 'package:learners_choice_app/core/widgets/mock_test/timer_count_down.dart';
 
 class MockTestScreen extends StatelessWidget {
   const MockTestScreen({super.key});
@@ -53,9 +56,28 @@ class MockTestScreen extends StatelessWidget {
                     height: 5,
                   ),
                   Container(
-                    height: 80,
+                    height: 60,
                     width: MediaQuery.of(context).size.width,
                     padding: const EdgeInsets.all(5.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        buildCustomRoundedButton(
+                          context: context,
+                          color: Colors.red,
+                          onPressed: () {},
+                          label: "End",
+                        ),
+                        const CountDownTimer(),
+                        buildCustomFabButton(
+                          context: context,
+                          label: "Submit",
+                          isReversed: true,
+                          onPressed: () {},
+                          ishidden: true,
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),

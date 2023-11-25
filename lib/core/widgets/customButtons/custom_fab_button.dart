@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 Widget buildCustomFabButton({
+  bool ishidden = false,
   required context,
   required String label,
   required bool isReversed,
@@ -16,10 +17,12 @@ Widget buildCustomFabButton({
       mainAxisSize: MainAxisSize.min,
       children: [
         isReversed
-            ? Icon(
-                icon,
-                color: const Color(0xFF00639B),
-              )
+            ? !ishidden
+                ? Icon(
+                    icon,
+                    color: const Color(0xFF00639B),
+                  )
+                : const SizedBox(width: 2)
             : const SizedBox(width: 2),
         Text(
           label,
@@ -34,16 +37,13 @@ Widget buildCustomFabButton({
         ),
         isReversed
             ? const SizedBox(width: 8)
-            : const Icon(
-                Icons.arrow_forward,
-                color: Color(0xFF00639B),
-              ),
+            : !ishidden
+                ? const Icon(
+                    Icons.arrow_forward,
+                    color: Color(0xFF00639B),
+                  )
+                : const SizedBox(width: 2),
       ],
     ),
   );
 }
-
-
-
-//    ? const EdgeInsets.fromLTRB(20, 70, 212, 0)
-//           : const EdgeInsets.fromLTRB(212, 70, 20, 0),
