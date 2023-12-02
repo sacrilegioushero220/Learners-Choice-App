@@ -57,9 +57,8 @@ class NameScreen extends StatelessWidget {
                   child: buildCustomFabButton(
                     context: BuildContext,
                     label: "Next",
-                    // isReversed: false,
-
-                    onPressed: () {}, isReversed: false,
+                    onPressed: () {},
+                    isReversed: false,
                   ),
                 )
               ],
