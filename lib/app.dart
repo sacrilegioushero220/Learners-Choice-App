@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/Theme/color_schemes.g.dart';
 import 'package:learners_choice_app/core/Theme/text_theme.dart';
-import 'package:learners_choice_app/features/home/presentation/home.dart';
+import 'package:learners_choice_app/presentation/home/home.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

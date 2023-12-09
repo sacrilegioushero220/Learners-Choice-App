@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:learners_choice_app/features/Intro/presentation/name_screen.dart';
+import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 
 class QuestionCard extends StatelessWidget {
   final String image;

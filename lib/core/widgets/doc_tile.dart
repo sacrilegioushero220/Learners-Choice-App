@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
-import 'package:learners_choice_app/features/Intro/presentation/name_screen.dart';
+import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 
 Widget docTile({
   required BuildContext context,

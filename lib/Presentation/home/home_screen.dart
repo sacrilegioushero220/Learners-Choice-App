@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/custom_grid_view_item.dart';
 import 'package:learners_choice_app/core/widgets/ll_tile.dart';
-import 'package:learners_choice_app/features/Intro/presentation/name_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

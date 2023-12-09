@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
-import 'package:learners_choice_app/features/home/presentation/docs_screen.dart';
-import 'package:learners_choice_app/features/home/presentation/home_screen.dart';
-import 'package:learners_choice_app/features/home/presentation/info_screen.dart';
+import 'package:learners_choice_app/presentation/home/docs_screen.dart';
+import 'package:learners_choice_app/presentation/home/home_screen.dart';
+import 'package:learners_choice_app/presentation/home/info_screen.dart';
 
 // ignore: must_be_immutable
 class Home extends StatefulWidget {
