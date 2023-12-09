@@ -75,6 +75,7 @@ class MockTestScreen extends StatelessWidget {
                           isReversed: true,
                           onPressed: () {},
                           ishidden: true,
+                          tag: 'fab4',
                         )
                       ],
                     ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:learners_choice_app/Presentation/home/home.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -72,14 +74,18 @@ class ImageScreen extends StatelessWidget {
                       buildCustomFabButton(
                           context: BuildContext,
                           label: "Back",
-                          onPressed: () {},
+                          onPressed: () => context.goNamed("NameScreen"),
                           isReversed: true,
-                          icon: Icons.arrow_back),
+                          icon: Icons.arrow_back,
+                          tag: 'fab1'),
                       buildCustomFabButton(
                         context: BuildContext,
                         label: "Next",
-                        onPressed: () {},
+                        onPressed: () {
+                          context.pushReplacementNamed("HomeScreen");
+                        },
                         isReversed: false,
+                        tag: 'fab2',
                       ),
                     ],
                   ),

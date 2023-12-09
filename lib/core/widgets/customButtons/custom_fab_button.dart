@@ -6,6 +6,7 @@ Widget buildCustomFabButton({
   required String label,
   required bool isReversed,
   required void Function() onPressed,
+  required String tag,
   IconData icon = Icons.arrow_forward,
 }) {
   return FloatingActionButton.extended(
@@ -45,5 +46,6 @@ Widget buildCustomFabButton({
                 : const SizedBox(width: 2),
       ],
     ),
+    heroTag: tag,
   );
 }

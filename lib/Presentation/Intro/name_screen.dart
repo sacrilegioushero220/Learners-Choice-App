@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
@@ -59,7 +60,8 @@ class NameScreen extends StatelessWidget {
                     label: "Next",
                     // isReversed: false,
 
-                    onPressed: () {}, isReversed: false,
+                    onPressed: () => context.goNamed("ImageScreen"),
+                    isReversed: false, tag: 'fab3',
                   ),
                 )
               ],
