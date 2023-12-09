@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
-import 'package:learners_choice_app/Presentation/Intro/presentation/name_screen.dart';
+
 import '../../../../core/widgets/customButtons/custom_round_button.dart';
+import '../../presentation/Intro/name_screen.dart';
 
 Widget buildLLTile(BuildContext context) {
   return Container(
