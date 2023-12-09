@@ -5,8 +5,7 @@
       "options": [
         "Sound horn and proceed",
         "Slow down, sound horn and pass ",
-        "Stop the vehicle and wait till the pedestrians cross the road and  then proceed",
-        "None of above" 
+        "Stop the vehicle and wait till the pedestrians cross the road and  then proceed"
       ],
       "correctAnswer": 3 
     },

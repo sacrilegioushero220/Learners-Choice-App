@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/widgets/doc_tile.dart';
-import 'package:learners_choice_app/features/Intro/presentation/name_screen.dart';
+import 'package:learners_choice_app/Presentation/Intro/presentation/name_screen.dart';
 
 class DocsScreen extends StatelessWidget {
   const DocsScreen({super.key});
