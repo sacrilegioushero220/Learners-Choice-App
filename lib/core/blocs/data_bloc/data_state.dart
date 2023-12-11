@@ -8,4 +8,8 @@ final class DataLoadingState extends DataState {}
 
 final class DataLoadedState extends DataState {}
 
-final class DataErrorState extends DataState {}
+final class DataErrorState extends DataState {
+  final String errorMessage;
+
+  DataErrorState({required this.errorMessage});
+}

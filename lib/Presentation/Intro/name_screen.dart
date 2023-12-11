@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import '../../../../core/widgets/customButtons/custom_fab_button.dart';
 
 class NameScreen extends StatelessWidget {
-  const NameScreen({super.key});
+  NameScreen({
+    super.key,
+  });
 
+  final _nameTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +49,7 @@ class NameScreen extends StatelessWidget {
                 const SizedBox(
                   height: 36.0,
                 ),
-                nameTextField(context),
+                nameTextField(context, controller: _nameTextController),
                 const SizedBox(
                   height: 105.0,
                 ),
@@ -60,7 +65,17 @@ class NameScreen extends StatelessWidget {
                     label: "Next",
                     // isReversed: false,
 
-                    onPressed: () => context.goNamed("ImageScreen"),
+                    onPressed: () {
+                      final name = _nameTextController.text.trim();
+                      BlocProvider.of<ProfileBloc>(context).add(WriteProfile(
+                        profileName: name,
+                      ));
+
+                      // ignore: unnecessary_null_comparison
+                      if (name.isNotEmpty) {
+                        context.pushNamed("ImageScreen");
+                      }
+                    },
                     isReversed: false, tag: 'fab3',
                   ),
                 )
@@ -94,8 +109,11 @@ Text buildRichTextTitle(String title1, String title2, BuildContext context) {
   );
 }
 
-Widget nameTextField(BuildContext context) {
+Widget nameTextField(BuildContext context,
+    {required TextEditingController controller}) {
   return TextField(
+    style: const TextStyle(color: Colors.black),
+    controller: controller,
     decoration: InputDecoration(
       contentPadding: const EdgeInsets.only(top: 8, left: 16, bottom: 8),
       border: OutlineInputBorder(

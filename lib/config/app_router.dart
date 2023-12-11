@@ -13,7 +13,8 @@ final GoRouter appRouter = GoRouter(
         GoRoute(
           name: "NameScreen",
           path: "NameScreen",
-          builder: (context, state) => const NameScreen(),
+          // ignore: prefer_const_constructors
+          builder: (context, state) => NameScreen(),
         ),
         GoRoute(
           name: "ImageScreen",

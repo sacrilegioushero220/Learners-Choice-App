@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sqflite/sqflite.dart';
@@ -7,12 +8,12 @@ part 'data_state.dart';
 
 class DataBloc extends Bloc<DataEvent, DataState> {
   DataBloc() : super(DataInitialState()) {
-    on<LoadDataEvent>(_loadDataEvent);
+    on<InitializeDatabase>(_loadDataEvent);
   }
 }
 
 FutureOr<void> _loadDataEvent(
-    LoadDataEvent event, Emitter<DataState> emit) async {
+    InitializeDatabase event, Emitter<DataState> emit) async {
   const String databasePath = 'lib/data/mydatabase.db';
 
   try {
@@ -27,6 +28,7 @@ FutureOr<void> _loadDataEvent(
     );
     emit(DataLoadingState());
   } catch (e) {
-    emit(DataErrorState());
+    print(e.toString());
+    emit(DataErrorState(errorMessage: e.toString()));
   }
 }
