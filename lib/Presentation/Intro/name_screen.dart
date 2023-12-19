@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
-import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
+
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
@@ -66,15 +64,15 @@ class NameScreen extends StatelessWidget {
                     // isReversed: false,
 
                     onPressed: () {
-                      final name = _nameTextController.text.trim();
-                      BlocProvider.of<ProfileBloc>(context).add(WriteProfile(
-                        profileName: name,
-                      ));
+                      // final name = _nameTextController.text.trim();
+                      // BlocProvider.of<ProfileBloc>(context).add(WriteNameEvent(
+                      //   profileName: name,
+                      // ));
 
-                      // ignore: unnecessary_null_comparison
-                      if (name.isNotEmpty) {
-                        context.pushNamed("ImageScreen");
-                      }
+                      // // ignore: unnecessary_null_comparison
+                      // if (name.isNotEmpty) {
+                      //   context.pushNamed("ImageScreen");
+                      // }
                     },
                     isReversed: false, tag: 'fab3',
                   ),

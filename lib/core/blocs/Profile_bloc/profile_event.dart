@@ -3,15 +3,22 @@ part of 'profile_bloc.dart';
 @immutable
 sealed class ProfileEvent {}
 
-final class WriteProfile extends ProfileEvent {
-  final String? profileName;
-  final String? profilePic;
+final class SaveNameEvent extends ProfileEvent {
+  final String profileName;
 
-  WriteProfile({this.profileName, this.profilePic});
+  SaveNameEvent({required this.profileName});
 }
 
-final class ReadProfile extends ProfileEvent {}
+final class PickImageEvent extends ProfileEvent {
+  final String profilePicPath;
 
-final class UpdateProfile extends ProfileEvent {}
+  PickImageEvent(this.profilePicPath);
+}
 
-final class DeleteProfile extends ProfileEvent {}
+final class SaveProfileEvent {
+  final String profileName;
+
+  final String profilePicPath;
+
+  SaveProfileEvent({required this.profileName, required this.profilePicPath});
+}

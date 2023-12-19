@@ -1,24 +1,36 @@
+import 'package:learners_choice_app/core/models/profile_model.dart';
 import 'package:sqflite/sqflite.dart';
 
 class ProfileDataRepository {
-  static const String tableName = 'profileData';
+  static const String dbPath = 'lib/data/mydatabase.db';
 
-  Future<void> createProfileData(Database db) async {
-    await db.execute('''
-      CREATE TABLE $tableName (
-        id INTEGER PRIMARY KEY,
-        profileName TEXT,
-        profilePic TEXT
-      );
-    ''');
-  }
+  static const int dbVersion = 1;
 
-  Future<void> insertProfileData(
-      Database db, String profileName, String profilePic) async {
-    await db.insert(
-      tableName,
-      {'profileName': profileName, 'profilePic': profilePic},
-      conflictAlgorithm: ConflictAlgorithm.replace,
+  Future<Database> openDb() async {
+    return await openDatabase(
+      dbPath,
+      version: dbVersion,
+      onCreate: (db, version) async {
+        await db.execute('''
+          CREATE TABLE profiles (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            profileName TEXT NOT NULL,
+            profilePic TEXT NOT NULL
+          )
+        ''');
+      },
     );
   }
+
+  Future<void> saveProfile(String profileName, String profilePic) async {
+    final db = await openDb();
+    final profile =
+        Profile(1, profileName: profileName, profilePic: profilePic);
+    // Insert the profile data into the 'profiles' table
+    await db.insert('profiles', profile.toMap());
+    // Close the database connection
+    await db.close();
+  }
+
+  // Methods for CRUD operations on Profile data...}
 }
