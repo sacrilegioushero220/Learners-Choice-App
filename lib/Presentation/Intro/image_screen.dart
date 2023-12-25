@@ -54,10 +54,12 @@ class ImageScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {},
-                  child: buildImageWidget(
-                    width: 316,
-                    height: 263.39,
-                    imagePath: imageAvatar,
+                  child: Center(
+                    child: buildImageWidget(
+                      width: 316,
+                      height: 263.39,
+                      imagePath: imageAvatar,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -65,7 +67,7 @@ class ImageScreen extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 130,
-                  width: 328,
+                  width: MediaQuery.of(context).size.width,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

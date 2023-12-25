@@ -15,7 +15,7 @@ final class PickImageEvent extends ProfileEvent {
   PickImageEvent(this.profilePicPath);
 }
 
-final class SaveProfileEvent {
+final class SaveProfileEvent extends ProfileEvent {
   final String profileName;
 
   final String profilePicPath;

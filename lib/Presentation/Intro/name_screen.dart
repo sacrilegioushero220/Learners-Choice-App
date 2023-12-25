@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
 
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -51,31 +54,37 @@ class NameScreen extends StatelessWidget {
                 const SizedBox(
                   height: 105.0,
                 ),
-                buildImageWidget(
-                  width: 316,
-                  height: 263.39,
-                  imagePath: mobileLogo,
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(212, 70, 20, 0),
-                  child: buildCustomFabButton(
-                    context: BuildContext,
-                    label: "Next",
-                    // isReversed: false,
-
-                    onPressed: () {
-                      // final name = _nameTextController.text.trim();
-                      // BlocProvider.of<ProfileBloc>(context).add(WriteNameEvent(
-                      //   profileName: name,
-                      // ));
-
-                      // // ignore: unnecessary_null_comparison
-                      // if (name.isNotEmpty) {
-                      //   context.pushNamed("ImageScreen");
-                      // }
-                    },
-                    isReversed: false, tag: 'fab3',
+                Center(
+                  child: buildImageWidget(
+                    width: 316,
+                    height: 263.39,
+                    imagePath: mobileLogo,
                   ),
+                ),
+                const SizedBox(
+                  height: 70,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    buildCustomFabButton(
+                      context: BuildContext,
+                      label: "Next",
+                      // isReversed: false,
+
+                      onPressed: () {
+                        final name = _nameTextController.text.trim();
+                        BlocProvider.of<ProfileBloc>(context)
+                            .add(SaveNameEvent(profileName: name));
+
+                        if (name.isNotEmpty) {
+                          context.pushNamed("ImageScreen");
+                        }
+                      },
+                      isReversed: false, tag: 'fab3',
+                    ),
+                  ],
                 )
               ],
             ),

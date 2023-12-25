@@ -10,47 +10,39 @@ part 'profile_state.dart';
 
 class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   final ProfileDataRepository repository;
-  ProfileBloc(this.repository) : super(ProfileInitialState());
+  ProfileBloc(this.repository) : super(ProfileInitialState()) {
+    on<SaveNameEvent>(_saveNameEvent);
+    on<PickImageEvent>(_pickImageEvent);
+    on<SaveProfileEvent>(_saveProfileEvent);
+  }
 
-  String _profileName = '';
-  String _profilePicPath = '';
+  FutureOr<void> _saveNameEvent(
+      SaveNameEvent event, Emitter<ProfileState> emit) {
+    final String profileName = event.profileName;
 
-  Stream<ProfileState> mapEventToState(ProfileEvent event) async* {
-    switch (event.runtimeType) {
-      case SaveNameEvent:
-        _profileName = (event as SaveNameEvent).profileName;
-        yield NameEnteredState(_profileName);
-        break;
+    emit(NameEnteredState(profileName));
+  }
 
-      case PickImageEvent:
-        // logic to launch image picker and set _profilePicPath
+  FutureOr<void> _pickImageEvent(
+      PickImageEvent event, Emitter<ProfileState> emit) async {
+    // logic to launch image picker and set _profilePicPath
+    final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (image != null) {
+      final String profilePicPath = image.path;
+      // ImagePicked event with the selected image path
+      emit(ImagePickedState(profilePicPath));
+    }
+  }
 
-        final image =
-            await ImagePicker().pickImage(source: ImageSource.gallery);
-        if (image != null) {
-          _profilePicPath = image.path;
-          // ImagePicked event with the selected image path
-          yield ImagePickedState(_profilePicPath);
-        }
+  FutureOr<void> _saveProfileEvent(
+      SaveProfileEvent event, Emitter<ProfileState> emit) async {
+    emit(SavingProfileState());
 
-        break;
-
-      case SaveProfileEvent:
-        // Create instance
-        yield SavingProfileState();
-
-        try {
-          _profileName = (event as SaveProfileEvent).profileName;
-          _profilePicPath = (event as SaveProfileEvent).profilePicPath;
-
-          //  logic to save profile to the database
-
-          await repository.saveProfile(_profileName, _profilePicPath);
-          yield ProfileSavedState();
-        } catch (e) {
-          yield ErrorState('Error saving profile: $e');
-        }
-        break;
+    try {
+      await repository.saveProfile(event.profileName, event.profilePicPath);
+      emit(ProfileSavedState());
+    } catch (e) {
+      emit(ErrorState('Error saving profile: $e'));
     }
   }
 }
