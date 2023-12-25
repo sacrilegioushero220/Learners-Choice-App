@@ -1,5 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
+import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -52,15 +57,38 @@ class ImageScreen extends StatelessWidget {
                 const SizedBox(
                   height: 100,
                 ),
-                InkWell(
-                  onTap: () {},
-                  child: Center(
-                    child: buildImageWidget(
-                      width: 316,
-                      height: 263.39,
-                      imagePath: imageAvatar,
-                    ),
-                  ),
+                BlocBuilder<ProfileBloc, ProfileState>(
+                  builder: (context, state) {
+                    if (state is ImagePickedState) {
+                      final selectedImagePath = state.profileImagePath;
+                      return InkWell(
+                        onTap: () {
+                          BlocProvider.of<ProfileBloc>(context)
+                              .add(PickImageEvent());
+                        },
+                        child: BuildImageWidget(
+                          isCircleAvatar: true,
+                          isFileImage: true,
+                          boxFit: BoxFit.cover,
+                          width: 316,
+                          height: 263.39,
+                          imagePath: selectedImagePath,
+                        ),
+                      );
+                    }
+
+                    return InkWell(
+                      onTap: () {
+                        BlocProvider.of<ProfileBloc>(context)
+                            .add(PickImageEvent());
+                      },
+                      child: BuildImageWidget(
+                        width: 316,
+                        height: 263.39,
+                        imagePath: imageAvatar,
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(
                   height: 70,
@@ -94,6 +122,20 @@ class ImageScreen extends StatelessWidget {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  buildImagePreviewWidget(String selectedImagePath) {
+    return Container(
+      width: 100, // Adjust the size as needed
+      height: 100,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: FileImage(File(selectedImagePath)),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -69,7 +70,7 @@ class DocsScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                buildImageWidget(
+                BuildImageWidget(
                   width: 283,
                   height: 217,
                   imagePath: learningIconPath,

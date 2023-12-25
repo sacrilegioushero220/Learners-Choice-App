@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
+import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 
 Widget buildCustomGridViewItem(
@@ -20,7 +21,7 @@ Widget buildCustomGridViewItem(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const SizedBox(height: 15),
-        buildImageWidget(
+        BuildImageWidget(
           width: 34,
           height: 33,
           imagePath: iconPath,

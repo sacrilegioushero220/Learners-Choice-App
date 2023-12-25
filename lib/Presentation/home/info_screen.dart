@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/widgets/info_screen_widgets.dart';
@@ -17,7 +18,7 @@ class InfoScreen extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 170),
-                  child: buildImageWidget(
+                  child: BuildImageWidget(
                     width: 223,
                     height: 49,
                     imagePath: choiceIconPath,

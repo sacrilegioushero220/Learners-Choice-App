@@ -9,11 +9,7 @@ final class SaveNameEvent extends ProfileEvent {
   SaveNameEvent({required this.profileName});
 }
 
-final class PickImageEvent extends ProfileEvent {
-  final String profilePicPath;
-
-  PickImageEvent(this.profilePicPath);
-}
+final class PickImageEvent extends ProfileEvent {}
 
 final class SaveProfileEvent extends ProfileEvent {
   final String profileName;
