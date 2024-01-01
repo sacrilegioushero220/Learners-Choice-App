@@ -148,7 +148,8 @@ void handleNextButtonPress(
   final state = profileBloc.state;
   // Handle navigation based on the extracted information
   if (state is ImagePickedState) {
-    context.goNamed("HomeScreen");
+    context.go("/home");
+
     debugPrint("SaveProfileEvent is called");
     debugPrint("profileName: $profileName, profilepic: $profilePicPath");
     profileBloc.add(SaveProfileEvent(

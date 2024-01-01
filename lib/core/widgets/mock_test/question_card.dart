@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 
 class QuestionCard extends StatelessWidget {
@@ -91,7 +92,7 @@ Widget imageContainerBlack(String image) {
         )
       ],
     ),
-    child: buildImageWidget(
+    child: BuildImageWidget(
       width: 154,
       height: 154,
       imagePath: image,

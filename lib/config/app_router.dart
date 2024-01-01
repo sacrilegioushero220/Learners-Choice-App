@@ -5,6 +5,7 @@ import 'package:learners_choice_app/Presentation/home/home.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 
 final GoRouter appRouter = GoRouter(
+  initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',
