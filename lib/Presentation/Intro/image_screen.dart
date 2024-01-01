@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
 import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
-import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
@@ -17,6 +16,9 @@ class ImageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String profileName = '';
+    String selectedImagePath = '';
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -57,38 +59,44 @@ class ImageScreen extends StatelessWidget {
                 const SizedBox(
                   height: 100,
                 ),
-                BlocBuilder<ProfileBloc, ProfileState>(
-                  builder: (context, state) {
-                    if (state is ImagePickedState) {
-                      final selectedImagePath = state.profileImagePath;
+                Center(
+                  child: BlocBuilder<ProfileBloc, ProfileState>(
+                    builder: (context, state) {
+                      print(state);
+                      if (state is NameEnteredState) {
+                        profileName = state.profileName;
+                      }
+                      if (state is ImagePickedState) {
+                        selectedImagePath = state.profileImagePath;
+                        return InkWell(
+                          onTap: () {
+                            BlocProvider.of<ProfileBloc>(context)
+                                .add(PickImageEvent());
+                          },
+                          child: BuildImageWidget(
+                            isCircleAvatar: true,
+                            isFileImage: true,
+                            boxFit: BoxFit.cover,
+                            width: 316,
+                            height: 263.39,
+                            imagePath: selectedImagePath,
+                          ),
+                        );
+                      }
+
                       return InkWell(
                         onTap: () {
                           BlocProvider.of<ProfileBloc>(context)
                               .add(PickImageEvent());
                         },
                         child: BuildImageWidget(
-                          isCircleAvatar: true,
-                          isFileImage: true,
-                          boxFit: BoxFit.cover,
                           width: 316,
                           height: 263.39,
-                          imagePath: selectedImagePath,
+                          imagePath: imageAvatar,
                         ),
                       );
-                    }
-
-                    return InkWell(
-                      onTap: () {
-                        BlocProvider.of<ProfileBloc>(context)
-                            .add(PickImageEvent());
-                      },
-                      child: BuildImageWidget(
-                        width: 316,
-                        height: 263.39,
-                        imagePath: imageAvatar,
-                      ),
-                    );
-                  },
+                    },
+                  ),
                 ),
                 const SizedBox(
                   height: 70,
@@ -103,16 +111,20 @@ class ImageScreen extends StatelessWidget {
                       buildCustomFabButton(
                           context: BuildContext,
                           label: "Back",
-                          onPressed: () => context.goNamed("NameScreen"),
+                          onPressed: () {
+                            context.goNamed("NameScreen");
+                          },
                           isReversed: true,
                           icon: Icons.arrow_back,
                           tag: 'fab1'),
                       buildCustomFabButton(
                         context: BuildContext,
                         label: "Next",
-                        onPressed: () {
-                          context.pushReplacementNamed("HomeScreen");
-                        },
+                        onPressed: () => handleNextButtonPress(
+                          context: context,
+                          profileName: profileName,
+                          profilePicPath: selectedImagePath,
+                        ),
                         isReversed: false,
                         tag: 'fab2',
                       ),
@@ -126,17 +138,25 @@ class ImageScreen extends StatelessWidget {
       ),
     );
   }
+}
 
-  buildImagePreviewWidget(String selectedImagePath) {
-    return Container(
-      width: 100, // Adjust the size as needed
-      height: 100,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: FileImage(File(selectedImagePath)),
-        ),
+void handleNextButtonPress(
+    {required BuildContext context,
+    required String profileName,
+    required String profilePicPath}) {
+  final profileBloc = BlocProvider.of<ProfileBloc>(context);
+  final state = profileBloc.state;
+  // Handle navigation based on the extracted information
+  if (state is ImagePickedState) {
+    context.goNamed("HomeScreen");
+    debugPrint("SaveProfileEvent is called");
+    debugPrint("profileName: $profileName, profilepic: $profilePicPath");
+    profileBloc.add(SaveProfileEvent(
+        profileName: profileName, profilePicPath: profilePicPath));
+  } else {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text("Please pick an image before proceeding."),
       ),
     );
   }
