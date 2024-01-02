@@ -84,4 +84,31 @@ class ProfileDataRepository {
       throw Exception('Error saving profile: $e');
     }
   }
+
+  Future<Profile?> getProfileById(int id) async {
+    try {
+      final db = await openDb();
+
+      final result = await db.query(
+        'profiles',
+        where: 'id = ?',
+        whereArgs: [id],
+      );
+
+      await db.close();
+
+      if (result.isNotEmpty) {
+        return Profile(
+          result.first['id'] as int,
+          profileName: result.first['profileName'] as String,
+          profilePic: result.first['profilePic'] as String,
+        );
+      } else {
+        return null; // Profile not found
+      }
+    } catch (e) {
+      print('Error getting profile: $e');
+      throw Exception('Error getting profile: $e');
+    }
+  }
 }

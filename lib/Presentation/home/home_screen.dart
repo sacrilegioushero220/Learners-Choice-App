@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
-import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/custom_grid_view_item.dart';
 import 'package:learners_choice_app/core/widgets/ll_tile.dart';
+import 'package:learners_choice_app/core/widgets/profile_bottom_sheet.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -28,8 +28,15 @@ class HomeScreen extends StatelessWidget {
             child: SizedBox(
               width: 30,
               height: 30,
-              child: CircleAvatar(
-                backgroundImage: AssetImage(avatar1Path),
+              child: GestureDetector(
+                onTap: () {
+                  showProfileDialog(
+                    context,
+                  );
+                },
+                child: CircleAvatar(
+                  backgroundImage: AssetImage(avatar1Path),
+                ),
               ),
             ),
           ),

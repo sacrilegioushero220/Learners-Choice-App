@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
-
 import 'package:learners_choice_app/core/constants/text.dart';
-import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
+import 'package:learners_choice_app/core/widgets/build_rich_text_title.dart';
+import 'package:learners_choice_app/core/widgets/name_text_field.dart';
 import '../../../../core/widgets/customButtons/custom_fab_button.dart';
 
 class NameScreen extends StatelessWidget {
@@ -38,8 +38,10 @@ class NameScreen extends StatelessWidget {
                 ),
                 SizedBox(
                   width: 291,
-                  child: buildRichTextTitle(
-                      titleNameScreen1, titleNameScreen2, context),
+                  child: BuildRichTextTitle(
+                    title1: titleNameScreen1,
+                    title2: titleNameScreen2,
+                  ),
                 ),
                 const SizedBox(
                   height: 25,
@@ -51,7 +53,7 @@ class NameScreen extends StatelessWidget {
                 const SizedBox(
                   height: 36.0,
                 ),
-                nameTextField(context, controller: _nameTextController),
+                NameTextField(controller: _nameTextController),
                 const SizedBox(
                   height: 105.0,
                 ),
@@ -94,49 +96,4 @@ class NameScreen extends StatelessWidget {
       ),
     );
   }
-}
-
-Text buildRichTextTitle(String title1, String title2, BuildContext context) {
-  return Text.rich(
-    TextSpan(
-      children: [
-        TextSpan(
-          text: title1,
-          style: context.headlineMediumLight,
-        ),
-        TextSpan(
-          text: title2,
-          style: getCustomHeadlineMediumLight(
-            context,
-            context.primary,
-          ),
-        ),
-      ],
-    ),
-    textAlign: TextAlign.left,
-  );
-}
-
-Widget nameTextField(BuildContext context,
-    {required TextEditingController controller}) {
-  return TextField(
-    style: const TextStyle(color: Colors.black),
-    controller: controller,
-    decoration: InputDecoration(
-      contentPadding: const EdgeInsets.only(top: 8, left: 16, bottom: 8),
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(4),
-        borderSide: const BorderSide(width: 2, color: Color(0xFF00639B)),
-      ),
-      hintText: 'Name',
-      hintStyle: TextStyle(
-        color: context.onSurface,
-        fontSize: 16,
-        fontFamily: 'Roboto',
-        fontWeight: FontWeight.w400,
-        height: 0.09,
-        letterSpacing: 0.50,
-      ),
-    ),
-  );
 }

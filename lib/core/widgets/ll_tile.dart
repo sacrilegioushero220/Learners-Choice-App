@@ -4,7 +4,6 @@ import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 
 import '../../../../core/widgets/customButtons/custom_round_button.dart';
-import '../../presentation/Intro/name_screen.dart';
 
 Widget buildLLTile(BuildContext context) {
   return Container(
