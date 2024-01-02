@@ -140,20 +140,31 @@ class ImageScreen extends StatelessWidget {
   }
 }
 
-void handleNextButtonPress(
-    {required BuildContext context,
-    required String profileName,
-    required String profilePicPath}) {
+void handleNextButtonPress({
+  required BuildContext context,
+  required String profileName,
+  required String profilePicPath,
+}) async {
   final profileBloc = BlocProvider.of<ProfileBloc>(context);
   final state = profileBloc.state;
-  // Handle navigation based on the extracted information
-  if (state is ImagePickedState) {
-    context.go("/home");
 
-    debugPrint("SaveProfileEvent is called");
-    debugPrint("profileName: $profileName, profilepic: $profilePicPath");
+  if (state is ImagePickedState) {
+    // Show circular progress indicator
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
+
+    // Dispatch SaveProfileEvent to trigger the saving process
     profileBloc.add(SaveProfileEvent(
-        profileName: profileName, profilePicPath: profilePicPath));
+      profileName: profileName,
+      profilePicPath: profilePicPath,
+    ));
   } else {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
@@ -161,4 +172,55 @@ void handleNextButtonPress(
       ),
     );
   }
+
+  // Listen to state changes after dispatching SaveProfileEvent
+  await for (final updatedState in profileBloc.stream) {
+    if (updatedState is SavingProfileState) {
+      // Do nothing while saving profile (you can update UI if needed)
+    } else if (updatedState is ProfileSavedState) {
+      // Close the circular progress indicator dialog
+      Navigator.pop(context);
+
+      // Navigate to /home
+      context.go("/home");
+
+      // Additional logic after profile is saved if needed
+    }
+  }
 }
+
+// void handleNextButtonPress(
+//     {required BuildContext context,
+//     required String profileName,
+//     required String profilePicPath}) async {
+//   final profileBloc = BlocProvider.of<ProfileBloc>(context);
+//   final state = profileBloc.state;
+
+//   // Handle navigation based on the extracted information
+//   // Show circular progress indicator
+//   showDialog(
+//     context: context,
+//     barrierDismissible: false,
+//     builder: (BuildContext context) {
+//       return const Center(
+//         child: CircularProgressIndicator(),
+//       );
+//     },
+//   );
+//   // Simulate saving profile with a delay
+//   await Future.delayed(const Duration(seconds: 2));
+//   if (state is ImagePickedState) {
+//     context.go("/home");
+
+//     debugPrint("SaveProfileEvent is called");
+//     debugPrint("profileName: $profileName, profilepic: $profilePicPath");
+//     profileBloc.add(SaveProfileEvent(
+//         profileName: profileName, profilePicPath: profilePicPath));
+//   } else {
+//     ScaffoldMessenger.of(context).showSnackBar(
+//       const SnackBar(
+//         content: Text("Please pick an image before proceeding."),
+//       ),
+//     );
+//   }
+// }

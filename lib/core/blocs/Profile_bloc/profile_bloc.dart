@@ -41,7 +41,9 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     try {
       await repository.saveProfile(event.profileName, event.profilePicPath);
       emit(ProfileSavedState());
-    } catch (e) {
+    } catch (e, stackTrace) {
+      print(e);
+      print('Error: $e\nStack Trace: $stackTrace');
       emit(ErrorState('Error saving profile: $e'));
     }
   }

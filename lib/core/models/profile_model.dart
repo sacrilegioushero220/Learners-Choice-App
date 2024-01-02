@@ -1,5 +1,5 @@
 class Profile {
-  final int id;
+  final int? id;
   final String profileName;
   final String profilePic;
 

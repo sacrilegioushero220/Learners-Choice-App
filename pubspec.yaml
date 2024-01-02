@@ -32,6 +32,7 @@ flutter:
     - assets/Images/docsscreen/
     - assets/Images/
     - assets/icons/
+    - assets/db/mydatabase.db
    
 
     
