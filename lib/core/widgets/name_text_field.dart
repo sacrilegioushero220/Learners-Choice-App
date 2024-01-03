@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 
 class NameTextField extends StatelessWidget {
-  const NameTextField({super.key, required this.controller});
+  const NameTextField(
+      {super.key, required this.controller, this.hintText = 'Name'});
   final TextEditingController controller;
+  final String hintText;
 
   @override
   Widget build(BuildContext context) {

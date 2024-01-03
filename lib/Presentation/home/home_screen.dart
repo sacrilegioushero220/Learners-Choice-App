@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
@@ -7,7 +9,6 @@ import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/custom_grid_view_item.dart';
 import 'package:learners_choice_app/core/widgets/ll_tile.dart';
-import 'package:learners_choice_app/core/widgets/profile_bottom_sheet.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -35,8 +36,20 @@ class HomeScreen extends StatelessWidget {
                   BlocProvider.of<ProfileBloc>(context)
                       .add(DisplayProfileEvent());
                 },
-                child: CircleAvatar(
-                  backgroundImage: AssetImage(avatar1Path),
+                child: BlocBuilder<ProfileBloc, ProfileState>(
+                  builder: (context, state) {
+                    String? profilePic;
+                    if (state is ProfileQueriedState) {
+                      profilePic = state.profilePic;
+                      //avatar1Path
+                    }
+                    return profilePic != null
+                        ? CircleAvatar(
+                            backgroundImage:
+                                FileImage(File(profilePic.toString())),
+                          )
+                        : const CircleAvatar();
+                  },
                 ),
               ),
             ),

@@ -185,6 +185,7 @@ void handleNextButtonPress({
 
       // Navigate to /home
       context.go("/home");
+      profileBloc.add(DisplayProfileEvent());
 
       // Additional logic after profile is saved if needed
     }

@@ -20,9 +20,13 @@ final class SavingProfileState extends ProfileState {}
 final class ProfileSavedState extends ProfileState {}
 
 final class ProfileQueriedState extends ProfileState {
-  final Profile? profile;
+  final String? profileName;
+  final String? profilePic;
 
-  ProfileQueriedState({required this.profile});
+  ProfileQueriedState({
+    required this.profileName,
+    required this.profilePic,
+  });
 }
 
 class ErrorState extends ProfileState {

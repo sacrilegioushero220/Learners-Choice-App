@@ -1,17 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/core/widgets/name_text_field.dart';
 
 Future<dynamic> showProfileDialog(
   BuildContext context,
+  TextEditingController controller,
+  String profileName,
+  String profilePic,
 ) {
   return showModalBottomSheet(
-      context: context, builder: (context) => const CustomBottomSheet());
+      context: context,
+      builder: (context) => CustomBottomSheet(
+            controller: controller,
+            profileName: profileName,
+            profilePic: profilePic,
+          ));
 }
 
 class CustomBottomSheet extends StatelessWidget {
-  const CustomBottomSheet({super.key});
+  const CustomBottomSheet(
+      {super.key,
+      required this.controller,
+      required this.profileName,
+      required this.profilePic});
+  final TextEditingController controller;
+  final String profileName;
+  final String profilePic;
 
   @override
   Widget build(BuildContext context) {
+    final controller = TextEditingController();
     return SafeArea(
       child: ListView(
         padding: const EdgeInsets.all(16),
@@ -25,12 +42,11 @@ class CustomBottomSheet extends StatelessWidget {
               const SizedBox(width: 16),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(24.0),
-                  child: TextFormField(
-                    keyboardType: TextInputType.name,
-                    onChanged: (value) {},
-                  ),
-                ),
+                    padding: const EdgeInsets.all(24.0),
+                    child: NameTextField(
+                      controller: controller,
+                      hintText: profileName,
+                    )),
               ),
             ],
           ),

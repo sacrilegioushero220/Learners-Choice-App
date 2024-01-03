@@ -61,7 +61,10 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
         // Do something with the latest profile
         final profileName = latestProfile.profileName;
         final profilePic = latestProfile.profilePic;
+        emit(ProfileQueriedState(
+            profileName: profileName, profilePic: profilePic));
         print('Latest Profile: $profileName $profilePic');
+        print("Profile Queried state");
       } else {
         // No profiles found
         print('No profiles found');
