@@ -120,11 +120,13 @@ class ImageScreen extends StatelessWidget {
                       buildCustomFabButton(
                         context: BuildContext,
                         label: "Next",
-                        onPressed: () => handleNextButtonPress(
-                          context: context,
-                          profileName: profileName,
-                          profilePicPath: selectedImagePath,
-                        ),
+                        onPressed: () {
+                          handleNextButtonPress(
+                            context: context,
+                            profileName: profileName,
+                            profilePicPath: selectedImagePath,
+                          );
+                        },
                         isReversed: false,
                         tag: 'fab2',
                       ),
@@ -188,39 +190,3 @@ void handleNextButtonPress({
     }
   }
 }
-
-// void handleNextButtonPress(
-//     {required BuildContext context,
-//     required String profileName,
-//     required String profilePicPath}) async {
-//   final profileBloc = BlocProvider.of<ProfileBloc>(context);
-//   final state = profileBloc.state;
-
-//   // Handle navigation based on the extracted information
-//   // Show circular progress indicator
-//   showDialog(
-//     context: context,
-//     barrierDismissible: false,
-//     builder: (BuildContext context) {
-//       return const Center(
-//         child: CircularProgressIndicator(),
-//       );
-//     },
-//   );
-//   // Simulate saving profile with a delay
-//   await Future.delayed(const Duration(seconds: 2));
-//   if (state is ImagePickedState) {
-//     context.go("/home");
-
-//     debugPrint("SaveProfileEvent is called");
-//     debugPrint("profileName: $profileName, profilepic: $profilePicPath");
-//     profileBloc.add(SaveProfileEvent(
-//         profileName: profileName, profilePicPath: profilePicPath));
-//   } else {
-//     ScaffoldMessenger.of(context).showSnackBar(
-//       const SnackBar(
-//         content: Text("Please pick an image before proceeding."),
-//       ),
-//     );
-//   }
-// }

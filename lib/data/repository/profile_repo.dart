@@ -85,14 +85,15 @@ class ProfileDataRepository {
     }
   }
 
-  Future<Profile?> getProfileById(int id) async {
+  Future<Profile?> getLatestProfile() async {
     try {
       final db = await openDb();
 
+      // Retrieve the latest record based on the highest id
       final result = await db.query(
         'profiles',
-        where: 'id = ?',
-        whereArgs: [id],
+        orderBy: 'id DESC', // Order by id in descending order
+        limit: 1, // Limit to only retrieve the latest record
       );
 
       await db.close();
@@ -104,11 +105,11 @@ class ProfileDataRepository {
           profilePic: result.first['profilePic'] as String,
         );
       } else {
-        return null; // Profile not found
+        return null; // No profiles found
       }
     } catch (e) {
-      print('Error getting profile: $e');
-      throw Exception('Error getting profile: $e');
+      print('Error getting latest profile: $e');
+      throw Exception('Error getting latest profile: $e');
     }
   }
 }

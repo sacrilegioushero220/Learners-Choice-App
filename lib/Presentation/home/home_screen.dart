@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
 import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -30,9 +32,8 @@ class HomeScreen extends StatelessWidget {
               height: 30,
               child: GestureDetector(
                 onTap: () {
-                  showProfileDialog(
-                    context,
-                  );
+                  BlocProvider.of<ProfileBloc>(context)
+                      .add(DisplayProfileEvent());
                 },
                 child: CircleAvatar(
                   backgroundImage: AssetImage(avatar1Path),

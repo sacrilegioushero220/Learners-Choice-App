@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:learners_choice_app/core/models/profile_model.dart';
 import 'package:learners_choice_app/data/repository/profile_repo.dart';
 
 part 'profile_event.dart';
@@ -14,6 +15,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<SaveNameEvent>(_saveNameEvent);
     on<PickImageEvent>(_pickImageEvent);
     on<SaveProfileEvent>(_saveProfileEvent);
+    on<DisplayProfileEvent>(_displayProfileEvent);
   }
 
   FutureOr<void> _saveNameEvent(
@@ -45,6 +47,29 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       print(e);
       print('Error: $e\nStack Trace: $stackTrace');
       emit(ErrorState('Error saving profile: $e'));
+    }
+  }
+
+  FutureOr<void> _displayProfileEvent(
+    DisplayProfileEvent event,
+    Emitter<ProfileState> emit,
+  ) async {
+    try {
+      final latestProfile = await repository.getLatestProfile();
+
+      if (latestProfile != null) {
+        // Do something with the latest profile
+        final profileName = latestProfile.profileName;
+        final profilePic = latestProfile.profilePic;
+        print('Latest Profile: $profileName $profilePic');
+      } else {
+        // No profiles found
+        print('No profiles found');
+      }
+    } catch (e, stackTrace) {
+      print(e);
+      print('Error: $e\nStack Trace: $stackTrace');
+      // Handle errors here
     }
   }
 }

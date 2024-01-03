@@ -18,3 +18,5 @@ final class SaveProfileEvent extends ProfileEvent {
 
   SaveProfileEvent({required this.profileName, required this.profilePicPath});
 }
+
+final class DisplayProfileEvent extends ProfileEvent {}
