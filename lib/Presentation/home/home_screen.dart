@@ -9,6 +9,7 @@ import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/custom_grid_view_item.dart';
 import 'package:learners_choice_app/core/widgets/ll_tile.dart';
+import 'package:learners_choice_app/core/widgets/profile_bottom_sheet.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -31,26 +32,27 @@ class HomeScreen extends StatelessWidget {
             child: SizedBox(
               width: 30,
               height: 30,
-              child: GestureDetector(
-                onTap: () {
-                  BlocProvider.of<ProfileBloc>(context)
-                      .add(DisplayProfileEvent());
-                },
-                child: BlocBuilder<ProfileBloc, ProfileState>(
-                  builder: (context, state) {
-                    String? profilePic;
-                    if (state is ProfileQueriedState) {
-                      profilePic = state.profilePic;
-                      //avatar1Path
-                    }
-                    return profilePic != null
+              child: BlocBuilder<ProfileBloc, ProfileState>(
+                builder: (context, state) {
+                  String profilePic = '';
+                  String profileName = '';
+                  final controller = TextEditingController();
+                  if (state is ProfileQueriedState) {
+                    profilePic = state.profilePic?.toString() ?? '';
+                    // Use null-aware operator to handle null
+                    profileName = state.profileName?.toString() ?? '';
+                  }
+                  return GestureDetector(
+                    onTap: () {
+                      showProfileDialog(
+                          context, controller, profileName, profilePic);
+                    },
+                    child: profilePic.isNotEmpty
                         ? CircleAvatar(
-                            backgroundImage:
-                                FileImage(File(profilePic.toString())),
-                          )
-                        : const CircleAvatar();
-                  },
-                ),
+                            backgroundImage: FileImage(File(profilePic)))
+                        : const CircleAvatar(),
+                  );
+                },
               ),
             ),
           ),
