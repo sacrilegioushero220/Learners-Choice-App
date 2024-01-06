@@ -3,10 +3,10 @@ part of 'profile_bloc.dart';
 @immutable
 sealed class ProfileEvent {}
 
-final class SaveNameEvent extends ProfileEvent {
+final class PickNameEvent extends ProfileEvent {
   final String profileName;
 
-  SaveNameEvent({required this.profileName});
+  PickNameEvent({required this.profileName});
 }
 
 final class PickImageEvent extends ProfileEvent {}

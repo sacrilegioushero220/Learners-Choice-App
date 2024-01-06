@@ -16,6 +16,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String profilePic = '';
+    String profileName = '';
+
     return Scaffold(
       backgroundColor: context.onPrimary,
       appBar: AppBar(
@@ -32,24 +35,27 @@ class HomeScreen extends StatelessWidget {
             child: SizedBox(
               width: 30,
               height: 30,
-              child: BlocBuilder<ProfileBloc, ProfileState>(
+              child: BlocConsumer<ProfileBloc, ProfileState>(
+                listener: (context, state) {
+                  if (state is ImagePickedState) {
+                    // Handle ImagePickedState changes if needed
+                    profilePic = state.profileImagePath;
+                  }
+                },
                 builder: (context, state) {
-                  String profilePic = '';
-                  String profileName = '';
-                  final controller = TextEditingController();
                   if (state is ProfileQueriedState) {
                     profilePic = state.profilePic?.toString() ?? '';
-                    // Use null-aware operator to handle null
                     profileName = state.profileName?.toString() ?? '';
                   }
+
                   return GestureDetector(
                     onTap: () {
-                      showProfileDialog(
-                          context, controller, profileName, profilePic);
+                      showProfileDialog(context, profileName, profilePic);
                     },
                     child: profilePic.isNotEmpty
                         ? CircleAvatar(
-                            backgroundImage: FileImage(File(profilePic)))
+                            backgroundImage: FileImage(File(profilePic)),
+                          )
                         : const CircleAvatar(),
                   );
                 },

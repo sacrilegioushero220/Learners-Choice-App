@@ -53,7 +53,10 @@ class NameScreen extends StatelessWidget {
                 const SizedBox(
                   height: 36.0,
                 ),
-                NameTextField(controller: _nameTextController),
+                NameTextField(
+                  controller: _nameTextController,
+                  hintText: "Name",
+                ),
                 const SizedBox(
                   height: 105.0,
                 ),
@@ -79,7 +82,7 @@ class NameScreen extends StatelessWidget {
                       onPressed: () {
                         final name = _nameTextController.text.trim();
                         BlocProvider.of<ProfileBloc>(context)
-                            .add(SaveNameEvent(profileName: name));
+                            .add(PickNameEvent(profileName: name));
 
                         if (name.isNotEmpty) {
                           context.pushNamed("ImageScreen");

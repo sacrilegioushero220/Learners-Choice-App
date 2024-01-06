@@ -3,13 +3,14 @@ import 'package:learners_choice_app/core/extensions/color_extention.dart';
 
 class NameTextField extends StatelessWidget {
   const NameTextField(
-      {super.key, required this.controller, this.hintText = 'Name'});
+      {super.key, required this.controller, this.hintText, this.onChanged});
   final TextEditingController controller;
-  final String hintText;
-
+  final String? hintText;
+  final Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onChanged: onChanged,
       style: const TextStyle(color: Colors.black),
       controller: controller,
       decoration: InputDecoration(
@@ -18,7 +19,7 @@ class NameTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(4),
           borderSide: const BorderSide(width: 2, color: Color(0xFF00639B)),
         ),
-        hintText: 'Name',
+        hintText: hintText,
         hintStyle: TextStyle(
           color: context.onSurface,
           fontSize: 16,
