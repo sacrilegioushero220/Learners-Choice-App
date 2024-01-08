@@ -20,3 +20,5 @@ final class SaveProfileEvent extends ProfileEvent {
 }
 
 final class DisplayProfileEvent extends ProfileEvent {}
+
+final class UserOnboardEvent extends ProfileEvent {}

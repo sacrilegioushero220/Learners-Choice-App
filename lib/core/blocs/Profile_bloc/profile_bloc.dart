@@ -1,14 +1,13 @@
 import 'dart:async';
-
 import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:learners_choice_app/data/repository/profile_repo.dart';
 
 part 'profile_event.dart';
 part 'profile_state.dart';
 
-class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
+class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
   final ProfileDataRepository repository;
   ProfileBloc(this.repository) : super(ProfileInitialState()) {
     on<PickNameEvent>(_saveNameEvent);
@@ -72,6 +71,51 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       print(e);
       print('Error: $e\nStack Trace: $stackTrace');
       // Handle errors here
+    }
+  }
+
+  @override
+  ProfileState fromJson(Map<String, dynamic> json) {
+    switch (json['runtimeType'] as String) {
+      case 'NameEnteredState':
+        return NameEnteredState.fromJson(json);
+      case 'ImagePickedState':
+        return ImagePickedState.fromJson(json);
+      case 'ProfileQueriedState':
+        return ProfileQueriedState.fromJson(json);
+      case 'ErrorState':
+        return ErrorState.fromJson(json);
+      case 'SavingProfileState':
+      case 'ProfileSavedState':
+      case 'ProfileInitialState':
+        return ProfileInitialState(); // Return the initial state for transient states
+      default:
+        throw UnimplementedError(
+            'Unexpected state type: ${json['runtimeType']}');
+    }
+  }
+
+  @override
+  Map<String, dynamic>? toJson(ProfileState state) {
+    switch (state.runtimeType) {
+      case NameEnteredState:
+        final nameEnteredState = state as NameEnteredState;
+        return nameEnteredState.toJson();
+      case ImagePickedState:
+        final imagePickedState = state as ImagePickedState;
+        return imagePickedState.toJson();
+      case ProfileQueriedState:
+        final profileQueriedState = state as ProfileQueriedState;
+        return profileQueriedState.toJson();
+      case ErrorState:
+        final errorState = state as ErrorState;
+        return errorState.toJson();
+      case SavingProfileState:
+      case ProfileSavedState:
+      case ProfileInitialState:
+        return null; // No need to serialize transient or initial states
+      default:
+        throw UnimplementedError('Unexpected state type: ${state.runtimeType}');
     }
   }
 }

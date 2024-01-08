@@ -6,10 +6,14 @@ import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
 import 'package:learners_choice_app/data/repository/profile_repo.dart';
 import 'package:path_provider/path_provider.dart';
 
+import 'core/blocs/bloc_observer.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   HydratedBloc.storage = await HydratedStorage.build(
       storageDirectory: await getApplicationDocumentsDirectory());
+  Bloc.observer = AppBlocObserver();
+
   runApp(MultiBlocProvider(
     providers: [
       BlocProvider(
