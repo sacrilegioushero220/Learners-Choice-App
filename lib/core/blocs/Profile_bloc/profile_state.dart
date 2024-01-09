@@ -7,6 +7,7 @@ final class ProfileInitialState extends ProfileState {}
 final class NameEnteredState extends ProfileState {
   final String profileName;
   NameEnteredState(this.profileName);
+
   // Convert the object to a JSON representation
   Map<String, dynamic> toJson() {
     return {
@@ -85,7 +86,3 @@ class ErrorState extends ProfileState {
     );
   }
 }
-
-final class UserOnboardedState extends ProfileState {}
-
-final class UserNotOnboardedState extends ProfileState {}

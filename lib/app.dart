@@ -9,16 +9,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: getAppRouter(),
-
+      routerConfig: appRouter,
       theme: ThemeData(
           useMaterial3: true,
           colorScheme: lightColorScheme,
           textTheme: CustomTextTheme.customDarkTextTheme),
-      // darkTheme: ThemeData(useMaterial3: true, colorScheme: da rkColorScheme),
-      // builder: (context, child) => const Scaffold(
-      //   body: Home(),
-      // ),
       debugShowCheckedModeBanner: false,
     );
   }

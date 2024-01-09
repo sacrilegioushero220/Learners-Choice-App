@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -185,8 +183,8 @@ void handleNextButtonPress({
       Navigator.pop(context);
 
       // Navigate to /home
-      //context.go("/home");
-      clearAndNavigate('/home');
+      context.go("/home");
+
       profileBloc.add(DisplayProfileEvent());
 
       // Additional logic after profile is saved
