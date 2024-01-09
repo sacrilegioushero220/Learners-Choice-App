@@ -36,7 +36,8 @@ class ProfileDataRepository {
           CREATE TABLE profiles (
             id INTEGER PRIMARY KEY,
             profileName TEXT NOT NULL,
-            profilePic TEXT NOT NULL
+            profilePic TEXT NOT NULL,
+            profileOnboardStatus INTEGER NOT NULL
           )
         ''');
       },

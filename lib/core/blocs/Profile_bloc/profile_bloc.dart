@@ -15,6 +15,61 @@ class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
     on<PickImageEvent>(_pickImageEvent);
     on<SaveProfileEvent>(_saveProfileEvent);
     on<DisplayProfileEvent>(_displayProfileEvent);
+    on<OnboardProfileEvent>(_onboardProfileEvent);
+  }
+
+  @override
+  ProfileState fromJson(Map<String, dynamic> json) {
+    switch (json['runtimeType'] as String) {
+      case 'NameEnteredState':
+        return NameEnteredState.fromJson(json);
+      case 'ImagePickedState':
+        return ImagePickedState.fromJson(json);
+      case 'ProfileQueriedState':
+        return ProfileQueriedState.fromJson(json);
+      case 'ErrorState':
+        return ErrorState.fromJson(json);
+      case 'SavingProfileState':
+      case 'ProfileSavedState':
+      case 'ProfileInitialState':
+        return ProfileInitialState();
+      case 'ProfileOnboardedState':
+        return ProfileOnboardedState.fromJson(json);
+      case 'ProfileNotOnboardedState':
+      // Return the initial state for transient states
+      default:
+        throw UnimplementedError(
+            'Unexpected state type: ${json['runtimeType']}');
+    }
+  }
+
+  @override
+  Map<String, dynamic>? toJson(ProfileState state) {
+    switch (state.runtimeType) {
+      case NameEnteredState:
+        final nameEnteredState = state as NameEnteredState;
+        return nameEnteredState.toJson();
+      case ImagePickedState:
+        final imagePickedState = state as ImagePickedState;
+        return imagePickedState.toJson();
+      case ProfileQueriedState:
+        final profileQueriedState = state as ProfileQueriedState;
+        return profileQueriedState.toJson();
+      case ErrorState:
+        final errorState = state as ErrorState;
+        return errorState.toJson();
+      case SavingProfileState:
+      case ProfileSavedState:
+      case ProfileInitialState:
+        return null;
+      case ProfileOnboardedState:
+        final onboardedState = state as ProfileOnboardedState;
+        return onboardedState.toJson();
+      case ProfileNotOnboardedState:
+        return null; // No need to serialize transient or initial states
+      default:
+        throw UnimplementedError('Unexpected state type: ${state.runtimeType}');
+    }
   }
 
   FutureOr<void> _saveNameEvent(
@@ -61,9 +116,11 @@ class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
         // Do something with the latest profile
         final profileName = latestProfile.profileName;
         final profilePic = latestProfile.profilePic;
+        final status = latestProfile.profileOnboardStatus;
         emit(ProfileQueriedState(
             profileName: profileName, profilePic: profilePic));
-        print('Latest Profile: $profileName $profilePic');
+        print(
+            'Latest Profile: profile name: $profileName profile Pic: $profilePic profile status:$status ');
         print("Profile Queried state");
       } else {
         // No profiles found
@@ -76,48 +133,20 @@ class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
     }
   }
 
-  @override
-  ProfileState fromJson(Map<String, dynamic> json) {
-    switch (json['runtimeType'] as String) {
-      case 'NameEnteredState':
-        return NameEnteredState.fromJson(json);
-      case 'ImagePickedState':
-        return ImagePickedState.fromJson(json);
-      case 'ProfileQueriedState':
-        return ProfileQueriedState.fromJson(json);
-      case 'ErrorState':
-        return ErrorState.fromJson(json);
-      case 'SavingProfileState':
-      case 'ProfileSavedState':
-      case 'ProfileInitialState':
-        return ProfileInitialState(); // Return the initial state for transient states
-      default:
-        throw UnimplementedError(
-            'Unexpected state type: ${json['runtimeType']}');
-    }
-  }
-
-  @override
-  Map<String, dynamic>? toJson(ProfileState state) {
-    switch (state.runtimeType) {
-      case NameEnteredState:
-        final nameEnteredState = state as NameEnteredState;
-        return nameEnteredState.toJson();
-      case ImagePickedState:
-        final imagePickedState = state as ImagePickedState;
-        return imagePickedState.toJson();
-      case ProfileQueriedState:
-        final profileQueriedState = state as ProfileQueriedState;
-        return profileQueriedState.toJson();
-      case ErrorState:
-        final errorState = state as ErrorState;
-        return errorState.toJson();
-      case SavingProfileState:
-      case ProfileSavedState:
-      case ProfileInitialState:
-        return null; // No need to serialize transient or initial states
-      default:
-        throw UnimplementedError('Unexpected state type: ${state.runtimeType}');
+  FutureOr<void> _onboardProfileEvent(
+      OnboardProfileEvent event, Emitter<ProfileState> emit) async {
+    try {
+      final existingProfile = await repository.getLatestProfile();
+      if (existingProfile != null) {
+        emit(ProfileOnboardedState(profile: existingProfile));
+        print("state is ProfileOnboarded ");
+      } else {
+        emit(ProfileNotOnboardedState());
+        print("state is ProfileNotOnboarded ");
+      }
+    } catch (e, stacktrace) {
+      print(
+          "there is issue with OnboardProfileEvent and error is : $e, the stacktrace : $stacktrace");
     }
   }
 }

@@ -21,4 +21,23 @@ class Profile {
       'profileOnboardStatus': profileOnboardStatus.index
     };
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'profileName': profileName,
+      'profilePic': profilePic,
+      'profileOnboardStatus': profileOnboardStatus.index,
+    };
+  }
+
+  factory Profile.fromJson(Map<String, dynamic> json) {
+    return Profile(
+      json['id'],
+      profileName: json['profileName'],
+      profilePic: json['profilePic'],
+      profileOnboardStatus:
+          ProfileOnboardStatus.values[json['profileOnboardStatus']],
+    );
+  }
 }

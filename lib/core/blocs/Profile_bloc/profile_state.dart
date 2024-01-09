@@ -86,3 +86,25 @@ class ErrorState extends ProfileState {
     );
   }
 }
+
+final class ProfileOnboardedState extends ProfileState {
+  final Profile? profile;
+
+  ProfileOnboardedState({required this.profile});
+
+  Map<String, dynamic> toJson() {
+    return {
+      'type': 'ProfileOnboardedState',
+      'profile':
+          profile?.toJson(), // Assuming Profile has its own toJson method
+    };
+  }
+
+  factory ProfileOnboardedState.fromJson(Map<String, dynamic> json) {
+    return ProfileOnboardedState(
+      profile: Profile.fromJson(json['profile']),
+    );
+  }
+}
+
+final class ProfileNotOnboardedState extends ProfileState {}
