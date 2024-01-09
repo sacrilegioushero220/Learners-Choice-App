@@ -43,9 +43,11 @@ class ProfileDataRepository {
     );
   }
 
-  Future<void> saveProfile(String profileName, String profilePic) async {
+  Future<void> saveProfile(String profileName, String profilePic,
+      ProfileOnboardStatus status) async {
     try {
-      print("saveProfile is called with : $profileName and $profilePic");
+      print(
+          "saveProfile is called with : $profileName and $profilePic the onboard status: $status");
       final db = await openDb();
 
       // Check if a profile with the same ID already exists
@@ -62,6 +64,7 @@ class ProfileDataRepository {
           existingProfile['id'] as int,
           profileName: profileName,
           profilePic: profilePic,
+          profileOnboardStatus: status,
         );
 
         await db.update(
@@ -72,8 +75,12 @@ class ProfileDataRepository {
         );
       } else {
         // Profile with the specified profileName doesn't exist, insert a new one
-        final profile =
-            Profile(null, profileName: profileName, profilePic: profilePic);
+        final profile = Profile(
+          null,
+          profileName: profileName,
+          profilePic: profilePic,
+          profileOnboardStatus: status,
+        );
         await db.insert('profiles', profile.toMap());
       }
 
@@ -103,6 +110,8 @@ class ProfileDataRepository {
           result.first['id'] as int,
           profileName: result.first['profileName'] as String,
           profilePic: result.first['profilePic'] as String,
+          profileOnboardStatus: ProfileOnboardStatus
+              .values[result.first['profileOnboardStatus'] as int],
         );
       } else {
         return null; // No profiles found

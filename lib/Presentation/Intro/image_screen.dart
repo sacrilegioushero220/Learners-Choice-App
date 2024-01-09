@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learners_choice_app/config/app_router.dart';
 import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
+import 'package:learners_choice_app/core/models/profile_model.dart';
 import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -165,6 +166,7 @@ void handleNextButtonPress({
     profileBloc.add(SaveProfileEvent(
       profileName: profileName,
       profilePicPath: profilePicPath,
+      status: ProfileOnboardStatus.onboarded,
     ));
   } else {
     ScaffoldMessenger.of(context).showSnackBar(

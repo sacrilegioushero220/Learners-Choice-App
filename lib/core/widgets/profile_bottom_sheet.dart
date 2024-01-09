@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
+import 'package:learners_choice_app/core/models/profile_model.dart';
 import 'package:learners_choice_app/core/widgets/name_text_field.dart';
 
 import 'build_image_widget.dart';
@@ -109,7 +110,9 @@ class CustomBottomSheet extends StatelessWidget {
                 print(profileName);
 
                 BlocProvider.of<ProfileBloc>(context).add(SaveProfileEvent(
-                    profileName: profileName, profilePicPath: profilePic));
+                    profileName: profileName,
+                    profilePicPath: profilePic,
+                    status: ProfileOnboardStatus.onboarded));
                 print("SaveProfile State");
               },
               child: const Text("Update"),

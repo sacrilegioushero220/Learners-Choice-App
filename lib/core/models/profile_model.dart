@@ -18,7 +18,7 @@ class Profile {
       'id': id,
       'profileName': profileName,
       'profilePic': profilePic,
-      'profileOnboardStatus': profileOnboardStatus
+      'profileOnboardStatus': profileOnboardStatus.index
     };
   }
 }

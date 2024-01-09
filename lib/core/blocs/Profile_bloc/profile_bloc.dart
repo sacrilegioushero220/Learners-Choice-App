@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/widgets.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:learners_choice_app/core/models/profile_model.dart';
 import 'package:learners_choice_app/data/repository/profile_repo.dart';
 
 part 'profile_event.dart';
