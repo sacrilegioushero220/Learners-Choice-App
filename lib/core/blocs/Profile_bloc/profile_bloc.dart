@@ -40,7 +40,8 @@ class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
     emit(SavingProfileState());
 
     try {
-      await repository.saveProfile(event.profileName, event.profilePicPath);
+      await repository.saveProfile(
+          event.profileName, event.profilePicPath, event.status);
       emit(ProfileSavedState());
     } catch (e, stackTrace) {
       print(e);
