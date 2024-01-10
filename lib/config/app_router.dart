@@ -15,6 +15,7 @@ class AppRouter {
     debugLogDiagnostics: true,
     redirect: (context, state) {
       bool loggedIn = loginCubit.state.status == AuthStatus.authenticated;
+
       final bool loggingIn = state.matchedLocation == "/OnboardingScreen";
       if (!loggedIn) {
         print("loop1");

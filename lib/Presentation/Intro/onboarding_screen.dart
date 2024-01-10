@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:learners_choice_app/core/blocs/cubit/login_cubit.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
@@ -94,7 +96,10 @@ class OnboardingScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 24),
           child: CustomBigButton(
-            onPressed: () => context.goNamed("NameScreen"),
+            onPressed: () {
+              context.read<LoginCubit>().onBoarding();
+              context.goNamed("NameScreen");
+            },
             title: "Get started",
           ),
         ),

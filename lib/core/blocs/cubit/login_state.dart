@@ -13,7 +13,10 @@ class LoginState extends Equatable {
       : this._(
           status: AuthStatus.unauthenticated,
         );
-
+  const LoginState.unknown()
+      : this._(
+          status: AuthStatus.unknown,
+        );
   @override
   List<Object> get props => [status];
 }

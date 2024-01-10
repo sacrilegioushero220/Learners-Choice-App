@@ -11,8 +11,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final loginCubit = context.read<LoginCubit>();
-    loginCubit.checkAuthentication();
-
+    loginCubit.checkAuthentication;
     return Builder(builder: (context) {
       return MaterialApp.router(
         routerConfig: AppRouter(loginCubit: loginCubit).appRouter,
