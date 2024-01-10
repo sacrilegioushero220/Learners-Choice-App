@@ -15,7 +15,6 @@ class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
     on<PickImageEvent>(_pickImageEvent);
     on<SaveProfileEvent>(_saveProfileEvent);
     on<DisplayProfileEvent>(_displayProfileEvent);
-    on<OnboardProfileEvent>(_onboardProfileEvent);
   }
 
   @override
@@ -33,10 +32,7 @@ class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
       case 'ProfileSavedState':
       case 'ProfileInitialState':
         return ProfileInitialState();
-      case 'ProfileOnboardedState':
-        return ProfileOnboardedState.fromJson(json);
-      case 'ProfileNotOnboardedState':
-      // Return the initial state for transient states
+
       default:
         throw UnimplementedError(
             'Unexpected state type: ${json['runtimeType']}');
@@ -62,11 +58,7 @@ class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
       case ProfileSavedState:
       case ProfileInitialState:
         return null;
-      case ProfileOnboardedState:
-        final onboardedState = state as ProfileOnboardedState;
-        return onboardedState.toJson();
-      case ProfileNotOnboardedState:
-        return null; // No need to serialize transient or initial states
+
       default:
         throw UnimplementedError('Unexpected state type: ${state.runtimeType}');
     }
@@ -130,23 +122,6 @@ class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
       print(e);
       print('Error: $e\nStack Trace: $stackTrace');
       // Handle errors here
-    }
-  }
-
-  FutureOr<void> _onboardProfileEvent(
-      OnboardProfileEvent event, Emitter<ProfileState> emit) async {
-    try {
-      final existingProfile = await repository.getLatestProfile();
-      if (existingProfile != null) {
-        emit(ProfileOnboardedState(profile: existingProfile));
-        print("state is ProfileOnboarded ");
-      } else {
-        emit(ProfileNotOnboardedState());
-        print("state is ProfileNotOnboarded ");
-      }
-    } catch (e, stacktrace) {
-      print(
-          "there is issue with OnboardProfileEvent and error is : $e, the stacktrace : $stacktrace");
     }
   }
 }

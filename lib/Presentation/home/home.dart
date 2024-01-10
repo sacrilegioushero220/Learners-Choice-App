@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
+import 'package:learners_choice_app/core/blocs/nav_bloc/nav_bloc.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/presentation/home/docs_screen.dart';
 import 'package:learners_choice_app/presentation/home/home_screen.dart';
@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    context.read<ProfileBloc>().add(OnboardProfileEvent());
+    context.read<NavBloc>().add(OnboardProfileEvent());
   }
 
   @override
