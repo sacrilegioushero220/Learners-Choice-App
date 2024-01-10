@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:learners_choice_app/core/blocs/Profile_bloc/profile_bloc.dart';
+import 'package:learners_choice_app/core/blocs/cubit/login_cubit.dart';
 import 'package:learners_choice_app/core/models/profile_model.dart';
 import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
@@ -186,7 +187,7 @@ void handleNextButtonPress({
 
       // Navigate to /home
       context.go("/home");
-
+      context.read<LoginCubit>().login();
       profileBloc.add(DisplayProfileEvent());
 
       // Additional logic after profile is saved

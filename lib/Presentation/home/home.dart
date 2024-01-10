@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learners_choice_app/core/blocs/nav_bloc/nav_bloc.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/presentation/home/docs_screen.dart';
 import 'package:learners_choice_app/presentation/home/home_screen.dart';
 import 'package:learners_choice_app/presentation/home/info_screen.dart';
 
-// ignore: must_be_immutable
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -26,12 +23,6 @@ class _HomeState extends State<Home> {
     setState(() {
       _selectedIndex = index;
     });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    context.read<NavBloc>().add(OnboardProfileEvent());
   }
 
   @override
