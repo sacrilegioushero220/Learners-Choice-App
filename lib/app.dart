@@ -13,7 +13,7 @@ class App extends StatelessWidget {
           useMaterial3: true,
           colorScheme: lightColorScheme,
           textTheme: CustomTextTheme.customDarkTextTheme),
-      // darkTheme: ThemeData(useMaterial3: true, colorScheme: da rkColorScheme),
+      // darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
       home: const Scaffold(
         body: Home(),
       ),
