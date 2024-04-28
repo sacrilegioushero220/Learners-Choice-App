@@ -14,7 +14,11 @@ class ImageScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.only(
+            top: 16,
+            left: 16,
+            right: 16,
+          ),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +66,8 @@ class ImageScreen extends StatelessWidget {
                 const SizedBox(
                   height: 70,
                 ),
-                SizedBox(
+                Container(
+                  padding: const EdgeInsets.only(bottom: 10),
                   height: 130,
                   width: 328,
                   child: Row(
@@ -83,7 +88,7 @@ class ImageScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
