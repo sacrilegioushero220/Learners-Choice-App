@@ -15,6 +15,7 @@ class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
     on<PickImageEvent>(_pickImageEvent);
     on<SaveProfileEvent>(_saveProfileEvent);
     on<DisplayProfileEvent>(_displayProfileEvent);
+    on<FetchProfileEvent>(_fetchProfileEvent);
   }
 
   @override
@@ -123,5 +124,34 @@ class ProfileBloc extends HydratedBloc<ProfileEvent, ProfileState> {
       print('Error: $e\nStack Trace: $stackTrace');
       // Handle errors here
     }
+  }
+
+  Future<Profile?> _fetchProfileEvent(
+      FetchProfileEvent event, Emitter<ProfileState> emit) async {
+    try {
+      final latestProfile = await repository.getLatestProfile();
+
+      if (latestProfile != null) {
+        // Create Profile object with required arguments
+        final newProfile = Profile(
+          latestProfile.id, // Assuming id is present in latestProfile
+          profileName: latestProfile.profileName,
+          profilePic: latestProfile.profilePic,
+          profileOnboardStatus:
+              ProfileOnboardStatus.onboarded, // Optional argument
+        );
+
+        return newProfile;
+      } else {
+        // No profiles found
+        print('No profiles found');
+        return null;
+      }
+    } catch (e, stackTrace) {
+      print(e);
+      print('Error: $e\nStack Trace: $stackTrace');
+      // Handle errors here
+    }
+    return null;
   }
 }

@@ -1,29 +1,50 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learners_choice_app/core/blocs/fetch_profile.dart';
+import 'package:learners_choice_app/core/models/profile_model.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Timer(const Duration(seconds: 3), () {
-      if (mounted) {}
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        color: Colors.amber,
-      ),
+    return FutureBuilder<Profile?>(
+      future: fetchProfileMethod(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Scaffold(
+            body: Center(
+              child: SplashScreen(),
+            ),
+          );
+        } else if (snapshot.hasError) {
+          return AlertDialog(
+            actions: <Widget>[
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context, 'Restart');
+                  // Restart the app when "Restart" is pressed
+                },
+                child: const Text("Ok"),
+              ),
+            ],
+            content: Text('Error: ${snapshot.error}'),
+          );
+        } else if (snapshot.hasData) {
+          final profile = snapshot.data!;
+          // Use the retrieved profile for UI updates
+          return Container(
+            // ... (Use profile data here)
+            color: Colors.white,
+            child: Text(profile.toString()),
+          );
+        } else {
+          return const Scaffold(
+            body: Center(
+              child: Text('Unexpected error occurred.'),
+            ),
+          );
+        }
+      },
     );
   }
 }
