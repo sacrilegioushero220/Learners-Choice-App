@@ -69,8 +69,8 @@ class MockTestScreen extends StatelessWidget {
                           label: "End",
                         ),
                         const CountDownTimer(),
-                        buildCustomFabButton(
-                          context: context,
+                        BuildCustomFabButton(
+                          heroTag: "6",
                           label: "Submit",
                           isReversed: true,
                           onPressed: () {},

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/Presentation/Intro/image_screen.dart';
+import 'package:learners_choice_app/core/blocs/cubit/cubit/local_storage_cubit.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
@@ -57,21 +59,16 @@ class NameScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(212, 70, 20, 0),
-                  child: buildCustomFabButton(
-                    context: BuildContext,
+                  child: BuildCustomFabButton(
+                    heroTag: "1",
                     label: "Next",
                     // isReversed: false,
 
                     onPressed: () {
                       String name = nameController.text; // Get the entered name
                       print("name is $name");
-                      ApiService.saveNameToFirestore(
-                          name); // Call the API method
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (ctx) =>
-                                  const ImageScreen())); // Navigate to the next screen or perform any other action
+                      BlocProvider.of<LocalStorageCubit>(context)
+                          .saveName(name, context);
                     },
                     isReversed: false,
                   ),

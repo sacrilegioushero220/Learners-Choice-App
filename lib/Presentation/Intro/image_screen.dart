@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learners_choice_app/core/blocs/cubit/cubit/local_storage_cubit.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -56,7 +58,10 @@ class ImageScreen extends StatelessWidget {
                   height: 100,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    BlocProvider.of<LocalStorageCubit>(context)
+                        .printStoredName();
+                  },
                   child: buildImageWidget(
                     width: 316,
                     height: 263.39,
@@ -74,16 +79,16 @@ class ImageScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      buildCustomFabButton(
-                          context: BuildContext,
+                      BuildCustomFabButton(
+                          heroTag: "2",
                           label: "Back",
                           onPressed: () {
                             Navigator.pop(context);
                           },
                           isReversed: true,
                           icon: Icons.arrow_back),
-                      buildCustomFabButton(
-                        context: BuildContext,
+                      BuildCustomFabButton(
+                        heroTag: "3",
                         label: "Next",
                         onPressed: () {},
                         isReversed: false,
