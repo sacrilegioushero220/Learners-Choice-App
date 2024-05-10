@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/Presentation/Intro/image_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
+import 'package:learners_choice_app/network/api_service.dart';
 import '../../../../core/widgets/customButtons/custom_fab_button.dart';
 
 class NameScreen extends StatelessWidget {
@@ -9,6 +11,7 @@ class NameScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final nameController = TextEditingController();
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -43,7 +46,7 @@ class NameScreen extends StatelessWidget {
                 const SizedBox(
                   height: 36.0,
                 ),
-                nameTextField(context),
+                nameTextField(context, nameController),
                 const SizedBox(
                   height: 105.0,
                 ),
@@ -59,7 +62,18 @@ class NameScreen extends StatelessWidget {
                     label: "Next",
                     // isReversed: false,
 
-                    onPressed: () {}, isReversed: false,
+                    onPressed: () {
+                      String name = nameController.text; // Get the entered name
+                      print("name is $name");
+                      ApiService.saveNameToFirestore(
+                          name); // Call the API method
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (ctx) =>
+                                  const ImageScreen())); // Navigate to the next screen or perform any other action
+                    },
+                    isReversed: false,
                   ),
                 )
               ],
@@ -92,8 +106,11 @@ Text buildRichTextTitle(String title1, String title2, BuildContext context) {
   );
 }
 
-Widget nameTextField(BuildContext context) {
+Widget nameTextField(
+    BuildContext context, TextEditingController nameTextController) {
   return TextField(
+    style: const TextStyle(color: Colors.black),
+    controller: nameTextController,
     decoration: InputDecoration(
       contentPadding: const EdgeInsets.only(top: 8, left: 16, bottom: 8),
       border: OutlineInputBorder(
@@ -101,8 +118,8 @@ Widget nameTextField(BuildContext context) {
         borderSide: const BorderSide(width: 2, color: Color(0xFF00639B)),
       ),
       hintText: 'Name',
-      hintStyle: TextStyle(
-        color: context.onSurface,
+      hintStyle: const TextStyle(
+        color: Colors.black,
         fontSize: 16,
         fontFamily: 'Roboto',
         fontWeight: FontWeight.w400,

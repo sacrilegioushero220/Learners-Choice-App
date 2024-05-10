@@ -77,7 +77,9 @@ class ImageScreen extends StatelessWidget {
                       buildCustomFabButton(
                           context: BuildContext,
                           label: "Back",
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                           isReversed: true,
                           icon: Icons.arrow_back),
                       buildCustomFabButton(
