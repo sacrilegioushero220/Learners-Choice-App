@@ -40,27 +40,6 @@ class DocsScreen extends StatelessWidget {
     ];
     return Scaffold(
       backgroundColor: context.onPrimary,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: context.onPrimary,
-        leading: Builder(builder: (BuildContext context) {
-          return const Icon(Icons.menu);
-        }),
-        title: Text(appBarTitle),
-        centerTitle: true,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0),
-            child: SizedBox(
-              width: 30,
-              height: 30,
-              child: CircleAvatar(
-                backgroundImage: AssetImage(avatar1Path),
-              ),
-            ),
-          ),
-        ],
-      ),
       body: SingleChildScrollView(
         child: Center(
           child: Padding(

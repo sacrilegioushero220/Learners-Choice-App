@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
+import 'package:learners_choice_app/core/widgets/custom_app_bar.dart';
 import 'package:learners_choice_app/presentation/home/docs_screen.dart';
 import 'package:learners_choice_app/presentation/home/home_screen.dart';
 import 'package:learners_choice_app/presentation/home/info_screen.dart';
@@ -37,6 +38,16 @@ class _HomeState extends State<Home> {
     return true;
   }
 
+  PreferredSizeWidget? _selectWhichAppBar(BuildContext context) {
+    if (_selectedIndex == 2) {
+      return AppBar(
+        backgroundColor: Colors.transparent,
+      );
+    } else {
+      return customAppBar(context);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return PopScope(
@@ -50,29 +61,32 @@ class _HomeState extends State<Home> {
           exit(0);
         }
       },
-      child: Scaffold(
-        backgroundColor: context.onPrimary,
-        body: screens[_selectedIndex],
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: context.surfaceVariant,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home_outlined,
+      child: SafeArea(
+        child: Scaffold(
+          backgroundColor: context.onPrimary,
+          body: screens[_selectedIndex],
+          appBar: _selectWhichAppBar(context),
+          bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: context.surfaceVariant,
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home_outlined,
+                ),
+                label: "Home",
               ),
-              label: "Home",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.description_outlined),
-              label: "Docs",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.info_outlined),
-              label: "info",
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          onTap: _onItemTapped,
+              BottomNavigationBarItem(
+                icon: Icon(Icons.description_outlined),
+                label: "Docs",
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.info_outlined),
+                label: "info",
+              ),
+            ],
+            currentIndex: _selectedIndex,
+            onTap: _onItemTapped,
+          ),
         ),
       ),
     );
