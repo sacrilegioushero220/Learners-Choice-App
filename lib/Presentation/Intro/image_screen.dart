@@ -1,5 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learners_choice_app/Presentation/home/home.dart';
 import 'package:learners_choice_app/core/blocs/cubit/cubit/local_storage_cubit.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
@@ -57,15 +59,35 @@ class ImageScreen extends StatelessWidget {
                 const SizedBox(
                   height: 100,
                 ),
-                InkWell(
-                  onTap: () {
-                    BlocProvider.of<LocalStorageCubit>(context)
-                        .printStoredName();
-                  },
-                  child: buildImageWidget(
-                    width: 316,
-                    height: 263.39,
-                    imagePath: imageAvatar,
+                Center(
+                  child: BlocBuilder<LocalStorageCubit, LocalStorageState>(
+                    builder: (context, state) {
+                      print("current State is : $state");
+                      if (state is ImagePicked) {
+                        return InkWell(
+                          onTap: () {
+                            BlocProvider.of<LocalStorageCubit>(context)
+                                .pickAndSaveImage();
+                          },
+                          child: CircleAvatar(
+                            radius: 130, // Adjust the radius as needed
+                            backgroundImage: FileImage(File(state.imagePath)),
+                          ),
+                        );
+                      } else {
+                        return InkWell(
+                          onTap: () {
+                            BlocProvider.of<LocalStorageCubit>(context)
+                                .pickAndSaveImage();
+                          },
+                          child: buildImageWidget(
+                            width: 316,
+                            height: 263.39,
+                            imagePath: imageAvatar,
+                          ),
+                        );
+                      }
+                    },
                   ),
                 ),
                 const SizedBox(
@@ -90,7 +112,18 @@ class ImageScreen extends StatelessWidget {
                       BuildCustomFabButton(
                         heroTag: "3",
                         label: "Next",
-                        onPressed: () {},
+                        onPressed: () async {
+                          final localStorageCubit =
+                              BlocProvider.of<LocalStorageCubit>(context);
+                          await localStorageCubit.getProfilePic();
+                          await localStorageCubit.saveOnboardStatus(true);
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (ctx) => const Home(),
+                              ));
+                          // Navigate to the next screen or perform any other action
+                        },
                         isReversed: false,
                       ),
                     ],

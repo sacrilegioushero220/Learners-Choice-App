@@ -1,4 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learners_choice_app/core/blocs/cubit/cubit/local_storage_cubit.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -6,9 +10,19 @@ import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/custom_grid_view_item.dart';
 import 'package:learners_choice_app/core/widgets/ll_tile.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+@override
+void initState(context) {
+  BlocProvider.of<LocalStorageCubit>(context).getProfilePic();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +41,20 @@ class HomeScreen extends StatelessWidget {
             child: SizedBox(
               width: 30,
               height: 30,
-              child: CircleAvatar(
-                backgroundImage: AssetImage(avatar1Path),
+              child: BlocBuilder<LocalStorageCubit, LocalStorageState>(
+                builder: (context, state) {
+                  print("current state in homeScreen is $state");
+                  if (state is ProfilePicFetchState) {
+                    return CircleAvatar(
+                      radius: 130, // Adjust the radius as needed
+                      backgroundImage: FileImage(File(state.profilePic)),
+                    );
+                  }
+
+                  return CircleAvatar(
+                    backgroundImage: AssetImage(avatar1Path),
+                  );
+                },
               ),
             ),
           ),
@@ -80,18 +106,30 @@ class HomeScreen extends StatelessWidget {
                   crossAxisSpacing: 10,
                   crossAxisCount: 3,
                   children: [
-                    buildCustomGridViewItem(
-                        gridViewItemIcon1, gridViewItemlabel1, context),
-                    buildCustomGridViewItem(
-                        gridViewItemIcon2, gridViewItemlabel2, context),
-                    buildCustomGridViewItem(
-                        gridViewItemIcon3, gridViewItemlabel3, context),
-                    buildCustomGridViewItem(
-                        gridViewItemIcon4, gridViewItemlabel4, context),
-                    buildCustomGridViewItem(
-                        gridViewItemIcon5, gridViewItemlabel5, context),
-                    buildCustomGridViewItem(
-                        gridViewItemIcon6, gridViewItemlabel6, context)
+                    BuildCustomGridViewItem(
+                      iconPath: gridViewItemIcon1,
+                      label: gridViewItemlabel1,
+                    ),
+                    BuildCustomGridViewItem(
+                      iconPath: gridViewItemIcon2,
+                      label: gridViewItemlabel2,
+                    ),
+                    BuildCustomGridViewItem(
+                      iconPath: gridViewItemIcon3,
+                      label: gridViewItemlabel3,
+                    ),
+                    BuildCustomGridViewItem(
+                      iconPath: gridViewItemIcon4,
+                      label: gridViewItemlabel4,
+                    ),
+                    BuildCustomGridViewItem(
+                      iconPath: gridViewItemIcon5,
+                      label: gridViewItemlabel5,
+                    ),
+                    BuildCustomGridViewItem(
+                      iconPath: gridViewItemIcon6,
+                      label: gridViewItemlabel6,
+                    )
                   ],
                 ),
               )

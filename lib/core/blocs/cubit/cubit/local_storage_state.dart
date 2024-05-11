@@ -9,3 +9,25 @@ class NameSaved extends LocalStorageState {
 
   NameSaved(this.name);
 }
+
+class ImagePicked extends LocalStorageState {
+  final String imagePath;
+
+  ImagePicked(this.imagePath);
+}
+
+class OnboardState extends LocalStorageState {
+  final bool isOnboarded;
+
+  OnboardState(this.isOnboarded);
+}
+
+class ProfilePicFetchState extends LocalStorageState {
+  final String profilePic;
+
+  ProfilePicFetchState({required this.profilePic});
+}
+
+class OnboardedState extends LocalStorageState {}
+
+class NotOnboardedState extends LocalStorageState {}
