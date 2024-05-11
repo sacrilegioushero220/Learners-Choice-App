@@ -67,8 +67,19 @@ class NameScreen extends StatelessWidget {
                     onPressed: () {
                       String name = nameController.text; // Get the entered name
                       print("name is $name");
-                      BlocProvider.of<LocalStorageCubit>(context)
-                          .saveName(name, context);
+                      if (name.isNotEmpty) {
+                        BlocProvider.of<LocalStorageCubit>(context)
+                            .saveName(name, context);
+                      } else {
+                        // Handle the case when the search keyword is empty or null
+                        // For example, you can show a snackbar or perform any other action
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Please enter a valid name '),
+                            duration: Duration(seconds: 1),
+                          ),
+                        );
+                      }
                     },
                     isReversed: false,
                   ),
