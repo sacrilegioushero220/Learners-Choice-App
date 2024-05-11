@@ -10,19 +10,11 @@ import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/custom_grid_view_item.dart';
 import 'package:learners_choice_app/core/widgets/ll_tile.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({
+    super.key,
+  });
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-@override
-void initState(context) {
-  BlocProvider.of<LocalStorageCubit>(context).getProfilePic();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
