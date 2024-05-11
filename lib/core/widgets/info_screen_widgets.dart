@@ -76,7 +76,6 @@ Widget buildInfoTileCard(BuildContext context) {
 
 Widget buildAboutCard(BuildContext context) {
   return Container(
-    height: 250,
     width: 322,
     padding: const EdgeInsets.only(
       top: 10,

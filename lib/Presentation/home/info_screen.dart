@@ -16,7 +16,7 @@ class InfoScreen extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 170),
+                  padding: const EdgeInsets.only(top: 50),
                   child: buildImageWidget(
                     width: 223,
                     height: 49,

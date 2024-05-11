@@ -9,6 +9,7 @@ import 'package:learners_choice_app/core/extensions/color_extention.dart';
 PreferredSizeWidget customAppBar(BuildContext context) {
   return AppBar(
     elevation: 0,
+    scrolledUnderElevation: 0,
     backgroundColor: context.onPrimary,
     leading: Builder(builder: (BuildContext context) {
       return const Icon(Icons.menu);
