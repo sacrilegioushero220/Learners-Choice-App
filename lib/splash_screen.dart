@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: BlocListener<LocalStorageCubit, LocalStorageState>(
           listener: (context, state) {
             if (state is OnboardedState) {
-              BlocProvider.of<LocalStorageCubit>(context).getProfilePic();
+              BlocProvider.of<LocalStorageCubit>(context).getProfile();
               print("state is :$state");
               Navigator.pushReplacement(
                 context,

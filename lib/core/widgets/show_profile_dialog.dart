@@ -5,30 +5,21 @@ import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 
 Future<dynamic> showProfileDialog(
   BuildContext context,
-  String profileName,
-  String profilePic,
-) {
+) async {
   return showModalBottomSheet(
-      context: context,
-      builder: (context) => CustomBottomSheet(
-            profileName: profileName,
-            profilePic: profilePic,
-          ));
+      context: context, builder: (context) => const CustomBottomSheet());
 }
 
 // ignore: must_be_immutable
 class CustomBottomSheet extends StatelessWidget {
-  CustomBottomSheet({
+  const CustomBottomSheet({
     super.key,
-    required this.profileName,
-    required this.profilePic,
   });
-
-  String profileName;
-  String profilePic;
 
   @override
   Widget build(BuildContext context) {
+    String profilePic = "";
+    String profileName = "";
     final controller = TextEditingController();
     return SafeArea(
       child: ListView(
@@ -49,8 +40,7 @@ class CustomBottomSheet extends StatelessWidget {
                   }
                 },
                 builder: (context, state) {
-                  if (state is ProfilePicFetchState) {
-                    print("ImagePicked State");
+                  if (state is ProfileFetchedState) {
                     profilePic = state.profilePic;
                     return InkWell(
                       onTap: () {
@@ -104,9 +94,30 @@ class CustomBottomSheet extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(24.0),
-                  child: NameTextField(
-                    controller: controller,
-                    hintText: profileName,
+                  child: BlocConsumer<LocalStorageCubit, LocalStorageState>(
+                    listener: (context, state) {
+                      // TODO: implement listener
+                    },
+                    builder: (context, state) {
+                      if (state is ProfileFetchedState) {
+                        print(state.profileName);
+                        return NameTextField(
+                          controller: controller,
+                          hintText: state.profileName,
+                        );
+                      }
+                      if (state is ProfileUpdatedState) {
+                        return NameTextField(
+                          controller: controller,
+                          hintText: state.profileName,
+                        );
+                      }
+
+                      return NameTextField(
+                        controller: controller,
+                        hintText: profileName,
+                      );
+                    },
                   ),
                 ),
               ),

@@ -22,11 +22,9 @@ class NameTextField extends StatelessWidget {
         hintText: hintText,
         hintStyle: TextStyle(
           color: context.onSurface,
-          fontSize: 16,
+          fontSize: 14,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.w400,
-          height: 0.09,
-          letterSpacing: 0.50,
         ),
       ),
     );

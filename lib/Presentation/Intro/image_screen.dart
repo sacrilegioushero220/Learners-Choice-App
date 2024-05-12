@@ -117,7 +117,7 @@ class ImageScreen extends StatelessWidget {
                               BlocProvider.of<LocalStorageCubit>(context);
 
                           await localStorageCubit.saveOnboardStatus(true);
-                          await localStorageCubit.getProfilePic();
+                          await localStorageCubit.getProfile();
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(

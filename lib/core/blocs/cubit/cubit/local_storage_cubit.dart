@@ -16,25 +16,29 @@ class LocalStorageCubit extends Cubit<LocalStorageState> {
   }
 
   // Function to print the stored name from shared preferences
-  Future<void> getProfilePic() async {
+  Future<void> getProfile() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? profilePic = prefs.getString('profilePic');
-    if (profilePic != null) {
-      emit(ProfilePicFetchState(profilePic: profilePic));
-      print('Stored Name: $profilePic');
+    String? profileName = prefs.getString('name');
+    if (profilePic != null && profileName != null) {
+      emit(ProfileFetchedState(
+        profilePic: profilePic,
+        profileName: profileName,
+      ));
+      print('Stored Name: $profileName and Stored Pic is : $profilePic');
     } else {
-      print('No name stored');
+      print('No profile is stored');
     }
   }
 
   // Function to print the stored name from shared preferences
-  Future<void> printStoredPath() async {
+  Future<String?> getSavedName() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? storedName = prefs.getString('profilePic');
+    String? storedName = prefs.getString('name');
     if (storedName != null) {
-      print('Stored Name: $storedName');
+      return storedName;
     } else {
-      print('No name stored');
+      return storedName;
     }
   }
 

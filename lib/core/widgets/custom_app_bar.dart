@@ -7,9 +7,11 @@ import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/widgets/show_profile_dialog.dart';
 
-PreferredSizeWidget customAppBar(BuildContext context,
-    {void Function()? onTap}) {
+PreferredSizeWidget customAppBar(
+  BuildContext context,
+) {
   String profilePic = '';
+  String profileName = '';
   return AppBar(
     elevation: 0,
     scrolledUnderElevation: 0,
@@ -26,25 +28,29 @@ PreferredSizeWidget customAppBar(BuildContext context,
           width: 30,
           height: 30,
           child: GestureDetector(
-            onTap: onTap,
+            onTap: () {
+              showProfileDialog(context);
+            },
             child: BlocConsumer<LocalStorageCubit, LocalStorageState>(
               listener: (context, state) {
                 if (state is ProfileUpdatedState) {
                   // Handle ImagePickedState changes if needed
                   profilePic = state.profilePic;
+                  profileName = state.profileName;
                 }
-                //profilePic =state.
               },
               builder: (context, state) {
                 print("current state in homeScreen is $state");
-                if (state is ProfilePicFetchState) {
+                if (state is ProfileFetchedState) {
                   profilePic = state.profilePic;
+                  profileName = state.profilePic;
                   return CircleAvatar(
                     radius: 130, // Adjust the radius as needed
                     backgroundImage: FileImage(File(profilePic)),
                   );
                 } else if (state is ProfileUpdatedState) {
                   profilePic = state.profilePic;
+                  profileName = state.profileName;
                   return CircleAvatar(
                     radius: 130, // Adjust the radius as needed
                     backgroundImage: FileImage(File(profilePic)),

@@ -22,10 +22,14 @@ class OnboardState extends LocalStorageState {
   OnboardState(this.isOnboarded);
 }
 
-class ProfilePicFetchState extends LocalStorageState {
+class ProfileFetchedState extends LocalStorageState {
   final String profilePic;
+  final String profileName;
 
-  ProfilePicFetchState({required this.profilePic});
+  ProfileFetchedState({
+    required this.profileName,
+    required this.profilePic,
+  });
 }
 
 class OnboardedState extends LocalStorageState {}
