@@ -12,3 +12,5 @@ export 'lava/ball.dart';
 export 'lava/lava_clock.dart';
 export 'lava/lava_painter.dart';
 export 'custom_app_bar.dart';
+export 'build_image_widget.dart';
+export 'name_text_field.dart';

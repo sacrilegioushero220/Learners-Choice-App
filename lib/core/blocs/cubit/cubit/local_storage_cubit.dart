@@ -13,12 +13,6 @@ class LocalStorageCubit extends Cubit<LocalStorageState> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('name', name);
     emit(NameSaved(name));
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (ctx) => const ImageScreen(),
-        ));
-    // Navigate to the next screen or perform any other action
   }
 
   // Function to print the stored name from shared preferences
@@ -69,5 +63,14 @@ class LocalStorageCubit extends Cubit<LocalStorageState> {
     } else {
       emit(NotOnboardedState());
     }
+  }
+
+  Future<void> updateProfile(String name) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('name', name);
+    String? profilePic = prefs.getString('profilePic');
+    emit(ProfileUpdatedState(
+        profileName: name, profilePic: profilePic.toString()));
+    print("Profile is updatedstate");
   }
 }

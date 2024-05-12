@@ -31,3 +31,13 @@ class ProfilePicFetchState extends LocalStorageState {
 class OnboardedState extends LocalStorageState {}
 
 class NotOnboardedState extends LocalStorageState {}
+
+class ProfileUpdatedState extends LocalStorageState {
+  final String profilePic;
+  final String profileName;
+
+  ProfileUpdatedState({
+    required this.profileName,
+    required this.profilePic,
+  });
+}

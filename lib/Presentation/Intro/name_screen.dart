@@ -70,6 +70,12 @@ class NameScreen extends StatelessWidget {
                       if (name.isNotEmpty) {
                         BlocProvider.of<LocalStorageCubit>(context)
                             .saveName(name, context);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (ctx) => const ImageScreen(),
+                            ));
+                        // Navigate to the next screen or perform any other action
                       } else {
                         // Handle the case when the search keyword is empty or null
                         // For example, you can show a snackbar or perform any other action
