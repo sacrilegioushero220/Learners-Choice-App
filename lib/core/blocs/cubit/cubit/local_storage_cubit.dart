@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
@@ -28,6 +30,7 @@ class LocalStorageCubit extends Cubit<LocalStorageState> {
       print('Stored Name: $profileName and Stored Pic is : $profilePic');
     } else {
       print('No profile is stored');
+      log("This is a log file");
     }
   }
 
