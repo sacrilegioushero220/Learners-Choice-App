@@ -10,8 +10,6 @@ import 'package:learners_choice_app/core/widgets/show_profile_dialog.dart';
 PreferredSizeWidget customAppBar(
   BuildContext context,
 ) {
-  String profilePic = '';
-  String profileName = '';
   return AppBar(
     elevation: 0,
     scrolledUnderElevation: 0,
@@ -33,30 +31,19 @@ PreferredSizeWidget customAppBar(
             },
             child: BlocConsumer<LocalStorageCubit, LocalStorageState>(
               listener: (context, state) {
-                if (state is ProfileUpdatedState) {
-                  // Handle ImagePickedState changes if needed
-                  profilePic = state.profilePic;
-                  profileName = state.profileName;
-                }
+                // Handle state changes if needed
               },
               builder: (context, state) {
-                print("current state in homeScreen is $state");
-                if (state is ProfileFetchedState) {
-                  profilePic = state.profilePic;
-                  profileName = state.profilePic;
-                  return CircleAvatar(
-                    radius: 130, // Adjust the radius as needed
-                    backgroundImage: FileImage(File(profilePic)),
-                  );
-                } else if (state is ProfileUpdatedState) {
-                  profilePic = state.profilePic;
-                  profileName = state.profileName;
+                if (state is ProfileFetchedState ||
+                    state is ProfileUpdatedState) {
+                  final profilePic = state is ProfileFetchedState
+                      ? state.profilePic
+                      : (state as ProfileUpdatedState).profilePic;
                   return CircleAvatar(
                     radius: 130, // Adjust the radius as needed
                     backgroundImage: FileImage(File(profilePic)),
                   );
                 }
-
                 return CircleAvatar(
                   backgroundImage: AssetImage(avatar1Path),
                 );

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/core/blocs/cubit/cubit/local_storage_cubit.dart';
@@ -15,17 +17,44 @@ Future<dynamic> showProfileDialog(
   );
 }
 
-// ignore: must_be_immutable
-class CustomBottomSheet extends StatelessWidget {
+class CustomBottomSheet extends StatefulWidget {
   const CustomBottomSheet({
     super.key,
   });
 
   @override
+  _CustomBottomSheetState createState() => _CustomBottomSheetState();
+}
+
+class _CustomBottomSheetState extends State<CustomBottomSheet> {
+  late TextEditingController controller;
+  String profilePic = "";
+  String profileName = "";
+
+  @override
+  void initState() {
+    super.initState();
+    controller = TextEditingController();
+    final state = BlocProvider.of<LocalStorageCubit>(context).state;
+    if (state is ProfileFetchedState) {
+      profilePic = state.profilePic;
+      profileName = state.profileName;
+      controller.text = profileName;
+    } else if (state is ProfileUpdatedState) {
+      profilePic = state.profilePic;
+      profileName = state.profileName;
+      controller.text = profileName;
+    }
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    String profilePic = "";
-    String profileName = "";
-    final controller = TextEditingController();
     return SingleChildScrollView(
       child: Padding(
         padding:
@@ -34,8 +63,6 @@ class CustomBottomSheet extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            //padding: const EdgeInsets.all(16),
-            //keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -53,46 +80,18 @@ class CustomBottomSheet extends StatelessWidget {
                   BlocConsumer<LocalStorageCubit, LocalStorageState>(
                     listener: (context, state) {
                       if (state is ProfileUpdatedState) {
-                        profilePic = state.profilePic;
+                        setState(() {
+                          profilePic = state.profilePic;
+                          profileName = state.profileName;
+                          controller.text = profileName;
+                        });
                       } else if (state is ImagePicked) {
-                        profilePic = state.imagePath;
+                        setState(() {
+                          profilePic = state.imagePath;
+                        });
                       }
                     },
                     builder: (context, state) {
-                      if (state is ProfileFetchedState) {
-                        profilePic = state.profilePic;
-                        return InkWell(
-                          onTap: () {
-                            BlocProvider.of<LocalStorageCubit>(context)
-                                .pickAndSaveImage();
-                          },
-                          child: BuildImageWidget(
-                            isCircleAvatar: true,
-                            isFileImage: true,
-                            boxFit: BoxFit.cover,
-                            width: 50,
-                            height: 60,
-                            imagePath: profilePic,
-                          ),
-                        );
-                      } else if (state is ProfileUpdatedState) {
-                        profilePic = state.profilePic;
-                        return InkWell(
-                          onTap: () {
-                            BlocProvider.of<LocalStorageCubit>(context)
-                                .pickAndSaveImage();
-                          },
-                          child: BuildImageWidget(
-                            isCircleAvatar: true,
-                            isFileImage: true,
-                            boxFit: BoxFit.cover,
-                            width: 50,
-                            height: 60,
-                            imagePath: profilePic,
-                          ),
-                        );
-                      }
-
                       return InkWell(
                         onTap: () {
                           BlocProvider.of<LocalStorageCubit>(context)
@@ -100,11 +99,11 @@ class CustomBottomSheet extends StatelessWidget {
                         },
                         child: BuildImageWidget(
                           isCircleAvatar: true,
-                          isFileImage: true,
-                          width: 100,
-                          height: 163.39,
+                          isFileImage: profilePic.isNotEmpty,
+                          boxFit: BoxFit.cover,
+                          width: 50,
+                          height: 60,
                           imagePath: profilePic,
-                          boxFit: BoxFit.fill,
                         ),
                       );
                     },
@@ -113,28 +112,9 @@ class CustomBottomSheet extends StatelessWidget {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
-                      child: BlocConsumer<LocalStorageCubit, LocalStorageState>(
-                        listener: (context, state) {},
-                        builder: (context, state) {
-                          if (state is ProfileFetchedState) {
-                            print(state.profileName);
-                            return NameTextField(
-                              controller: controller,
-                              hintText: state.profileName,
-                            );
-                          }
-                          if (state is ProfileUpdatedState) {
-                            return NameTextField(
-                              controller: controller,
-                              hintText: state.profileName,
-                            );
-                          }
-
-                          return NameTextField(
-                            controller: controller,
-                            hintText: profileName,
-                          );
-                        },
+                      child: NameTextField(
+                        controller: controller,
+                        hintText: "Enter your name",
                       ),
                     ),
                   ),
@@ -155,15 +135,11 @@ class CustomBottomSheet extends StatelessWidget {
                     ),
                     onPressed: () {
                       final name = controller.text.trim();
-
                       if (name.isNotEmpty) {
                         BlocProvider.of<LocalStorageCubit>(context)
                             .updateProfile(name);
-
-                        Navigator.pop(context);
-                      } else {
-                        Navigator.pop(context);
                       }
+                      Navigator.pop(context);
                     },
                     child: const Icon(Icons.done),
                   ),
