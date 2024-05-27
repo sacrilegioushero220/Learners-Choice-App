@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/Presentation/results_screen.dart';
+import 'package:learners_choice_app/Presentation/traffic_signs_screen.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -69,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (ctx) => const ResultsScreen()));
+                                builder: (ctx) => const TrafficSignScreen()));
                       },
                     ),
                     BuildCustomGridViewItem(

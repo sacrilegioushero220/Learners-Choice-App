@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/core/blocs/cubit/apiCubit/api_cubit.dart';
+import 'package:learners_choice_app/core/blocs/cubit/apiCubit/traffic_sign_type.dart';
 
 import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({super.key});
-
+  const ResultsScreen({
+    super.key,
+    required this.trafficSignType,
+  });
+  final TrafficSignType trafficSignType;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ApiCubit()..fetchItems(),
+      create: (context) => ApiCubit()..fetchItems(trafficSignType),
       child: Scaffold(
         appBar: customAppBar(context),
         body: Padding(

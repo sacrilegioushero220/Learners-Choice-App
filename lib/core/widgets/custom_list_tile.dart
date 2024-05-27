@@ -26,7 +26,23 @@ class CustomListTile extends StatelessWidget {
               scale: 1,
               width: 80,
               height: 80,
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
+              loadingBuilder: (context, child, loadingProgress) {
+                if (loadingProgress == null) {
+                  return child;
+                } else {
+                  return Center(
+                    child: CircularProgressIndicator(
+                      valueColor:
+                          const AlwaysStoppedAnimation<Color>(Colors.blue),
+                      value: loadingProgress.expectedTotalBytes != null
+                          ? loadingProgress.cumulativeBytesLoaded /
+                              loadingProgress.expectedTotalBytes!
+                          : null,
+                    ),
+                  );
+                }
+              },
             ),
           ),
           const SizedBox(
