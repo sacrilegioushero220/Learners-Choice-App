@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class CustomListTile extends StatelessWidget {
   const CustomListTile({
@@ -8,6 +8,7 @@ class CustomListTile extends StatelessWidget {
     required this.imagePath,
     required this.title,
   });
+
   final String number;
   final String imagePath;
   final String title;
@@ -21,33 +22,18 @@ class CustomListTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
-            child: Image.network(
-              imagePath,
-              scale: 1,
+            child: CachedNetworkImage(
+              imageUrl: imagePath,
               width: 80,
               height: 80,
               fit: BoxFit.contain,
-              loadingBuilder: (context, child, loadingProgress) {
-                if (loadingProgress == null) {
-                  return child;
-                } else {
-                  return Center(
-                    child: CircularProgressIndicator(
-                      valueColor:
-                          const AlwaysStoppedAnimation<Color>(Colors.blue),
-                      value: loadingProgress.expectedTotalBytes != null
-                          ? loadingProgress.cumulativeBytesLoaded /
-                              loadingProgress.expectedTotalBytes!
-                          : null,
-                    ),
-                  );
-                }
-              },
+              // placeholder: (context, url) => const CircularProgressIndicator(
+              //   valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+              // ),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
           ),
-          const SizedBox(
-            height: 8,
-          ),
+          const SizedBox(height: 8),
           Flexible(
             child: Text(
               title,
