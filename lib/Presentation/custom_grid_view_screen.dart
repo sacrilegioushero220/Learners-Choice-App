@@ -5,8 +5,8 @@ import 'package:learners_choice_app/core/blocs/cubit/apiCubit/traffic_sign_type.
 
 import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 
-class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({
+class CustomGridViewScreen extends StatelessWidget {
+  const CustomGridViewScreen({
     super.key,
     required this.trafficSignType,
   });

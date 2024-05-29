@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learners_choice_app/Presentation/results_screen.dart';
+import 'package:learners_choice_app/Presentation/custom_grid_view_screen.dart';
 import 'package:learners_choice_app/core/widgets/custom_app_bar.dart';
 import 'package:learners_choice_app/core/widgets/traffic_sign_category.dart';
 
@@ -25,7 +25,7 @@ class TrafficSignScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ResultsScreen(
+                        builder: (context) => const CustomGridViewScreen(
                               trafficSignType: TrafficSignType.cautionary,
                             )));
               },
@@ -40,7 +40,7 @@ class TrafficSignScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ResultsScreen(
+                        builder: (context) => const CustomGridViewScreen(
                               trafficSignType: TrafficSignType.mandatory,
                             )));
               },
@@ -55,7 +55,7 @@ class TrafficSignScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ResultsScreen(
+                        builder: (context) => const CustomGridViewScreen(
                               trafficSignType: TrafficSignType.informatory,
                             )));
               },

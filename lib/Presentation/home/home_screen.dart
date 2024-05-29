@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learners_choice_app/Presentation/results_screen.dart';
+import 'package:learners_choice_app/Presentation/custom_list_view_screen.dart';
 import 'package:learners_choice_app/Presentation/traffic_signs_screen.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
@@ -76,6 +76,13 @@ class HomeScreen extends StatelessWidget {
                     BuildCustomGridViewItem(
                       iconPath: gridViewItemIcon2,
                       label: gridViewItemlabel2,
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (ctx) =>
+                                    const CustomListViewScreen()));
+                      },
                     ),
                     BuildCustomGridViewItem(
                       iconPath: gridViewItemIcon3,
