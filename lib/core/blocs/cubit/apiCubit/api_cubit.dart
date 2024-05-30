@@ -23,6 +23,10 @@ class ApiCubit extends Cubit<ApiState> {
     await fetchData('trafficSigns', subCollectionPath: type.path);
   }
 
+  Future<void> fetchDriverSignals() async {
+    await fetchData('driverSignals');
+  }
+
   Future<void> fetchData(String collectionPath,
       {String? subCollectionPath}) async {
     emit(ApiLoading());

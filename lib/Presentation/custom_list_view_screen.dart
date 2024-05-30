@@ -2,16 +2,15 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/core/blocs/cubit/apiCubit/api_cubit.dart';
-import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 
 class CustomListViewScreen extends StatelessWidget {
-  const CustomListViewScreen({super.key});
-
+  const CustomListViewScreen({super.key, required this.apiCubit,});
+final ApiCubit apiCubit;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ApiCubit()..fetchRoadSigns(),
+      create: (context) =>apiCubit,
       child: Scaffold(
         appBar: customAppBar(context),
         body: Padding(

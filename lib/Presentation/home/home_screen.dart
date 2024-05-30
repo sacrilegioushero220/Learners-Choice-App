@@ -82,8 +82,8 @@ class HomeScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (ctx) =>
-                                    const CustomListViewScreen()));
+                                builder: (ctx) => CustomListViewScreen(
+                                    apiCubit: ApiCubit()..fetchRoadSigns())));
                       },
                     ),
                     BuildCustomGridViewItem(
@@ -94,13 +94,22 @@ class HomeScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (ctx) => CustomGridViewScreen(
-                                      apiCubit: ApiCubit()..fetchHazardSigns(),
+                                      apiCubit: ApiCubit()
+                                        ..fetchHazardSigns(),
                                     )));
                       },
                     ),
                     BuildCustomGridViewItem(
                       iconPath: gridViewItemIcon4,
                       label: gridViewItemlabel4,
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (ctx) => CustomListViewScreen(
+                                      apiCubit: ApiCubit()..fetchDriverSignals(),
+                                    )));
+                      },
                     ),
                     BuildCustomGridViewItem(
                       iconPath: gridViewItemIcon5,

@@ -27,7 +27,7 @@ String lIconPath = "assets/Images/homescreen/L.png";
 String gridViewItemIcon1 = "assets/Images/homescreen/TrafficSigns.png";
 String gridViewItemIcon2 = "assets/Images/homescreen/RoadSign.png";
 String gridViewItemIcon3 = "assets/Images/homescreen/HazardSigns.png";
-String gridViewItemIcon4 = "assets/Images/homescreen/Codes.png";
+String gridViewItemIcon4 = "assets/icons/driver.png";
 String gridViewItemIcon5 = "assets/Images/homescreen/HandSignals.png";
 String gridViewItemIcon6 = "assets/Images/homescreen/LLTestQna.png";
 
@@ -35,7 +35,7 @@ String gridViewItemIcon6 = "assets/Images/homescreen/LLTestQna.png";
 String gridViewItemlabel1 = "Traffic Signs";
 String gridViewItemlabel2 = "Road Signs";
 String gridViewItemlabel3 = "Hazard Signs";
-String gridViewItemlabel4 = "Codes";
+String gridViewItemlabel4 = "Driver Signs";
 String gridViewItemlabel5 = "Hand Signals";
 String gridViewItemlabel6 = "LL Test QnA";
 
