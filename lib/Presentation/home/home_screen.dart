@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/Presentation/custom_grid_view_screen.dart';
 import 'package:learners_choice_app/Presentation/custom_list_view_screen.dart';
 import 'package:learners_choice_app/Presentation/traffic_signs_screen.dart';
+import 'package:learners_choice_app/core/blocs/cubit/apiCubit/api_cubit.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -87,6 +89,14 @@ class HomeScreen extends StatelessWidget {
                     BuildCustomGridViewItem(
                       iconPath: gridViewItemIcon3,
                       label: gridViewItemlabel3,
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (ctx) => CustomGridViewScreen(
+                                      apiCubit: ApiCubit()..fetchHazardSigns(),
+                                    )));
+                      },
                     ),
                     BuildCustomGridViewItem(
                       iconPath: gridViewItemIcon4,

@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/core/blocs/cubit/apiCubit/api_cubit.dart';
-import 'package:learners_choice_app/core/blocs/cubit/apiCubit/traffic_sign_type.dart';
-
 import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 
 class CustomGridViewScreen extends StatelessWidget {
   const CustomGridViewScreen({
     super.key,
-    required this.trafficSignType,
+    required this.apiCubit,
   });
-  final TrafficSignType trafficSignType;
+
+  final ApiCubit apiCubit;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ApiCubit()..fetchItems(trafficSignType),
+      create: (context) => apiCubit,
       child: Scaffold(
         appBar: customAppBar(context),
         body: Padding(

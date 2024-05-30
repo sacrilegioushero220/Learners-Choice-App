@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/Presentation/custom_grid_view_screen.dart';
+import 'package:learners_choice_app/core/blocs/cubit/apiCubit/api_cubit.dart';
 import 'package:learners_choice_app/core/widgets/custom_app_bar.dart';
 import 'package:learners_choice_app/core/widgets/traffic_sign_category.dart';
 
@@ -25,8 +26,9 @@ class TrafficSignScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const CustomGridViewScreen(
-                              trafficSignType: TrafficSignType.cautionary,
+                        builder: (context) => CustomGridViewScreen(
+                              apiCubit: ApiCubit()
+                                ..fetchItems(TrafficSignType.cautionary),
                             )));
               },
             ),
@@ -40,8 +42,9 @@ class TrafficSignScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const CustomGridViewScreen(
-                              trafficSignType: TrafficSignType.mandatory,
+                        builder: (context) => CustomGridViewScreen(
+                              apiCubit: ApiCubit()
+                                ..fetchItems(TrafficSignType.mandatory),
                             )));
               },
             ),
@@ -55,8 +58,9 @@ class TrafficSignScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const CustomGridViewScreen(
-                              trafficSignType: TrafficSignType.informatory,
+                        builder: (context) => CustomGridViewScreen(
+                              apiCubit: ApiCubit()
+                                ..fetchItems(TrafficSignType.informatory),
                             )));
               },
             ),
