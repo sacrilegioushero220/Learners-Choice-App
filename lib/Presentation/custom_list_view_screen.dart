@@ -79,7 +79,7 @@ class CustomListTile2 extends StatelessWidget {
               errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(width: 8),
           Expanded(
             child: Text(
               title,
