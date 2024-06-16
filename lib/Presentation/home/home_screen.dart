@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/Presentation/custom_grid_view_screen.dart';
 import 'package:learners_choice_app/Presentation/custom_list_view_screen.dart';
+import 'package:learners_choice_app/Presentation/learners_test/mock_test_screen.dart';
 import 'package:learners_choice_app/Presentation/traffic_signs_screen.dart';
 import 'package:learners_choice_app/core/blocs/cubit/apiCubit/api_cubit.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
@@ -46,7 +47,14 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 25,
               ),
-              buildLLTile(context),
+              BuildLLTile(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MockTestScreen()));
+                },
+              ),
               const SizedBox(
                 height: 35,
               ),

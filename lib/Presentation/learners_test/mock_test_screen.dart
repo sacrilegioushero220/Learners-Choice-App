@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
-import 'package:learners_choice_app/core/widgets/customButtons/custom_fab_button.dart';
 import 'package:learners_choice_app/core/widgets/customButtons/custom_round_button.dart';
 import 'package:learners_choice_app/core/widgets/mock_test/question_card.dart';
 import 'package:learners_choice_app/core/widgets/mock_test/option_card.dart';
@@ -62,20 +61,17 @@ class MockTestScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        buildCustomRoundedButton(
-                          context: context,
+                        BuildCustomRoundedButton(
                           color: Colors.red,
                           onPressed: () {},
                           label: "End",
                         ),
                         const CountDownTimer(),
-                        BuildCustomFabButton(
-                          heroTag: "6",
-                          label: "Submit",
-                          isReversed: true,
+                        BuildCustomRoundedButton(
+                          color: const Color(0xFFD8C2BC),
                           onPressed: () {},
-                          ishidden: true,
-                        )
+                          label: "Submit",
+                        ),
                       ],
                     ),
                   )

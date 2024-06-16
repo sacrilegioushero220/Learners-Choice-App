@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/Presentation/Intro/image_screen.dart';
-import 'package:learners_choice_app/core/blocs/cubit/cubit/local_storage_cubit.dart';
+import 'package:learners_choice_app/core/blocs/cubit/localStorageCubit/local_storage_cubit.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
-import 'package:learners_choice_app/network/api_service.dart';
 import '../../../../core/widgets/customButtons/custom_fab_button.dart';
 
 class NameScreen extends StatelessWidget {

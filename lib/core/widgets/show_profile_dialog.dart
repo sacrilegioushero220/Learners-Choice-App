@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learners_choice_app/core/blocs/cubit/cubit/local_storage_cubit.dart';
+import 'package:learners_choice_app/core/blocs/cubit/localStorageCubit/local_storage_cubit.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 
