@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 
 class QuestionCard extends StatelessWidget {
@@ -10,7 +11,6 @@ class QuestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 398,
       clipBehavior: Clip.antiAlias,
       decoration: containerDecDefault(),
       child: Padding(
@@ -22,7 +22,6 @@ class QuestionCard extends StatelessWidget {
           children: [
             SizedBox(
               width: 331,
-              height: 150,
               child: Flexible(
                 child: Text(
                   textAlign: TextAlign.justify,
@@ -91,7 +90,7 @@ Widget imageContainerBlack(String image) {
         )
       ],
     ),
-    child: buildImageWidget(
+    child: BuildImageWidget(
       width: 154,
       height: 154,
       imagePath: image,
