@@ -3,7 +3,7 @@ import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 
 class QuestionCard extends StatelessWidget {
-  final String image;
+  final String? image;
   final String question;
   const QuestionCard({super.key, required this.image, required this.question});
 
@@ -22,33 +22,33 @@ class QuestionCard extends StatelessWidget {
           children: [
             SizedBox(
               width: 331,
-              child: Flexible(
-                child: Text(
-                  textAlign: TextAlign.justify,
-                  question,
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 13,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w500,
-                    height: 1.6,
-                  ),
+              child: Text(
+                textAlign: TextAlign.justify,
+                question,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 13,
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w500,
+                  height: 1.6,
                 ),
               ),
             ),
-            SizedBox(
-              height: 226,
-              width: MediaQuery.of(context).size.width,
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 20,
-                  bottom: 20,
-                  right: 60,
-                  left: 60,
-                ),
-                child: imageContainerBlack(image),
-              ),
-            )
+            image != null
+                ? SizedBox(
+                    height: 226,
+                    width: MediaQuery.of(context).size.width,
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        top: 20,
+                        bottom: 20,
+                        right: 60,
+                        left: 60,
+                      ),
+                      child: imageContainerBlack(image ?? "Null"),
+                    ),
+                  )
+                : const SizedBox(),
           ],
         ),
       ),
