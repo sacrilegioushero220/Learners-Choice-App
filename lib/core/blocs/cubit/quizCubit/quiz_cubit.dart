@@ -58,13 +58,18 @@ class QuizCubit extends Cubit<QuizState> {
     emit(QuizLoading());
     try {
       // Fetch questions from Firebase
-      List<QuizQuestion> quizQuestions = await fetchQuizQuestionsFromFirebase();
+      List<QuizQuestion> allQuizQuestions =
+          await fetchQuizQuestionsFromFirebase();
 
+      //shuffle all the questions
+      allQuizQuestions.shuffle();
       // Cache the questions
-      await cacheQuestions(quizQuestions);
-
+      await cacheQuestions(allQuizQuestions);
+      //Select only 40 questions
+      final List<QuizQuestion> selectedQuestions =
+          allQuizQuestions.take(20).toList();
       // Emit the loaded state
-      emit(QuizLoaded(quizQuestions: quizQuestions));
+      emit(QuizLoaded(quizQuestions: selectedQuestions));
     } catch (e) {
       emit(QuizError(message: e.toString()));
     }
