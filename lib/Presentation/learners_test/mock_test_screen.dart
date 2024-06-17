@@ -90,12 +90,14 @@ class _MockTestBodyState extends State<MockTestBody> {
   }
 
   void _showResultDialog(int totalQuestions) {
+    final isPassed = score >= 20;
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Congratulations'),
-          content: Text('You scored $score/$totalQuestions'),
+          title: Text(isPassed ? 'Congratulations' : 'Try Again'),
+          content: Text(
+              'You scored $score/$totalQuestions. You ${isPassed ? 'passed' : 'failed'} the quiz.'),
           actions: <Widget>[
             TextButton(
               child: const Text('Repeat Test'),
@@ -169,7 +171,9 @@ class _MockTestBodyState extends State<MockTestBody> {
                     children: [
                       BuildCustomRoundedButton(
                         color: Colors.red,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
                         label: "End",
                       ),
                       CountDownTimer(timeRemaining: _remainingTime),
