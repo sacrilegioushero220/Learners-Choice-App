@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 
 class QuestionCard extends StatelessWidget {
   final String? image;

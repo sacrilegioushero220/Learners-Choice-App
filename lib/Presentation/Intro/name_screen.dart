@@ -65,7 +65,7 @@ class NameScreen extends StatelessWidget {
 
                     onPressed: () {
                       String name = nameController.text; // Get the entered name
-                      print("name is $name");
+
                       if (name.isNotEmpty) {
                         BlocProvider.of<LocalStorageCubit>(context)
                             .saveName(name, context);

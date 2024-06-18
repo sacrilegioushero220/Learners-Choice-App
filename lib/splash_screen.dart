@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
           listener: (context, state) {
             if (state is OnboardedState) {
               BlocProvider.of<LocalStorageCubit>(context).getProfile();
-              print("state is :$state");
+
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
@@ -37,7 +37,6 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               );
             } else if (state is NotOnboardedState) {
-              print("state is :$state");
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
@@ -46,12 +45,10 @@ class _SplashScreenState extends State<SplashScreen> {
               );
             }
           },
-          child: Container(
-            child: const Icon(
-              size: 100,
-              Icons.book,
-              color: Colors.black,
-            ),
+          child: const Icon(
+            size: 100,
+            Icons.book,
+            color: Colors.black,
           ),
         ),
       ),
