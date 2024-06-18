@@ -39,6 +39,7 @@ class _MockTestBodyState extends State<MockTestBody> {
   int score = 0;
   Timer? _timer;
   int _remainingTime = 30;
+  int? selectedOptionIndex; // Track the selected option
 
   @override
   void initState() {
@@ -59,13 +60,13 @@ class _MockTestBodyState extends State<MockTestBody> {
         if (_remainingTime > 0) {
           _remainingTime--;
         } else {
-          _nextQuestion(null);
+          _nextQuestion();
         }
       });
     });
   }
 
-  void _nextQuestion(int? selectedOptionIndex) {
+  void _nextQuestion() {
     _timer?.cancel();
 
     if (context.read<QuizCubit>().state is QuizLoaded) {
@@ -81,6 +82,7 @@ class _MockTestBodyState extends State<MockTestBody> {
       setState(() {
         if (currentQuestionIndex < quizQuestions.length - 1) {
           currentQuestionIndex++;
+          selectedOptionIndex = null; // Reset selected option for next question
           _startTimer();
         } else {
           _showResultDialog(quizQuestions.length);
@@ -150,7 +152,13 @@ class _MockTestBodyState extends State<MockTestBody> {
                             OptionCard(
                               optionDescription: question.options[index],
                               optionNumber: "${index + 1}.",
-                              onTap: () => _nextQuestion(index),
+                              isSelected: selectedOptionIndex ==
+                                  index, // Highlight selected option
+                              onTap: () {
+                                setState(() {
+                                  selectedOptionIndex = index;
+                                });
+                              },
                             ),
                             const SizedBox(height: 5),
                           ],
@@ -180,8 +188,10 @@ class _MockTestBodyState extends State<MockTestBody> {
                       ),
                       CountDownTimer(timeRemaining: _remainingTime),
                       BuildCustomRoundedButton(
-                        color: const Color(0xFFD8C2BC),
-                        onPressed: () {},
+                        color: Colors.blue,
+                        onPressed: selectedOptionIndex != null
+                            ? _nextQuestion // Only proceed if an option is selected
+                            : () {},
                         label: "Submit",
                       ),
                     ],
