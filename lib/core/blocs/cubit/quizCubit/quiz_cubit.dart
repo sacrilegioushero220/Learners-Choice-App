@@ -45,7 +45,7 @@ import 'quiz_state.dart';
 //     }
 //   }
 // }
-import 'dart:convert';
+
 import 'dart:typed_data';
 
 class QuizCubit extends Cubit<QuizState> {
@@ -96,25 +96,30 @@ class QuizCubit extends Cubit<QuizState> {
             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type ',
         'options': ['SDK', 'IDE', 'Language', 'Framework'],
         'correctAnswerIndex': 3,
+        'imageUrl':
+            "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/handSignals%2FtoStartOneSidedVehicles.jpg?alt=media&token=29a9d36f-1823-4ac3-8d97-35be153cd0f0"
       },
       {
         'question': 'Who developed Dart?',
         'options': ['Google', 'Facebook', 'Microsoft', 'Apple'],
         'correctAnswerIndex': 0,
-        'imageUrl': null,
+        'imageUrl':
+            "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/handSignals%2FtoStartOneSidedVehicles.jpg?alt=media&token=29a9d36f-1823-4ac3-8d97-35be153cd0f0",
       },
       // Add more dummy questions here
       {
         'question': 'What is the capital of France?',
         'options': ['Paris', 'London', 'Berlin', 'Madrid'],
         'correctAnswerIndex': 0,
-        'imageUrl': null,
+        'imageUrl':
+            "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/handSignals%2FtoStartOneSidedVehicles.jpg?alt=media&token=29a9d36f-1823-4ac3-8d97-35be153cd0f0"
       },
       {
         'question': 'What is the largest planet in our solar system?',
         'options': ['Jupiter', 'Saturn', 'Earth', 'Mars'],
         'correctAnswerIndex': 0,
-        'imageUrl': null,
+        'imageUrl':
+            "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/handSignals%2FtoStartOneSidedVehicles.jpg?alt=media&token=29a9d36f-1823-4ac3-8d97-35be153cd0f0"
       },
       // Add 70 more dummy questions
       // Example of adding multiple questions programmatically
@@ -123,7 +128,8 @@ class QuizCubit extends Cubit<QuizState> {
           'question': 'Dummy Question ${index + 1}',
           'options': ['Option 1', 'Option 2', 'Option 3', 'Option 4'],
           'correctAnswerIndex': index % 4, // Just an example, adjust as needed
-          'imageUrl': null,
+          'imageUrl':
+              "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/handSignals%2FtoStartOneSidedVehicles.jpg?alt=media&token=29a9d36f-1823-4ac3-8d97-35be153cd0f0"
         };
       }),
     ];

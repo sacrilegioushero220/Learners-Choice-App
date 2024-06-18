@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 
@@ -44,7 +45,7 @@ class QuestionCard extends StatelessWidget {
                         right: 60,
                         left: 60,
                       ),
-                      child: imageContainerBlack(image ?? "Null"),
+                      child: imageContainerBlack(image.toString()),
                     ),
                   )
                 : const SizedBox(),
@@ -89,10 +90,12 @@ Widget imageContainerBlack(String image) {
         )
       ],
     ),
-    child: BuildImageWidget(
+    child: CachedNetworkImage(
+      imageUrl: image,
       width: 154,
       height: 154,
-      imagePath: image,
+      fit: BoxFit.contain,
+      errorWidget: (context, url, error) => const Icon(Icons.error),
     ),
   );
 }
