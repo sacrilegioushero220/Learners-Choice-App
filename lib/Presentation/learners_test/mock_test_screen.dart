@@ -143,8 +143,10 @@ class _MockTestBodyState extends State<MockTestBody> {
                   child: Column(
                     children: [
                       QuestionCard(
-                          image: question.imageUrl,
-                          question: question.question),
+                        image: question.imageUrl,
+                        question:
+                            "Q${currentQuestionIndex + 1}. ${question.question}",
+                      ),
                       const SizedBox(height: 10),
                       ...List.generate(question.options.length, (index) {
                         return Column(
