@@ -116,15 +116,24 @@ class ImageScreen extends StatelessWidget {
                           final localStorageCubit =
                               BlocProvider.of<LocalStorageCubit>(context);
 
-                          await localStorageCubit.saveOnboardStatus(true);
-                          await localStorageCubit.getProfile();
-                          Navigator.pushReplacement(
-                              // ignore: use_build_context_synchronously
+                          if (localStorageCubit.state is ImagePicked) {
+                            await localStorageCubit.saveOnboardStatus(true);
+                            await localStorageCubit.getProfile();
+
+                            Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                 builder: (ctx) => const Home(),
-                              ));
-                          // Navigate to the next screen or perform any other action
+                              ),
+                            );
+                          } else {
+                            // Show a message or a dialog to the user indicating that they need to pick an image
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Please pick an image first.'),
+                              ),
+                            );
+                          }
                         },
                         isReversed: false,
                       ),
