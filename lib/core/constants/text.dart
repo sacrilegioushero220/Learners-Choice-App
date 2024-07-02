@@ -1,3 +1,5 @@
+//splashscreen
+String applogo = "assets/icons/icon.png";
 //Intro
 String introTitle = "Learner's Choice";
 String introSubtitle = "Simple way to learn  and imporve driving skills";

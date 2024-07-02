@@ -129,7 +129,7 @@ class ImageScreen extends StatelessWidget {
                           } else {
                             // Show a message or a dialog to the user indicating that they need to pick an image
                             ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
+                              const SnackBar(
                                 content: Text('Please pick an image first.'),
                               ),
                             );

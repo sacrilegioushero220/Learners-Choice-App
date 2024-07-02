@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/Presentation/presentation_layer.dart';
 
 import 'package:learners_choice_app/core/blocs/cubit/localStorageCubit/local_storage_cubit.dart';
+import 'package:learners_choice_app/core/constants/text.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -45,10 +46,8 @@ class _SplashScreenState extends State<SplashScreen> {
               );
             }
           },
-          child: const Icon(
-            size: 100,
-            Icons.book,
-            color: Colors.black,
+          child: Container(
+            child: Image.asset(applogo),
           ),
         ),
       ),
