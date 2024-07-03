@@ -42,6 +42,7 @@ flutter:
     - assets/Images/docsscreen/
     - assets/Images/
     - assets/icons/
+    - assets/output.json
    
 
     
