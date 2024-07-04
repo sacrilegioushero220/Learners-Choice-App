@@ -143,7 +143,7 @@ class _MockTestBodyState extends State<MockTestBody> {
                   child: Column(
                     children: [
                       QuestionCard(
-                        image: question.imageUrl ?? "",
+                        image: question.imageUrl,
                         question:
                             "Q${currentQuestionIndex + 1}. ${question.question}",
                       ),
