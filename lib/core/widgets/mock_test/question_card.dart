@@ -31,7 +31,7 @@ class QuestionCard extends StatelessWidget {
                 question,
                 style: const TextStyle(
                   color: Colors.black,
-                  fontSize: 13,
+                  fontSize: 18,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w500,
                   height: 1.6,
@@ -101,8 +101,7 @@ Widget imageContainerBlack(String image) {
       height: 154,
       fit: BoxFit.contain,
       errorWidget: (context, url, error) {
-        print("Error is this : $error");
-        return const Icon(Icons.error);
+        return Text(error.toString());
       },
     ),
   );

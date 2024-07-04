@@ -22,7 +22,7 @@ class OptionCard extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: 65,
+        height: 80,
         clipBehavior: Clip.antiAlias,
         decoration: ShapeDecoration(
           color: isSelected ? Colors.green : const Color(0xFFFFF8F6),
@@ -56,12 +56,12 @@ class OptionCard extends StatelessWidget {
             const VerticalDivider(color: Color(0xFFD8C2BC)),
             Expanded(
               child: Container(
-                padding: const EdgeInsets.only(bottom: 5, top: 5),
+                padding: const EdgeInsets.only(bottom: 5, top: 5, right: 5),
                 child: Text(
                   optionDescription,
                   style: const TextStyle(
                     color: Colors.black,
-                    fontSize: 11,
+                    fontSize: 15,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w400,
                     height: 1.3,

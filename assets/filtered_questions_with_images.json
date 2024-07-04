@@ -1,0 +1,1037 @@
+[
+  {
+    "question": "Near a pedestrian crossing, when the pedestrians are waiting to cross the road, you should...",
+    "answer": "Stop the vehicle and wait till the pedestrians cross the road and then proceed",
+    "imageUrl": ""
+  },
+  {
+    "question": " When a vehicle is involved in an accident causing injury to any person...",
+    "answer": "Take all reasonable steps to secure medical attention to the injured and report to the nearest police station within 24 hours",
+    "imageUrl": ""
+  },
+  {
+    "question": "You can overtake a vehicle in front..",
+    "answer": "Through the right side of that vehicle",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "U-turn prohibited",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Futurnprob.jpg?alt=media&token=52309b13-8bf3-4dd0-9d57-2314de0ee27e"
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Pedestrian crossing",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FPEDESTRIAN%20CROSSING.jpg?alt=media&token=742ae910-8e2c-4bc8-aeb5-a3d1f82ca096"
+  },
+  {
+    "question": "How can you distinguish a transport vehicle?",
+    "answer": "By looking at the number plate of the vehicle",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Horn prohibited",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FHORN%20PROHIBITED.jpg?alt=media&token=fa4999b4-5053-4764-b488-fe2eb199b008"
+  },
+  {
+    "question": "free passage should be given to the following types of vehicles...",
+    "answer": "Ambulance and fire service vehicles",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Narrow bridge ahead",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FNARROW%20BRIDGE.jpg?alt=media&token=c18db101-43f4-49ed-9040-8f816ae3755b"
+  },
+  {
+    "question": "Vehicles proceeding from opposite direction should be allowed to pass through",
+    "answer": "Your right side",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Hospital",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2Fhospital.jpg?alt=media&token=9a7df525-4502-4e48-be4f-6d055e127ec1"
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "First aid post",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2Ffirst%20aid%20box.jpg?alt=media&token=73da1d66-a976-4ae7-8b84-249a0ce48868"
+  },
+  {
+    "question": "Driver of a motor vehicle shall drive through...",
+    "answer": "The left side of the road",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Resting place",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2FrestingPlace.jpg?alt=media&token=2c45b39a-4697-4545-81a5-d3e24c58d918"
+  },
+  {
+    "question": "When a Vehicle is parked on the road side during night...",
+    "answer": "The park light shall remain lit",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "End of speed restriction",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FRESTRICTION%20ENDS%20SIGN.jpg?alt=media&token=2825e5ff-b4ab-4f0b-9420-8f5d24b1f624"
+  },
+  {
+    "question": "Fog lamps are used„,",
+    "answer": "When there is mist",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Narrow road ahead",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FNARROW%20ROAD%20AHEAD.jpg?alt=media&token=29178153-fec1-45ab-87bb-9fe816af5d70"
+  },
+  {
+    "question": "Zebra lines are meant for...",
+    "answer": "Pedestrians crossing",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Level crossing unguarded",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FUNGUARDED%20LEVEL%20CROSSING%20(200%20METERS).jpg?alt=media&token=e37a2e0f-c136-4a22-afa6-b554250b5b3a"
+  },
+  {
+    "question": "When an ambulance is approaching„.",
+    "answer": "the driver shall allow free passage by drawing to the side of the road",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Overtaking prohibited",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fovertakingprob.jpg?alt=media&token=3ca80b51-9c25-49b8-b658-40e93d8a8793"
+  },
+  {
+    "question": "Red traffic light indicates..",
+    "answer": "stop the vehicle",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Cross road",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FCROSS%20ROAD.jpg?alt=media&token=90f9dd9d-a738-478b-872b-d2dccdbffc4b"
+  },
+  {
+    "question": "Parking a vehicle in frontof entrance to hospital...",
+    "answer": "Improper",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "No entry",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FNoEntry.jpg?alt=media&token=4e1d34ca-1440-41d7-85ec-51b45455bb00"
+  },
+  {
+    "question": "Where the slippery road sign is seen on the road, the driver shall...",
+    "answer": "reduce the speed by changing the gear",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Side road left",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSIDE-ROAD-LEFT.jpg?alt=media&token=8cb57589-e399-470c-ace0-455803d0d44b"
+  },
+  {
+    "question": "Overtaking is prohibited in following circumstances...",
+    "answer": "when it is likely to cause inconvenience or danger to other traffic",
+    "imageUrl": ""
+  },
+  {
+    "question": "Overtaking when approaching a bend...",
+    "answer": "not permissible",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Compulsory turn right",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FCOMPULSORY%20TURN%20RIGHT.jpg?alt=media&token=1a3fd36c-729e-409e-bc42-e22973a21eb6"
+  },
+  {
+    "question": "Drunken driving...",
+    "answer": "prohibited in all vehicles",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "No parking",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FNO%20PARKING.jpg?alt=media&token=f6f6ed83-c491-43d0-839d-7b1c5367279b"
+  },
+  {
+    "question": "Use of horn prohibited...",
+    "answer": "Near Hospital, Courts of Law",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "One way",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FVehiclesProhibitedbothDirections.jpg?alt=media&token=11c6032c-da5e-4ec2-accd-df6bc6b7c514"
+  },
+  {
+    "question": "Rear view mirror is used.....",
+    "answer": "for watching the traffic approaching from behind",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "No entry for cars and motor cycles",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fallvehiclesproh.jpg?alt=media&token=2bd3d796-a157-421a-86fb-e993f02add29"
+  },
+  {
+    "question": "Boarding in and alighting from a vehicle while in motion...",
+    "answer": "prohibited in all vehicles",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Trucks Prohibited",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Ftruckprohib.jpg?alt=media&token=752111ab-2b67-420d-a290-8434fb1bf9b6"
+  },
+  {
+    "question": "Parking is permitted...",
+    "answer": "where parking is not prohibited",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Bullock cart prohibited",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fbullocarprob.jpg?alt=media&token=0423b33f-a385-4c5a-8fd2-e85364ec50ab"
+  },
+  {
+    "question": "When fuel is filled in a vehicle...",
+    "answer": "shall not smoke",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Pedestrians prohibited",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fpedestriansprohb.jpg?alt=media&token=d612b69e-8375-4600-92a2-1225852c1f43"
+  },
+  {
+    "question": "Mobile phones shall not be used...",
+    "answer": "while driving a vehicle",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Left turn Prohibited",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fleftturnprob.jpg?alt=media&token=151b262a-9fc8-4c65-87b8-6938200d504b"
+  },
+  {
+    "question": "Overtaking is prohibited...",
+    "answer": "when the road ahead is not clearly visible",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Drive the vehicle not exceeding 50 km/hr",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FSPEED%20LIMIT.jpg?alt=media&token=4e03cc61-13f7-43e6-9f24-61c0bc6b8535"
+  },
+  {
+    "question": "The pedestrians shall not cross the road at sharp bends or very near to a stopped vehicle. Why?",
+    "answer": "Drivers of other vehicles coming at a distance may not see persons crossing the road",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "No entry for vehicles having more than 2 meters width",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FWIDTH%20LIMIT.jpg?alt=media&token=ad18fb46-42a6-49dd-b9ca-1e6a4bdc44bf"
+  },
+  {
+    "question": "Records of a private vehicle are...",
+    "answer": "registration certificate, Insurance Certificate, Tax Token, Driving Licence",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Entryfor vehicles having height not exceeding 3.5 meters",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FHEIGHT%20LIMIT.jpg?alt=media&token=ccb3ca5b-a13b-40f3-ab70-71f94b3cc1d8"
+  },
+  {
+    "question": "While turning to a road to the left of the road in which you are going, you should...",
+    "answer": "Show the left turn signal, keep to the left side of the road and turn to the left",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "No Stopping or standing",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FNO%20STOPPING%20OR%20STANDING.jpg?alt=media&token=63b0a608-b8d7-4fde-9913-9d92c3c8767c"
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Ahead only",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FCOMPULSORY%20AHEAD.jpg?alt=media&token=3ac56158-7a2c-425d-8d01-bbb57aa14a44"
+  },
+  {
+    "question": "While you are driving with the head light in high beam during night, a vehicle approaches from opposite direction, you will...",
+    "answer": "dim the head light till the vehicle passes",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Compulsory ahead or turn left",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FCOMPULSORY%20AHEAD%20OR%20TURN%20LEFT.jpg?alt=media&token=1257ded8-a939-4279-b253-c063a2b14148"
+  },
+  {
+    "question": "The Driver of a vehicle extends his right arm with the palm downward and moves the arm upward and downward several times, You will understand that...",
+    "answer": "He is slowing down the vehicle",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Compulsory keep left",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FCOMPULSORY%20KEEP%20LEFT.jpg?alt=media&token=09edde03-b102-4719-9f03-b47c683c62e0"
+  },
+  {
+    "question": "Minimum age for getting a licence to drive motor cycle without gear...",
+    "answer": "16 years",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Right hand curve",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FRIGHT%20HAND%20CURVE.jpg?alt=media&token=a12dd0e1-4655-4f43-b8ab-95ff5b26aa43"
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Right hair pin bend",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FRIGHT%20HAIR%20PIN%20BAND.jpg?alt=media&token=6696f595-7609-493c-bfa3-37b9be79e151"
+  },
+  {
+    "question": "The Signal while taking U -turn.......",
+    "answer": "Right turn signal",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Left hair pin bend",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FLEFT%20HAIR%20PIN%20BAND.jpg?alt=media&token=4d038ef6-0999-4aa7-8a50-c58ef0f303ce"
+  },
+  {
+    "question": "e driver of a vehicle shall not take U-turn...",
+    "answer": "Ina busy road",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Right reverse bend",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FRIGHT%20REVERSE%20BAND.jpg?alt=media&token=7b1e0f00-623a-4126-bcf7-bdaa42f158be"
+  },
+  {
+    "question": "One time tax for a new car is for...",
+    "answer": "15 years",
+    "imageUrl": ""
+  },
+  {
+    "question": "Before overtaking a vehicle, it should be ensured that",
+    "answer": "The road ahead is clearly visible and it is safe to overtake",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Axle weight limit",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FAXLE%20LOAD%20LIMIT.jpg?alt=media&token=bd2f9534-3e31-4b4f-acf7-aa6690869b4f"
+  },
+  {
+    "question": "Number of persons can be carried in the cabin of a Goods Carriage..",
+    "answer": "As many persons as recorded in the Registration Certificate",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Side road right",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSIDE%20ROAD%20RIGHT.jpg?alt=media&token=386cd2b5-3511-4b2f-a251-f78112e1ea78"
+  },
+  {
+    "question": "When your vehicle is being overtaken, you should...",
+    "answer": "Not obstruct the other vehicle from over taking",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Major Road ahead",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FMAJOR%20ROAD%20AHEAD.jpg?alt=media&token=590308ac-a83d-46b5-83dc-7d07993f5a63"
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Round about",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FROUND%20ABOUT.jpg?alt=media&token=0b54f379-3b37-4736-b75a-c5c3ad10f8f4"
+  },
+  {
+    "question": "The hand brake is to be used„.",
+    "answer": "To park a vehicle",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Dangerous dip",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FDANGEROUS%20DIP.jpg?alt=media&token=23189260-1f0c-4afb-beec-01ffeaf2a4ec"
+  },
+  {
+    "question": "More than two persons on a two wheeler is...",
+    "answer": "Violation of law",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Guarded level cross",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FGUARDED%20LEVEL%20CROSSING%20(200%20METERS).jpg?alt=media&token=5022e510-590b-4743-8f61-72d13d4e248b"
+  },
+  {
+    "question": "You want to overtake a vehicle near a hospital. You will...",
+    "answer": "Not blow horn",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Y - inter section left",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FY%20-%20INTERSECTION1.jpg?alt=media&token=9be8c959-2ade-4670-b574-a25cce72b056"
+  },
+  {
+    "question": "Using unregistered vehicle in public place is...",
+    "answer": "illegal",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Y- inter section right",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FY%20-%20INTERSECTION2.jpg?alt=media&token=e47c7f5a-242f-426f-af1d-544fe0468047"
+  },
+  {
+    "question": "Minimum age for obtaining driving licence for transport vehicles....",
+    "answer": "20 years",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Y-inter section",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FY%20-%20INTERSECTION3.jpg?alt=media&token=b475c649-5c24-431e-9da3-5367caf09aa0"
+  },
+  {
+    "question": "Ifa person in charge of an animal apprehending that the animal may become unmanageable, request to stop a vehicle...",
+    "answer": "The driver shall stop the vehicle",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Slippery road",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSLIPPERY%20ROAD.jpg?alt=media&token=45d43c99-dba2-46ea-889e-2400d7d7d196"
+  },
+  {
+    "question": "Parking prohibited in the following case....",
+    "answer": "Near traffic fight",
+    "imageUrl": ""
+  },
+  {
+    "question": "Over speeding...",
+    "answer": "Is an offence leading to suspension or cancellation of driving licence",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Cycle",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FCYCLE%20CROSSING.jpg?alt=media&token=fb49150e-4250-490b-93ba-e572754c8f0c"
+  },
+  {
+    "question": "When school buses are stopped for picking up or setting down students...",
+    "answer": "Proceed slowly and cautiously since there is chance of students suddenly crossing the road",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Possibility of cattle on road",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FCATTLE.jpg?alt=media&token=244f6092-5770-4834-875e-5ad2c8a835e6"
+  },
+  {
+    "question": "When a blind person crosses the road holding White Cane...",
+    "answer": "The driver of a vehicle shall consider the white cane as a traffic sign to stop the vehicle",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "School ahead",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSCHOOL%20AHEAD.jpg?alt=media&token=d546d771-c57d-4fd9-a9c8-f6e88dd54a90"
+  },
+  {
+    "question": "When a motor vehicle is involved in an accident...",
+    "answer": "Shall report to the nearest police station within 24 hours",
+    "imageUrl": ""
+  },
+  {
+    "question": "When any property of a third party is damaged due to an accident...",
+    "answer": "Driver shall report to the nearest police station within 24 hours",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": null,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FFALLING%20ROCKS.jpg?alt=media&token=db8e75e7-e7ab-4efb-a91b-9270a099ff51"
+  },
+  {
+    "question": "When the vehicle behind has begun to overtake our vehicle...",
+    "answer": "We shall not overtake another vehicle,",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Ferry",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FFERRY.jpg?alt=media&token=e9feb53d-fcb5-45fd-9346-d92cc4511f53"
+  },
+  {
+    "question": "The driver of the vehicle in front has not given signal for over taking...",
+    "answer": "We shall not overtake",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Steep ascend",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSTEEP%20ASCENT.jpg?alt=media&token=26e85898-25f4-429f-964b-b689abf7b10d"
+  },
+  {
+    "question": "When our vehicleis being over taken„.",
+    "answer": "We shall not increase speed",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Steep descend",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSTEEP%20DESCENT.jpg?alt=media&token=7d25867f-23dd-47c9-8af9-d3797ab88285"
+  },
+  {
+    "question": "Parking is prohibited in the following place...",
+    "answer": "Entrance of hospital",
+    "imageUrl": ""
+  },
+  {
+    "question": "Parking is prohibited in the following",
+    "answer": "Blocking a fire hydrant",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Gap in median",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FGAP%20IN%20MEDIAN.jpg?alt=media&token=8beb2e9b-f188-4a39-bc0f-7197cd0c8873"
+  },
+  {
+    "question": "To carry pillion rider on a motor cycle...",
+    "answer": "The vehicle shall be provided with foot rest, hand grip and sari guard",
+    "imageUrl": ""
+  },
+  {
+    "question": "Smoking while driving public service",
+    "answer": "can attract suspension of driving licence",
+    "imageUrl": ""
+  },
+  {
+    "question": "Abandoning vehicle in a public place causing in convenience to others or passengers..",
+    "answer": "The driving licence is liable to be suspended or cancelled",
+    "imageUrl": ""
+  },
+  {
+    "question": "Abandoning a transport vehicle as a mark of protest or agitation or any kind of strike, in a public place or in any other place causing obstruction or inconvenience to the public or passengers or other users of such places...",
+    "answer": "the driving license liable to be suspended or cancelled",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "No thorough road",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2FnoThroughRoad.jpg?alt=media&token=dfffab62-9ee0-4fc1-99cd-ec5a999ab984"
+  },
+  {
+    "question": "Carrying overload in goods carriages...",
+    "answer": "Can attract suspension or cancellation of driving licence",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Parking both sides",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2FparkingBothside.jpg?alt=media&token=b2f22014-443d-494d-b9a2-eb99689de13c"
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "ParkingIot -Taxis",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2FPARKING%20LOT%20TAXIS.jpg?alt=media&token=440eb442-b280-4af6-b423-0fdfb31dab36"
+  },
+  {
+    "question": "While you are approaching an intersection where the yellow signal light is blinking, you should..",
+    "answer": "Slow down the vehicle and proceed only after ensuring that it is safe to do so",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Parking lot - Autorikshaws",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2FPARKING%20LOT%20AUTO%20RICKSHAWS.jpg?alt=media&token=60dca0b7-ec16-419f-8c44-4402dc3b6cff"
+  },
+  {
+    "question": "Where the road is marked with continuous yellow line the vehicle should...",
+    "answer": "Not touch or cross the yellow line",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Intends to turn right",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/driverSignals%2Fright.jpg?alt=media&token=f9cb368d-f535-4626-88c1-3bb93e0b0d38"
+  },
+  {
+    "question": "While you are driving on gradient roads, you should...",
+    "answer": "Give precedence to the vehicles going up the hill",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Intends to turn left",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/driverSignals%2Fleft.jpg?alt=media&token=2ef2eb11-b01e-4d48-ad6d-11e7bebff12f"
+  },
+  {
+    "question": "The driver of a tractor shall not carry...",
+    "answer": "Any person other than the driver",
+    "imageUrl": ""
+  },
+  {
+    "question": "While a vehicle entering a main road from a branch road, the driver shall give preference...",
+    "answer": "To all vehicles proceeding along the main road",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Intends to stop the vehicle",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/driverSignals%2Fstop.jpg?alt=media&token=881f0857-a51a-484a-a55f-c84cccb593eb"
+  },
+  {
+    "question": "You can overtake a vehicle through the left side if...",
+    "answer": "The driver of that vehicle indicates his intention to turn right and proceeds to the center of the road",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Request to stop the vehicle from behind",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/handSignals%2FTo%20stop%20vehicles%20approaching%20from%20behind.jpg?alt=media&token=25ead0d4-465b-496e-957d-a10a9b135ca6"
+  },
+  {
+    "question": "What is \"Tail-gating\"?",
+    "answer": "Driving too close behind a vehicle in a dangerous manner",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Request to stop the vehicle from behind and front",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/handSignals%2FtoStopVehiclesSimunFrontBehind.jpg?alt=media&token=0b073d1b-cde6-45a2-896b-2f8a285bd4e7"
+  },
+  {
+    "question": "A vehicle can be seized by authorized officers, if....",
+    "answer": "The vehicle is not covered by a valid registration or permit",
+    "imageUrl": ""
+  },
+  {
+    "question": "This sign represents..",
+    "answer": "Request to stop the vehicle from front",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/handSignals%2FtoStopVehiclesComingFromtheFront.jpg?alt=media&token=f63295e5-1760-4afa-840f-eae3bcc43806"
+  },
+  {
+    "question": "Type of horn permitted...",
+    "answer": "Electric horn",
+    "imageUrl": ""
+  },
+  {
+    "question": "Road on which driving in reverse gear is prohibited...",
+    "answer": "One-way road",
+    "imageUrl": ""
+  },
+  {
+    "question": "You hold a learners licence for motor cycle....",
+    "answer": "You will not carry any other person on the motor cycle except for the purpose of getting instructions from an instructor who holds a valid driving licence to drive motorcycle",
+    "imageUrl": ""
+  },
+  {
+    "question": "When the yellow light at an intersection appear on the signal light, the driver of an approaching vehicle should...",
+    "answer": "Slow down to stop",
+    "imageUrl": ""
+  },
+  {
+    "question": "All motor vehicles must be covered by...",
+    "answer": "Third party Insurance",
+    "imageUrl": ""
+  },
+  {
+    "question": "Minimum distance to be kept from the vehicle going in front...",
+    "answer": "Safe distance according to speed",
+    "imageUrl": ""
+  },
+  {
+    "question": "The number of passengers permitted to be taken in private vehicle is recorded in the...",
+    "answer": "Registration Certificate",
+    "imageUrl": ""
+  },
+  {
+    "question": "Overtaking is prohibited when..",
+    "answer": "Vehicle is driven on a steep hill",
+    "imageUrl": ""
+  },
+  {
+    "question": "Blinking red traffic light means...",
+    "answer": "Stop the vehicle and proceed if safe",
+    "imageUrl": ""
+  },
+  {
+    "question": "What is defensive driving?",
+    "answer": "Driving cautiously anticipating violation of traffic rules and road signs both by drivers and other road users",
+    "imageUrl": ""
+  },
+  {
+    "question": "What is meant by stop line?",
+    "answer": "A line with 5 centimeters width in white or yellow colour at the approach of road junction or pedestrian crossing",
+    "imageUrl": ""
+  },
+  {
+    "question": "Before starting the engine of a vehicle...",
+    "answer": "Check radiator water level and engine oil level",
+    "imageUrl": ""
+  },
+  {
+    "question": "When Lorries are loaded...",
+    "answer": "The load shall not project on both sides",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum distance allowed between towing and towed vehicles...",
+    "answer": "5 meters",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum speed permitted for vehicles towing another vehicle...",
+    "answer": "24 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Circumstances in which a motor cycle can be driven at the speed of 60 km/hour...",
+    "answer": "Under no circumstances",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permitted weight that can be carried on a goods carriage...",
+    "answer": "AIlowed as per permit",
+    "imageUrl": ""
+  },
+  {
+    "question": "According to section 112 of the Motor Vehicles Act 1988...",
+    "answer": "Speed limit shall not be exceeded",
+    "imageUrl": ""
+  },
+  {
+    "question": "Section 113 of the Motor Vehicle Act 1988 stipulates that the driver should not drive a vehicle...",
+    "answer": "Exceeding the weight permitted to carry",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum speed allowed to vehicles passing a procession...",
+    "answer": "15 KM/hr",
+    "imageUrl": ""
+  },
+  {
+    "question": "The height limit of load on goods vehicle from ground level...",
+    "answer": "3.8 meters",
+    "imageUrl": ""
+  },
+  {
+    "question": "According to section 129 of Motor Vehicle Act 1988 a person driving a motor cycle shall...",
+    "answer": "Wear helmet",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of auto rickshaw in cites and municipal towns...",
+    "answer": "30 Km/hr",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum speed allowed for motor cars in Kerala",
+    "answer": "90 km/Hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum speed permitted for an Autorickshaw in Kerala",
+    "answer": "50 km/Hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum speed allowed for a motor cycle in Kerala",
+    "answer": "70 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of motor cycle in cities and municipal towns within the State of Kerala",
+    "answer": "50 Km/hr",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of motor car in cities and municipal towns within the State of Kerala,",
+    "answer": "50 km/Hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of heavy motor vehicles in the cities",
+    "answer": "40 Km/hr",
+    "imageUrl": ""
+  },
+  {
+    "question": "The maximum speed permitted for motor cycles in city during night time",
+    "answer": "50 km/hr",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of medium motor vehicles in cities and municipal towns within the State of Kerala",
+    "answer": "40km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permitted speed of a motor car on national high way in the state...",
+    "answer": "90 km/Hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of a motor cycle...",
+    "answer": "70 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "The only vehicle which is permitted to be driven at a speed exceeding 85 Km/hr",
+    "answer": "Motor Car",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of a motor car near educational\r\ninstitution..",
+    "answer": "30 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permitted speed of trucks on national high way in the state ...",
+    "answer": "65 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of a two wheeler near educational institution....",
+    "answer": "30 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of a motor cycle in cities...",
+    "answer": "50 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Circumstances in which a motor cycle can be driven at the speed of 80 km/hour",
+    "answer": "Under no circumstances",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of an auto rickshaw near educational institution...",
+    "answer": "30 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of a light motor vehicle near educational institution...",
+    "answer": "30 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of motor car on ghat roads...",
+    "answer": "45 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of motor cycle on ghat roads...",
+    "answer": "45 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of an auto rickshaw...",
+    "answer": "50 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of heavy motor vehicle near education institution",
+    "answer": "30 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of heavy passenger motor vehicle near educational institution",
+    "answer": "30 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of a medium motor vehicle near educational institution„,",
+    "answer": "30 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of auto rickshaws on ghat road...",
+    "answer": "35 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of heavy motor vehicles on ghat roads..",
+    "answer": "40 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Maximum permissible speed of medium motor vehicles on ghat roads...",
+    "answer": "40 km/hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "While driving a motor vehicle",
+    "answer": "Drive to the left carriageway",
+    "imageUrl": ""
+  },
+  {
+    "question": "When you are overtaking a motor vehicle",
+    "answer": "You shall overtake from the right side",
+    "imageUrl": ""
+  },
+  {
+    "question": "When approaching a road intersection or a curve road",
+    "answer": "Slow down and drive carefully",
+    "imageUrl": ""
+  },
+  {
+    "question": "If a U-Turn is not prohibited",
+    "answer": "Watch front and rear if there are any other vehicles approaching, and turn when safe to do so",
+    "imageUrl": ""
+  },
+  {
+    "question": "When passing or meeting a procession, body of troops or police and workman engaged on road repair",
+    "answer": "Drive at a speed not exceeding more than 25 kilometres an hour",
+    "imageUrl": ""
+  },
+  {
+    "question": "Safe distance to keep while driving is",
+    "answer": "Distance which is sufficient enough",
+    "imageUrl": ""
+  },
+  {
+    "question": "Size of 'L' in learner indicator should be",
+    "answer": "10cm high, 9cm wide and 2cm thick",
+    "imageUrl": ""
+  },
+  {
+    "question": "Hand signal for turning to the left is",
+    "answer": "Extend right arm and rotate it in an anticlockwise Direction",
+    "imageUrl": ""
+  },
+  {
+    "question": "Hand signal for turning to the right",
+    "answer": "Extend right arm and palm of the hand facing front",
+    "imageUrl": ""
+  },
+  {
+    "question": "On mountain roads and Steep roads Where the is not sufficiently wide enough to allow the vehicles to pass each other freely without danger, who shall be given precedence?",
+    "answer": "Vehicle travelling uphill",
+    "imageUrl": ""
+  },
+  {
+    "question": "Drunken driving or a motor vehicle driven by a person under the influence of drugs is punishable for the first offense with",
+    "answer": "Heavy fines and/or an imprisonment for a term of up to Six months",
+    "imageUrl": ""
+  },
+  {
+    "question": "Drunken driving or a motor vehicle driven by a person under the influence of drugs is punishable (for the second time if the person committed the sarme offences within three years)",
+    "answer": "Heavy fines and/or an imprisonment for a term of up to two years",
+    "imageUrl": ""
+  },
+  {
+    "question": "This road sign means",
+    "answer": "Stop",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fstop.jpg?alt=media&token=7bf89662-bc4c-4e5e-a16f-c795220c3ab9"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "No parking",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FNO%20PARKING.jpg?alt=media&token=f6f6ed83-c491-43d0-839d-7b1c5367279b"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "Falling rocks",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FFALLING%20ROCKS.jpg?alt=media&token=db8e75e7-e7ab-4efb-a91b-9270a099ff51"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "pedestrian crossing",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FPEDESTRIAN%20CROSSING.jpg?alt=media&token=742ae910-8e2c-4bc8-aeb5-a3d1f82ca096"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "Compulsory sound horn",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FCOMPULSORY%20SOUND%20HORN.jpg?alt=media&token=b7c5bad5-5fb7-4675-b69a-ea86d5591738"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "Straight prohibited no entry",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FNoEntry.jpg?alt=media&token=4e1d34ca-1440-41d7-85ec-51b45455bb00"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "Horn prohibited",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FHORN%20PROHIBITED.jpg?alt=media&token=fa4999b4-5053-4764-b488-fe2eb199b008"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "Restriction end",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FRESTRICTION%20ENDS%20SIGN.jpg?alt=media&token=2825e5ff-b4ab-4f0b-9420-8f5d24b1f624"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "Men at work",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FMEN%20AT%20WORK.jpg?alt=media&token=58bfa801-dc18-4f58-af51-a2cf278f1cf4"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "No overtake",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fovertakingprob.jpg?alt=media&token=3ca80b51-9c25-49b8-b658-40e93d8a8793"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "No motor vehicles",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fallvehiclesproh.jpg?alt=media&token=2bd3d796-a157-421a-86fb-e993f02add29"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "School ahead",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSCHOOL%20AHEAD.jpg?alt=media&token=d546d771-c57d-4fd9-a9c8-f6e88dd54a90"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "Parking both sides",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2FparkingBothside.jpg?alt=media&token=b2f22014-443d-494d-b9a2-eb99689de13c"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "Road hump (slow down)",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FHUMP%20OR%20ROUGH%20ROAD.jpg?alt=media&token=81fe6424-b993-4cbb-aa69-d089646ed13c"
+  },
+  {
+    "question": "This road sign means",
+    "answer": "No U-Turn",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Futurnprob.jpg?alt=media&token=52309b13-8bf3-4dd0-9d57-2314de0ee27e"
+  },
+  {
+    "question": "This Traffic Light sign means",
+    "answer": "Go",
+    "imageUrl": " https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficlights%2Fgreen.png?alt=media&token=e961b42e-6491-4274-9352-796612d2b6d9"
+  },
+  {
+    "question": "This Traffic Light sign means",
+    "answer": "Wait/Slow down",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficlights%2Fyellow.png?alt=media&token=fa7071c4-29fa-40b4-8263-51fc997d6aac"
+  },
+  {
+    "question": "This Traffic Light sign means",
+    "answer": "Stop",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficlights%2Fred.png?alt=media&token=f7ca2809-b91f-4b7f-b187-afaa408e9233"
+  }
+]
