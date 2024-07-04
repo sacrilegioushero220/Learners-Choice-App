@@ -1,10 +1,16 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/core/extensions/color_extention.dart';
 
 class QuestionCard extends StatelessWidget {
   final String? image;
   final String question;
-  const QuestionCard({super.key, required this.image, required this.question});
+
+  const QuestionCard({
+    super.key,
+    this.image,
+    required this.question,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,21 +39,22 @@ class QuestionCard extends StatelessWidget {
                 ),
               ),
             ),
-            image != null
-                ? SizedBox(
-                    height: 226,
-                    width: MediaQuery.of(context).size.width,
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        top: 20,
-                        bottom: 20,
-                        right: 60,
-                        left: 60,
-                      ),
-                      child: imageContainerBlack(image.toString()),
-                    ),
-                  )
-                : const SizedBox(),
+            if (image != null && image!.isNotEmpty)
+              SizedBox(
+                height: 226,
+                width: MediaQuery.of(context).size.width,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 20,
+                    bottom: 20,
+                    right: 60,
+                    left: 60,
+                  ),
+                  child: imageContainerBlack(image!),
+                ),
+              )
+            else
+              const SizedBox(),
           ],
         ),
       ),
@@ -94,7 +101,10 @@ Widget imageContainerBlack(String image) {
       width: 154,
       height: 154,
       fit: BoxFit.contain,
-      errorWidget: (context, url, error) => const Icon(Icons.error),
+      errorWidget: (context, url, error) {
+        print("Error is this : $error");
+        return const Icon(Icons.error);
+      },
     ),
   );
 }

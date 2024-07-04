@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class OptionCard extends StatelessWidget {
   final String optionDescription;
   final String optionNumber;
-  final bool isSelected; // Add this parameter
+  final bool isSelected;
   final VoidCallback onTap;
 
   const OptionCard({
@@ -11,11 +11,13 @@ class OptionCard extends StatelessWidget {
     required this.optionDescription,
     required this.optionNumber,
     required this.onTap,
-    this.isSelected = false, // Default value is false
+    this.isSelected = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    if (optionDescription.isEmpty) return const SizedBox();
+
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -23,9 +25,7 @@ class OptionCard extends StatelessWidget {
         height: 65,
         clipBehavior: Clip.antiAlias,
         decoration: ShapeDecoration(
-          color: isSelected
-              ? Colors.green
-              : const Color(0xFFFFF8F6), // Change color if selected
+          color: isSelected ? Colors.green : const Color(0xFFFFF8F6),
           shape: RoundedRectangleBorder(
             side: const BorderSide(width: 1, color: Color(0xFFD8C2BC)),
             borderRadius: BorderRadius.circular(12),
@@ -53,9 +53,7 @@ class OptionCard extends StatelessWidget {
                 ),
               ),
             ),
-            const VerticalDivider(
-              color: Color(0xFFD8C2BC),
-            ),
+            const VerticalDivider(color: Color(0xFFD8C2BC)),
             Expanded(
               child: Container(
                 padding: const EdgeInsets.only(bottom: 5, top: 5),
