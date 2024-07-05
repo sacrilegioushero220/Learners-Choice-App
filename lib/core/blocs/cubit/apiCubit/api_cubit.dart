@@ -14,9 +14,11 @@ class ApiCubit extends Cubit<ApiState> {
   Future<void> fetchRoadSigns() async {
     await fetchData('roadSigns');
   }
+
   Future<void> fetchHandSignals() async {
     await fetchData('handSignals');
   }
+
   Future<void> fetchHazardSigns() async {
     await fetchData('hazardSigns');
   }

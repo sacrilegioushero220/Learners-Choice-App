@@ -5,6 +5,7 @@ class OptionCard extends StatelessWidget {
   final String optionNumber;
   final bool isSelected;
   final VoidCallback onTap;
+  final double leadingFontSize;
 
   const OptionCard({
     Key? key,
@@ -12,6 +13,7 @@ class OptionCard extends StatelessWidget {
     required this.optionNumber,
     required this.onTap,
     this.isSelected = false,
+    this.leadingFontSize = 35,
   }) : super(key: key);
 
   @override
@@ -22,7 +24,6 @@ class OptionCard extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: 80,
         clipBehavior: Clip.antiAlias,
         decoration: ShapeDecoration(
           color: isSelected ? Colors.green : const Color(0xFFFFF8F6),
@@ -43,9 +44,9 @@ class OptionCard extends StatelessWidget {
               child: Center(
                 child: Text(
                   optionNumber,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.black,
-                    fontSize: 35,
+                    fontSize: leadingFontSize,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w500,
                     height: 1.5,

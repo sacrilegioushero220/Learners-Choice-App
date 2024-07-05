@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:learners_choice_app/Presentation/custom_grid_view_screen.dart';
 import 'package:learners_choice_app/Presentation/custom_list_view_screen.dart';
 import 'package:learners_choice_app/Presentation/learners_test/mock_test_screen.dart';
+import 'package:learners_choice_app/Presentation/presentation_layer.dart';
 import 'package:learners_choice_app/Presentation/traffic_signs_screen.dart';
 import 'package:learners_choice_app/core/blocs/cubit/apiCubit/api_cubit.dart';
+import 'package:learners_choice_app/core/blocs/cubit/quizCubit/quiz_cubit.dart';
+import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -32,7 +36,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              buildImageWidget(
+              BuildImageWidget(
                 width: 278,
                 height: 138,
                 imagePath: carHomePage,
@@ -134,6 +138,16 @@ class HomeScreen extends StatelessWidget {
                     BuildCustomGridViewItem(
                       iconPath: gridViewItemIcon6,
                       label: gridViewItemlabel6,
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (ctx) => QnaScreen(
+                                      quizCubit:
+                                          QuizCubit(DefaultCacheManager())
+                                            ..fetchQnA(),
+                                    )));
+                      },
                     )
                   ],
                 ),

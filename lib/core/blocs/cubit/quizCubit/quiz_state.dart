@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:learners_choice_app/model/qn_a/qn_a.dart';
 import 'package:learners_choice_app/model/quiz_question.dart';
 
 abstract class QuizState extends Equatable {
@@ -26,4 +27,13 @@ class QuizError extends QuizState {
 
   @override
   List<Object> get props => [message];
+}
+
+class QnALoaded extends QuizState {
+  final List<QnA> qnAs;
+
+  QnALoaded({required this.qnAs});
+
+  @override
+  List<Object> get props => [qnAs];
 }

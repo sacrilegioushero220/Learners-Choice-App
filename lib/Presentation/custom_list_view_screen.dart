@@ -5,12 +5,15 @@ import 'package:learners_choice_app/core/blocs/cubit/apiCubit/api_cubit.dart';
 import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 
 class CustomListViewScreen extends StatelessWidget {
-  const CustomListViewScreen({super.key, required this.apiCubit,});
-final ApiCubit apiCubit;
+  const CustomListViewScreen({
+    super.key,
+    required this.apiCubit,
+  });
+  final ApiCubit apiCubit;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>apiCubit,
+      create: (context) => apiCubit,
       child: Scaffold(
         appBar: customAppBar(context),
         body: Padding(
