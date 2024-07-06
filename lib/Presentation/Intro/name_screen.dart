@@ -7,99 +7,117 @@ import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import '../../../../core/widgets/customButtons/custom_fab_button.dart';
 
-class NameScreen extends StatelessWidget {
+class NameScreen extends StatefulWidget {
   const NameScreen({super.key});
 
   @override
+  _NameScreenState createState() => _NameScreenState();
+}
+
+class _NameScreenState extends State<NameScreen> {
+  late TextEditingController nameController;
+
+  @override
+  void initState() {
+    super.initState();
+    nameController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final nameController = TextEditingController();
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
-          child: SizedBox(
-            height: MediaQuery.of(context).size.height,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 44.0,
-                ),
-                buildImageWidget(
-                  width: 134,
-                  height: 57,
-                  imagePath: choiceLogo,
-                ),
-                const SizedBox(
-                  height: 24.0,
-                ),
-                SizedBox(
-                  width: 291,
-                  child: buildRichTextTitle(
-                      titleNameScreen1, titleNameScreen2, context),
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-                Text(
-                  smallTitleNameScreen,
-                  style: context.titleSmallLight,
-                ),
-                const SizedBox(
-                  height: 36.0,
-                ),
-                nameTextField(context, nameController),
-                const SizedBox(
-                  height: 105.0,
-                ),
-                buildImageWidget(
-                  width: 316,
-                  height: 263.39,
-                  imagePath: mobileLogo,
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 15),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        BuildCustomFabButton(
-                          heroTag: "1",
-                          label: "Next",
-                          // isReversed: false,
-
-                          onPressed: () {
-                            String name =
-                                nameController.text; // Get the entered name
-
-                            if (name.isNotEmpty) {
-                              BlocProvider.of<LocalStorageCubit>(context)
-                                  .saveName(name, context);
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (ctx) => const ImageScreen(),
-                                  ));
-                              // Navigate to the next screen or perform any other action
-                            } else {
-                              // Handle the case when the search keyword is empty or null
-                              // For example, you can show a snackbar or perform any other action
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text('Please enter a valid name '),
-                                  duration: Duration(seconds: 1),
-                                ),
-                              );
-                            }
-                          },
-                          isReversed: false,
-                        ),
-                      ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
+            child: SizedBox(
+              height: screenHeight - 100, // Dynamic height adjustment
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 44.0,
+                  ),
+                  buildImageWidget(
+                    width: 134,
+                    height: 57,
+                    imagePath: choiceLogo,
+                  ),
+                  const SizedBox(
+                    height: 24.0,
+                  ),
+                  SizedBox(
+                    width: 291,
+                    child: buildRichTextTitle(
+                        titleNameScreen1, titleNameScreen2, context),
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  Text(
+                    smallTitleNameScreen,
+                    style: context.titleSmallLight,
+                  ),
+                  const SizedBox(
+                    height: 36.0,
+                  ),
+                  nameTextField(context, nameController),
+                  const SizedBox(
+                    height: 105.0,
+                  ),
+                  Center(
+                    child: buildImageWidget(
+                      width: 316,
+                      height: 263.39,
+                      imagePath: mobileLogo,
                     ),
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          BuildCustomFabButton(
+                            heroTag: "1",
+                            label: "Next",
+                            onPressed: () {
+                              String name =
+                                  nameController.text; // Get the entered name
+
+                              if (name.isNotEmpty) {
+                                BlocProvider.of<LocalStorageCubit>(context)
+                                    .saveName(name, context);
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (ctx) => const ImageScreen(),
+                                    ));
+                              } else {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text('Please enter a valid name '),
+                                    duration: Duration(seconds: 1),
+                                  ),
+                                );
+                              }
+                            },
+                            isReversed: false,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -134,6 +152,7 @@ Widget nameTextField(
   return TextField(
     style: const TextStyle(color: Colors.black),
     controller: nameTextController,
+    textInputAction: TextInputAction.done,
     decoration: InputDecoration(
       contentPadding: const EdgeInsets.only(top: 8, left: 16, bottom: 8),
       border: OutlineInputBorder(
