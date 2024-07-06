@@ -25,16 +25,22 @@ class _QnaScreenState extends State<QnaScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: customAppBar(context),
-      body: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10),
-        child: BlocBuilder<QuizCubit, QuizState>(
-          builder: (context, state) {
-            if (state is QuizLoading) {
-              return const Center(child: CircularProgressIndicator());
-            } else if (state is QnALoaded) {
-              // Print the fetched data for debugging
-              print("QnA Data Loaded: ${state.qnAs}");
-              return ListView.builder(
+      body: BlocBuilder<QuizCubit, QuizState>(
+        builder: (context, state) {
+          if (state is QuizLoading) {
+            return const Center(child: CircularProgressIndicator());
+          } else if (state is QnALoaded) {
+            // Print the fetched data for debugging
+            print("QnA Data Loaded: ${state.qnAs}");
+            return Padding(
+              padding: const EdgeInsets.only(
+                left: 10,
+                right: 10,
+              ),
+              child: ListView.separated(
+                separatorBuilder: (context, index) => const SizedBox(
+                  height: 15,
+                ),
                 itemCount: state.qnAs.length,
                 itemBuilder: (context, index) {
                   final qnA = state.qnAs[index];
@@ -45,19 +51,19 @@ class _QnaScreenState extends State<QnaScreen> {
                     number: index + 1,
                   );
                 },
-              );
-            } else if (state is QuizError) {
-              return Center(child: Text('Error: ${state.message}'));
-            } else {
-              BlocProvider.of<QuizCubit>(context).fetchQnA();
-              return const Center(
-                  child: Text(
-                'No data available',
-                style: TextStyle(color: Colors.black),
-              ));
-            }
-          },
-        ),
+              ),
+            );
+          } else if (state is QuizError) {
+            return Center(child: Text('Error: ${state.message}'));
+          } else {
+            BlocProvider.of<QuizCubit>(context).fetchQnA();
+            return const Center(
+                child: Text(
+              'No data available',
+              style: TextStyle(color: Colors.black),
+            ));
+          }
+        },
       ),
     );
   }

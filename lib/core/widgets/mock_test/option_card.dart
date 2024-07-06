@@ -6,15 +6,17 @@ class OptionCard extends StatelessWidget {
   final bool isSelected;
   final VoidCallback onTap;
   final double leadingFontSize;
+  final double trailingFontSize;
 
-  const OptionCard({
-    Key? key,
-    required this.optionDescription,
-    required this.optionNumber,
-    required this.onTap,
-    this.isSelected = false,
-    this.leadingFontSize = 35,
-  }) : super(key: key);
+  const OptionCard(
+      {Key? key,
+      required this.optionDescription,
+      required this.optionNumber,
+      required this.onTap,
+      this.isSelected = false,
+      this.leadingFontSize = 35,
+      this.trailingFontSize = 15})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,20 +56,22 @@ class OptionCard extends StatelessWidget {
                 ),
               ),
             ),
-            const VerticalDivider(color: Color(0xFFD8C2BC)),
+            const VerticalDivider(
+              color: Color(0xFFD8C2BC),
+            ),
             Expanded(
               child: Container(
-                padding: const EdgeInsets.only(bottom: 5, top: 5, right: 5),
+                padding: const EdgeInsets.only(bottom: 10, top: 10, right: 15),
                 child: Text(
                   optionDescription,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.black,
-                    fontSize: 15,
+                    fontSize: trailingFontSize,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w400,
                     height: 1.3,
                   ),
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.start,
                 ),
               ),
             ),

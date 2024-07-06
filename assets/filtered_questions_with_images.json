@@ -251,7 +251,7 @@
   },
   {
     "question": "This sign represents..",
-    "answer": "Entryfor vehicles having height not exceeding 3.5 meters",
+    "answer": "Entry for vehicles having height not exceeding 3.5 meters",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FHEIGHT%20LIMIT.jpg?alt=media&token=ccb3ca5b-a13b-40f3-ab70-71f94b3cc1d8"
   },
   {
@@ -315,8 +315,8 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FLEFT%20HAIR%20PIN%20BAND.jpg?alt=media&token=4d038ef6-0999-4aa7-8a50-c58ef0f303ce"
   },
   {
-    "question": "e driver of a vehicle shall not take U-turn...",
-    "answer": "Ina busy road",
+    "question": "The driver of a vehicle shall not take U-turn...",
+    "answer": "In a busy road",
     "imageUrl": ""
   },
   {
@@ -865,7 +865,7 @@
     "imageUrl": ""
   },
   {
-    "question": "Maximum permissible speed of a medium motor vehicle near educational institution„,",
+    "question": "Maximum permissible speed of a medium motor vehicle near educational institution....",
     "answer": "30 km/hour",
     "imageUrl": ""
   },

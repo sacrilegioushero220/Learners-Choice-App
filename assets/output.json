@@ -554,7 +554,7 @@
     "options": [
       "Entry only for vehicles with height above 3.5 meters",
       "Entry only for vehicles with width above 3.5 meters",
-      "Entryfor vehicles having height not exceeding 3.5 meters",
+      "Entry for vehicles having height not exceeding 3.5 meters",
       ""
     ],
     "correctAnswerIndex": 2,
@@ -693,10 +693,10 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FLEFT%20HAIR%20PIN%20BAND.jpg?alt=media&token=4d038ef6-0999-4aa7-8a50-c58ef0f303ce"
   },
   {
-    "question": "e driver of a vehicle shall not take U-turn...",
+    "question": "The driver of a vehicle shall not take U-turn...",
     "options": [
       "In a road where there is no traffic restrictions",
-      "Ina busy road",
+      "In a busy road",
       "When there are vehicles passing through the left",
       ""
     ],
@@ -1903,7 +1903,7 @@
     "imageUrl": ""
   },
   {
-    "question": "Maximum permissible speed of a medium motor vehicle near educational institution\u201e,",
+    "question": "Maximum permissible speed of a medium motor vehicle near educational institution....",
     "options": [
       "30 km/hour",
       "25 km/hour",
@@ -2252,7 +2252,7 @@
       ""
     ],
     "correctAnswerIndex": 1,
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficlights%2Fgreen.png?alt=media&token=e961b42e-6491-4274-9352-796612d2b6d9"
+    "imageUrl": " https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficlights%2Fgreen.png?alt=media&token=e961b42e-6491-4274-9352-796612d2b6d9"
   },
   {
     "question": "This Traffic Light sign means",

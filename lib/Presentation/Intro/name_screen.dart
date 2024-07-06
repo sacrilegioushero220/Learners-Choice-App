@@ -17,7 +17,8 @@ class NameScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
-          child: SingleChildScrollView(
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -56,39 +57,48 @@ class NameScreen extends StatelessWidget {
                   height: 263.39,
                   imagePath: mobileLogo,
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(212, 70, 20, 0),
-                  child: BuildCustomFabButton(
-                    heroTag: "1",
-                    label: "Next",
-                    // isReversed: false,
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 15),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        BuildCustomFabButton(
+                          heroTag: "1",
+                          label: "Next",
+                          // isReversed: false,
 
-                    onPressed: () {
-                      String name = nameController.text; // Get the entered name
+                          onPressed: () {
+                            String name =
+                                nameController.text; // Get the entered name
 
-                      if (name.isNotEmpty) {
-                        BlocProvider.of<LocalStorageCubit>(context)
-                            .saveName(name, context);
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (ctx) => const ImageScreen(),
-                            ));
-                        // Navigate to the next screen or perform any other action
-                      } else {
-                        // Handle the case when the search keyword is empty or null
-                        // For example, you can show a snackbar or perform any other action
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Please enter a valid name '),
-                            duration: Duration(seconds: 1),
-                          ),
-                        );
-                      }
-                    },
-                    isReversed: false,
+                            if (name.isNotEmpty) {
+                              BlocProvider.of<LocalStorageCubit>(context)
+                                  .saveName(name, context);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (ctx) => const ImageScreen(),
+                                  ));
+                              // Navigate to the next screen or perform any other action
+                            } else {
+                              // Handle the case when the search keyword is empty or null
+                              // For example, you can show a snackbar or perform any other action
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text('Please enter a valid name '),
+                                  duration: Duration(seconds: 1),
+                                ),
+                              );
+                            }
+                          },
+                          isReversed: false,
+                        ),
+                      ],
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),

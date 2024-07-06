@@ -16,14 +16,14 @@ class QnaItem extends StatelessWidget {
   final int number;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       child: Column(
         children: [
           const SizedBox(
             height: 10,
           ),
           QuestionCard(
-            question: "Q$number. $question",
+            question: "Q$number: $question",
             image: imagePath,
           ),
           const SizedBox(
@@ -31,12 +31,10 @@ class QnaItem extends StatelessWidget {
           ),
           OptionCard(
             optionDescription: answer,
-            optionNumber: "Ans",
+            optionNumber: "Ans:",
             onTap: () {},
-            leadingFontSize: 25,
-          ),
-          const SizedBox(
-            height: 13,
+            leadingFontSize: 18,
+            trailingFontSize: 18,
           ),
         ],
       ),
