@@ -120,7 +120,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FCROSS%20ROAD.jpg?alt=media&token=90f9dd9d-a738-478b-872b-d2dccdbffc4b"
   },
   {
-    "question": "Parking a vehicle in frontof entrance to hospital...",
+    "question": "Parking a vehicle in front of entrance to hospital...",
     "answer": "Improper",
     "imageUrl": ""
   },
@@ -1022,7 +1022,7 @@
   {
     "question": "This Traffic Light sign means",
     "answer": "Go",
-    "imageUrl": " https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficlights%2Fgreen.png?alt=media&token=e961b42e-6491-4274-9352-796612d2b6d9"
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficlights%2Fgreen.png?alt=media&token=e961b42e-6491-4274-9352-796612d2b6d9"
   },
   {
     "question": "This Traffic Light sign means",

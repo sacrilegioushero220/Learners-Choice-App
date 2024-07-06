@@ -34,7 +34,6 @@ class QuestionCard extends StatelessWidget {
                   fontSize: 18,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w500,
-                  height: 1.6,
                 ),
               ),
             ),

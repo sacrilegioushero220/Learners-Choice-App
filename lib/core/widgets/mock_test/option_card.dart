@@ -69,7 +69,6 @@ class OptionCard extends StatelessWidget {
                     fontSize: trailingFontSize,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w400,
-                    height: 1.3,
                   ),
                   textAlign: TextAlign.start,
                 ),
