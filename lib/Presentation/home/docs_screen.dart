@@ -9,67 +9,71 @@ class DocsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scrollController = ScrollController();
+
     final List<Widget> docTiles = [
-      docTile(
-        context: context,
+      DocTile(
         iconPath: tipsIconPath,
         title: tipsIconlabel,
-        points: 10,
       ),
-      docTile(
-        context: context,
+      DocTile(
         iconPath: infoIconPath,
         title: infoIconlabel1,
-        subtitle: infoIconlabel2,
-        points: 10,
       ),
-      docTile(
-        context: context,
+      DocTile(
         iconPath: actsIconPath,
         title: actsIconlabel1,
-        subtitle: actsIconlabel2,
-        points: 10,
       ),
-      docTile(
-        context: context,
+      DocTile(
         iconPath: carIconPath,
         title: carIconlabel1,
-        subtitle: carIconlabel2,
-        points: 10,
+      ),
+      DocTile(
+        iconPath: carIconPath,
+        title:
+            "avg=2205.67ms min=8.15msmax=10855.35mscount=5max=10855.35ms count=5",
+      ),
+      DocTile(
+        iconPath: carIconPath,
+        title: carIconlabel1,
+      ),
+      DocTile(
+        iconPath: carIconPath,
+        title: carIconlabel1,
+      ),
+      DocTile(
+        iconPath: carIconPath,
+        title: carIconlabel1,
+      ),
+      DocTile(
+        iconPath: carIconPath,
+        title: carIconlabel1,
       ),
     ];
     return Scaffold(
       backgroundColor: context.onPrimary,
-      body: SingleChildScrollView(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                buildImageWidget(
-                  width: 283,
-                  height: 217,
-                  imagePath: learningIconPath,
+      body: Padding(
+        padding: const EdgeInsets.only(top: 20),
+        child: Scrollbar(
+          thumbVisibility: true,
+          controller: scrollController,
+          child: ListView.separated(
+            controller: scrollController,
+            itemCount: docTiles.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 20,
                 ),
-                SizedBox(
-                  width: 340,
-                  height: 410,
-                  child: ListView.separated(
-                    itemCount: docTiles.length,
-                    itemBuilder: (context, index) {
-                      return docTiles[index];
-                    },
-                    separatorBuilder: (context, index) {
-                      return const SizedBox(
-                        height: 15,
-                      );
-                    },
-                  ),
-                )
-              ],
-            ),
+                child: docTiles[index],
+              );
+            },
+            separatorBuilder: (context, index) {
+              return const SizedBox(
+                height: 15,
+              );
+            },
           ),
         ),
       ),

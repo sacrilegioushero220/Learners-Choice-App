@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 
 class QnaItem extends StatelessWidget {
   const QnaItem({

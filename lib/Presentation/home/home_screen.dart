@@ -8,12 +8,9 @@ import 'package:learners_choice_app/Presentation/traffic_signs_screen.dart';
 import 'package:learners_choice_app/core/blocs/cubit/apiCubit/api_cubit.dart';
 import 'package:learners_choice_app/core/blocs/cubit/quizCubit/quiz_cubit.dart';
 import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
-import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
-import 'package:learners_choice_app/core/widgets/custom_grid_view_item.dart';
-import 'package:learners_choice_app/core/widgets/ll_tile.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({

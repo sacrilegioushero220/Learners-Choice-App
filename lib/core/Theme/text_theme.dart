@@ -165,7 +165,6 @@ class CustomTextTheme {
       color: Colors.black,
       fontSize: 14.0,
       fontWeight: FontWeight.w500,
-      height: 1.5,
       letterSpacing: 0.10,
     ),
   );
