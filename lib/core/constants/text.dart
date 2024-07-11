@@ -48,14 +48,20 @@ String actsIconPath = "assets/Images/docsscreen/acts.png";
 String carIconPath = "assets/Images/docsscreen/car.png";
 String infoIconPath = "assets/Images/docsscreen/info.jpg";
 String tipsIconPath = "assets/Images/docsscreen/tips.jpg";
+String codeIconPath = "assets/Images/docsscreen/Codes.png";
+String acts2IconPath = "assets/Images/docsscreen/acts2.png";
+String speedLimitIconPath = "assets/Images/docsscreen/speedLimit.png";
+String roadSignIconPath = "assets/Images/docsscreen/RoadSign.png";
+String hTrackIconPath = "assets/Images/docsscreen/Htrack.png";
 
-String tipsIconlabel = "Tips for Beginner Drivers";
-String infoIconlabel1 = "Important Information";
-String infoIconlabel2 = "regarding DL Test";
-String actsIconlabel1 = "Important Acts for all";
-String actsIconlabel2 = "Drivers";
-String carIconlabel1 = "Important Speed Limit of";
-String carIconlabel2 = "Indian Roads";
+String docTilelabel1 = "Tips for Beginner Drivers";
+String docTilelabel2 = "Driving School Syllabus";
+String docTilelabel3 = "Traffic Regulation Act & Rules 1989";
+String docTilelabel4 = "Important Speed Limits of Indian Roads";
+String docTilelabel5 = " Rto Codes";
+String docTilelabel6 = "Driving Test Track";
+String docTilelabel7 = "Road Test";
+String docTilelabel8 = "Important acts for drivers";
 
 //InfoScreen
 String choiceIconPath = "assets/Images/choicelogo.png";

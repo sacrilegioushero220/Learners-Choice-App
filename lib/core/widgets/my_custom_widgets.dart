@@ -16,3 +16,4 @@ export 'mock_test/question_card.dart';
 export 'mock_test/timer_count_down.dart';
 export 'name_text_field.dart';
 export 'qna_item.dart';
+export 'Docs Screen/acts_card.dart';

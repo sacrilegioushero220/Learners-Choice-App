@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
+
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/widgets/doc_tile.dart';
@@ -13,41 +13,36 @@ class DocsScreen extends StatelessWidget {
 
     final List<Widget> docTiles = [
       DocTile(
-        iconPath: tipsIconPath,
-        title: tipsIconlabel,
+        iconPath: acts2IconPath,
+        title: docTilelabel8,
       ),
       DocTile(
         iconPath: infoIconPath,
-        title: infoIconlabel1,
+        title: docTilelabel2,
       ),
       DocTile(
         iconPath: actsIconPath,
-        title: actsIconlabel1,
+        title: docTilelabel3,
       ),
       DocTile(
         iconPath: carIconPath,
-        title: carIconlabel1,
+        title: docTilelabel4,
       ),
       DocTile(
-        iconPath: carIconPath,
-        title:
-            "avg=2205.67ms min=8.15msmax=10855.35mscount=5max=10855.35ms count=5",
+        iconPath: speedLimitIconPath,
+        title: docTilelabel5,
       ),
       DocTile(
-        iconPath: carIconPath,
-        title: carIconlabel1,
+        iconPath: codeIconPath,
+        title: docTilelabel6,
       ),
       DocTile(
-        iconPath: carIconPath,
-        title: carIconlabel1,
+        iconPath: hTrackIconPath,
+        title: docTilelabel6,
       ),
       DocTile(
-        iconPath: carIconPath,
-        title: carIconlabel1,
-      ),
-      DocTile(
-        iconPath: carIconPath,
-        title: carIconlabel1,
+        iconPath: roadSignIconPath,
+        title: docTilelabel7,
       ),
     ];
     return Scaffold(
