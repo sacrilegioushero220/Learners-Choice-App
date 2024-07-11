@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:learners_choice_app/Presentation/home/result_screen.dart';
+import 'package:learners_choice_app/core/blocs/cubit/docLoaderCubit/doc_loader_cubit.dart';
 
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -19,8 +21,10 @@ class DocsScreen extends StatelessWidget {
         onTap: () => Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (ctx) => const ResultScreen(
+                builder: (ctx) => ResultScreen(
                       appBarTitle: "Important acts for drivers",
+                      docsLoaderCubit: DocLoaderCubit(DefaultCacheManager())
+                        ..fetchDriverActs(),
                     ))),
       ),
       DocTile(
