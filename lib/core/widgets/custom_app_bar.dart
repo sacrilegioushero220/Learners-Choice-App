@@ -7,9 +7,8 @@ import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/widgets/show_profile_dialog.dart';
 
-PreferredSizeWidget customAppBar(
-  BuildContext context,
-) {
+PreferredSizeWidget customAppBar(BuildContext context,
+    {String customAppBarTitle = "Learner's Choice"}) {
   return AppBar(
     elevation: 0,
     scrolledUnderElevation: 0,
@@ -17,7 +16,7 @@ PreferredSizeWidget customAppBar(
     leading: Builder(builder: (BuildContext context) {
       return const Icon(Icons.menu);
     }),
-    title: Text(appBarTitle),
+    title: Text(customAppBarTitle),
     centerTitle: true,
     actions: [
       Padding(

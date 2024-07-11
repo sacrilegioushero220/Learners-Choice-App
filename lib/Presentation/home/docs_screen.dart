@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/Presentation/home/result_screen.dart';
 
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -15,6 +16,12 @@ class DocsScreen extends StatelessWidget {
       DocTile(
         iconPath: acts2IconPath,
         title: docTilelabel8,
+        onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (ctx) => const ResultScreen(
+                      appBarTitle: "Important acts for drivers",
+                    ))),
       ),
       DocTile(
         iconPath: infoIconPath,
