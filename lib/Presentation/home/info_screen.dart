@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
-import 'package:learners_choice_app/core/widgets/info_screen_widgets.dart';
+import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class InfoScreen extends StatelessWidget {
   const InfoScreen({super.key});
@@ -23,9 +23,31 @@ class InfoScreen extends StatelessWidget {
                 imagePath: choiceIconPath,
               ),
               //
-              const BuildAboutCard(),
+              const BuildAboutDescriptionCard(),
               const SizedBox(height: 30),
-              const BuildInfoTileCard(),
+              BuildInfoTileCard(
+                locateUsTap: () {
+                  const String googleMap =
+                      "https://maps.app.goo.gl/axwWHAoFEDbYASWE7";
+                  launchUrl(Uri.parse(googleMap));
+                },
+                phoneTap1: () async {
+                  final Uri url = Uri(scheme: 'tel', path: "+919846090270");
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  } else {
+                    throw Exception('url cannnot be launched');
+                  }
+                },
+                phoneTap2: () async {
+                  final Uri url = Uri(scheme: 'tel', path: "+919995543742");
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  } else {
+                    throw Exception('url cannnot be launched');
+                  }
+                },
+              ),
             ],
           ),
         ),

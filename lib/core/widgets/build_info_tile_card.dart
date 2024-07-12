@@ -3,7 +3,11 @@ import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 
 class BuildInfoTileCard extends StatelessWidget {
-  const BuildInfoTileCard({super.key});
+  const BuildInfoTileCard(
+      {super.key, this.locateUsTap, this.phoneTap1, this.phoneTap2});
+  final void Function()? locateUsTap;
+  final void Function()? phoneTap1;
+  final void Function()? phoneTap2;
 
   @override
   Widget build(BuildContext context) {
@@ -70,22 +74,43 @@ class BuildInfoTileCard extends StatelessWidget {
                         )
                       ],
                     ),
-                    GestureDetector(
-                      onTap: () {},
-                      child: Row(
-                        children: [
-                          const Icon(Icons.call),
-                          const SizedBox(
-                            width: 10,
+                    Row(
+                      children: [
+                        const Icon(Icons.call),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Mobile: ",
+                                style: context.captionLight,
+                              ),
+                              Row(
+                                children: [
+                                  GestureDetector(
+                                    onTap: phoneTap1,
+                                    child: Text(
+                                      "+91 9846090270,",
+                                      style: context.captionLight,
+                                    ),
+                                  ),
+                                  GestureDetector(
+                                    onTap: phoneTap2,
+                                    child: Text(
+                                      " +91 9995543742",
+                                      style: context.captionLight,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
-                          Expanded(
-                            child: Text(
-                              "Mobile:\n+91 9846090270, +91 9995543742",
-                              style: context.captionLight,
-                            ),
-                          )
-                        ],
-                      ),
+                        )
+                      ],
                     ),
                   ],
                 ),
@@ -94,7 +119,7 @@ class BuildInfoTileCard extends StatelessWidget {
             Expanded(
                 flex: 1,
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: locateUsTap,
                   child: Image.asset(
                     locationIcon,
                   ),
