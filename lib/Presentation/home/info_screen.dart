@@ -26,6 +26,15 @@ class InfoScreen extends StatelessWidget {
               const BuildAboutDescriptionCard(),
               const SizedBox(height: 30),
               BuildInfoTileCard(
+                mailTap: () async {
+                  final Uri url =
+                      Uri(scheme: 'mailto', path: "choicemdsvpr6669@gmail.com");
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  } else {
+                    throw Exception('url cannnot be launched');
+                  }
+                },
                 locateUsTap: () {
                   const String googleMap =
                       "https://maps.app.goo.gl/axwWHAoFEDbYASWE7";

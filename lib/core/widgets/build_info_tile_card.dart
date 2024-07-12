@@ -4,11 +4,15 @@ import 'package:learners_choice_app/core/extensions/text_extension.dart';
 
 class BuildInfoTileCard extends StatelessWidget {
   const BuildInfoTileCard(
-      {super.key, this.locateUsTap, this.phoneTap1, this.phoneTap2});
+      {super.key,
+      this.locateUsTap,
+      this.phoneTap1,
+      this.phoneTap2,
+      this.mailTap});
   final void Function()? locateUsTap;
   final void Function()? phoneTap1;
   final void Function()? phoneTap2;
-
+  final void Function()? mailTap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -67,9 +71,12 @@ class BuildInfoTileCard extends StatelessWidget {
                           width: 10,
                         ),
                         Expanded(
-                          child: Text(
-                            mailId,
-                            style: context.captionLight,
+                          child: GestureDetector(
+                            onTap: mailTap,
+                            child: Text(
+                              mailId,
+                              style: context.captionLight,
+                            ),
                           ),
                         )
                       ],
