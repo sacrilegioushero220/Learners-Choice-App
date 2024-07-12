@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 class BuildImageWidget extends StatelessWidget {
   const BuildImageWidget({
     Key? key,
-    required this.width,
-    required this.height,
+    this.width,
+    this.height,
     required this.imagePath,
     this.isCircleAvatar = false,
     this.isFileImage = false,
@@ -16,8 +16,8 @@ class BuildImageWidget extends StatelessWidget {
   final bool isCircleAvatar;
   final bool isFileImage;
   final BoxFit? boxFit;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final String imagePath;
 
   @override

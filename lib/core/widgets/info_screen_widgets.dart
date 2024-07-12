@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
+import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 
 Widget buildInfoTileCard(BuildContext context) {
   return Container(
-    width: 322,
     height: 157,
     clipBehavior: Clip.antiAlias,
     decoration: ShapeDecoration(
@@ -29,45 +29,67 @@ Widget buildInfoTileCard(BuildContext context) {
     ),
     child: Padding(
       padding: const EdgeInsets.all(10.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      child: Row(
         children: [
-          Row(
-            children: [
-              const Icon(Icons.settings),
-              const SizedBox(
-                width: 10,
+          Flexible(
+            flex: 2,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 4.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    children: [
+                      const Icon(Icons.settings),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Text(
+                          services,
+                          style: context.captionLight,
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      const Icon(Icons.mail_outline_outlined),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Text(
+                          mailId,
+                          style: context.captionLight,
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      const Icon(Icons.call),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Text(
+                          "Mobile:\n+91 9846090270, +91 9995543742",
+                          style: context.captionLight,
+                        ),
+                      )
+                    ],
+                  ),
+                ],
               ),
-              Text(
-                services,
-                style: context.captionLight,
-              )
-            ],
+            ),
           ),
-          Row(
-            children: [
-              const Icon(Icons.mail_outline_outlined),
-              const SizedBox(
-                width: 10,
-              ),
-              Text(
-                mailId,
-                style: context.captionLight,
-              )
-            ],
-          ),
-          Row(
-            children: [
-              const Icon(Icons.location_on_outlined),
-              const SizedBox(
-                width: 10,
-              ),
-              Text(
-                address,
-                style: context.captionLight,
-              )
-            ],
-          ),
+          Expanded(
+              flex: 1,
+              child: Image.asset(
+                locationIcon,
+              )),
         ],
       ),
     ),
@@ -76,7 +98,6 @@ Widget buildInfoTileCard(BuildContext context) {
 
 Widget buildAboutCard(BuildContext context) {
   return Container(
-    width: 322,
     padding: const EdgeInsets.only(
       top: 10,
       left: 15,

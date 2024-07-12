@@ -1,6 +1,4 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 

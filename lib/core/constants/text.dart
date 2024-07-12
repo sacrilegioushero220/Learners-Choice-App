@@ -66,7 +66,8 @@ String docTilelabel8 = "Important acts for drivers";
 //InfoScreen
 String choiceIconPath = "assets/Images/choicelogo.png";
 String settingsIcon = "assets/icons/settings.png";
-String locationIcon = "assets/icons/location.png";
+String locationIcon = "assets/Images/locateUsIcon.png";
+
 String phoneIcon = "assets/icons/phone.png";
 String services = "LMV, MCWG, MCWOG, HMV , Vehicle Insurance";
 String mailId = "choicemdsvpr6669@gmail.com";

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/core/blocs/cubit/docLoaderCubit/doc_loader_cubit.dart';
 import 'package:learners_choice_app/core/blocs/cubit/docLoaderCubit/doc_loader_state.dart';
-import 'package:learners_choice_app/core/widgets/custom_app_bar.dart';
 import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 
 class ResultScreen extends StatefulWidget {
