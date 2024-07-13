@@ -15,8 +15,11 @@ class BuildInfoTileCard extends StatelessWidget {
   final void Function()? mailTap;
   @override
   Widget build(BuildContext context) {
+    final TextStyle infoStyle = context.captionLight!.copyWith(
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
+    );
     return Container(
-      height: 157,
       clipBehavior: Clip.antiAlias,
       decoration: ShapeDecoration(
         color: const Color(0xFFFCF1F3),
@@ -45,11 +48,11 @@ class BuildInfoTileCard extends StatelessWidget {
             Flexible(
               flex: 2,
               child: Padding(
-                padding: const EdgeInsets.only(right: 4.0),
+                padding: const EdgeInsets.only(right: 10),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    const SizedBox(height: 10),
                     Row(
                       children: [
                         const Icon(Icons.settings),
@@ -59,11 +62,12 @@ class BuildInfoTileCard extends StatelessWidget {
                         Expanded(
                           child: Text(
                             services,
-                            style: context.captionLight,
+                            style: infoStyle,
                           ),
                         )
                       ],
                     ),
+                    const SizedBox(height: 10),
                     Row(
                       children: [
                         const Icon(Icons.mail_outline_outlined),
@@ -75,12 +79,13 @@ class BuildInfoTileCard extends StatelessWidget {
                             onTap: mailTap,
                             child: Text(
                               mailId,
-                              style: context.captionLight,
+                              style: infoStyle,
                             ),
                           ),
                         )
                       ],
                     ),
+                    const SizedBox(height: 10),
                     Row(
                       children: [
                         const Icon(Icons.call),
@@ -94,31 +99,28 @@ class BuildInfoTileCard extends StatelessWidget {
                             children: [
                               Text(
                                 "Mobile: ",
-                                style: context.captionLight,
+                                style: infoStyle,
                               ),
-                              Row(
-                                children: [
-                                  GestureDetector(
-                                    onTap: phoneTap1,
-                                    child: Text(
-                                      "+91 9846090270,",
-                                      style: context.captionLight,
-                                    ),
-                                  ),
-                                  GestureDetector(
-                                    onTap: phoneTap2,
-                                    child: Text(
-                                      " +91 9995543742",
-                                      style: context.captionLight,
-                                    ),
-                                  ),
-                                ],
+                              GestureDetector(
+                                onTap: phoneTap1,
+                                child: Text(
+                                  "+91 9846090270,",
+                                  style: infoStyle,
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: phoneTap2,
+                                child: Text(
+                                  "+91 9995543742",
+                                  style: infoStyle,
+                                ),
                               ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    const SizedBox(height: 10),
                   ],
                 ),
               ),

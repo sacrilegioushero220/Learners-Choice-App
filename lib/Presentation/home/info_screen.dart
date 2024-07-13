@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
+import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/my_custom_widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -57,10 +59,72 @@ class InfoScreen extends StatelessWidget {
                   }
                 },
               ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Spacer(
+                flex: 1,
+              ),
+              BottomInfoCard(
+                developerTap: () {
+                  const String website = "https://www.abhiramtsabu.com";
+                  launchUrl(Uri.parse(website));
+                },
+              )
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class BottomInfoCard extends StatelessWidget {
+  const BottomInfoCard({
+    super.key,
+    this.privacyPolicyTap,
+    this.developerTap,
+  });
+  final privacyPolicyTap;
+  final developerTap;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          "Choice Driving School, Ayyapara Building, Chottupara PO, Vandiperiyar, Idukki, 685533",
+          textAlign: TextAlign.center,
+          style: context.captionLight,
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        GestureDetector(
+          onTap: privacyPolicyTap,
+          child: Text("Privacy Policy",
+              style: GoogleFonts.roboto(
+                  color: const Color.fromARGB(255, 101, 98, 98))),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 5, bottom: 10),
+          child: Text.rich(TextSpan(children: [
+            TextSpan(
+                text: "Developed with 💙 by ",
+                style: GoogleFonts.roboto(
+                    color: const Color.fromARGB(255, 101, 98, 98))),
+            WidgetSpan(
+              child: GestureDetector(
+                onTap: developerTap,
+                child: Text("Abhiram",
+                    style: GoogleFonts.roboto(
+                        decoration: TextDecoration.underline,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.purple)),
+              ),
+            )
+          ])),
+        ),
+      ],
     );
   }
 }
