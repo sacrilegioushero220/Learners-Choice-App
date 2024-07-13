@@ -46,4 +46,16 @@ class DocLoaderCubit extends Cubit<DocLoaderState> {
       fileExtension: 'json',
     );
   }
+
+  Future<void> fetchDrivingSchoolSyllabus() async {
+    emit(DocLoading());
+    try {
+      final ByteData data =
+          await rootBundle.load('assets/pdf/DrivingSyllabus.pdf');
+      final Uint8List bytes = data.buffer.asUint8List();
+      emit(PdfLoaded(pdfBytes: bytes));
+    } catch (e) {
+      emit(DocLoaderError(message: e.toString()));
+    }
+  }
 }

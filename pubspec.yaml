@@ -19,6 +19,7 @@ dependencies:
 
   google_fonts: ^6.1.0
   image_picker: ^1.1.0
+  pdfx: ^2.6.0
   shared_preferences: ^2.2.3
   url_launcher: ^6.3.0
 
@@ -47,6 +48,7 @@ flutter:
     - assets/output.json
     - assets/actsData.json
     - assets/filtered_questions_with_images.json
+    - assets/pdf/DrivingSyllabus.pdf
    
 
     

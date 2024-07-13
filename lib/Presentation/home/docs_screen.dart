@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:learners_choice_app/Presentation/home/pdf_screen.dart';
 import 'package:learners_choice_app/Presentation/home/result_screen.dart';
 import 'package:learners_choice_app/core/blocs/cubit/docLoaderCubit/doc_loader_cubit.dart';
 
@@ -30,6 +32,13 @@ class DocsScreen extends StatelessWidget {
       DocTile(
         iconPath: infoIconPath,
         title: docTilelabel2,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const PdfScreen(),
+              ));
+        },
       ),
       DocTile(
         iconPath: actsIconPath,

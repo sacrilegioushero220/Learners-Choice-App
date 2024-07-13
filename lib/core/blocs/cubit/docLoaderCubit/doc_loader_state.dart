@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:equatable/equatable.dart';
 import 'package:learners_choice_app/model/driver_acts/driver_acts.dart';
 
@@ -26,4 +28,13 @@ class DocLoaderError extends DocLoaderState {
 
   @override
   List<Object> get props => [message];
+}
+
+class PdfLoaded extends DocLoaderState {
+  final Uint8List pdfBytes;
+
+  PdfLoaded({required this.pdfBytes});
+
+  @override
+  List<Object> get props => [pdfBytes];
 }
