@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learners_choice_app/core/blocs/cubit/docLoaderCubit/doc_loader_cubit.dart';
-import 'package:learners_choice_app/core/blocs/cubit/docLoaderCubit/doc_loader_state.dart';
 import 'package:pdfx/pdfx.dart';
 
 class PdfScreen extends StatefulWidget {
+  final String documentPath;
+  final String appBarTitle;
+
   const PdfScreen({
-    super.key,
-  });
+    Key? key,
+    required this.documentPath,
+    required this.appBarTitle,
+  }) : super(key: key);
 
   @override
   _PdfScreenState createState() => _PdfScreenState();
@@ -31,7 +33,7 @@ class _PdfScreenState extends State<PdfScreen> {
 
   void _loadPdfDocument() {
     _pdfControllerPinch = PdfControllerPinch(
-      document: PdfDocument.openAsset('assets/pdf/DrivingSyllabus.pdf'),
+      document: PdfDocument.openAsset(widget.documentPath),
       initialPage: _initialPage,
     );
   }
@@ -40,13 +42,7 @@ class _PdfScreenState extends State<PdfScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('Driving School Syllabus')),
-        // actions: [
-        //   IconButton(
-        //     icon: const Icon(Icons.refresh),
-        //     onPressed: () {}, // Call refresh function here
-        //   ),
-        // ],
+        title: Center(child: Text(widget.appBarTitle)),
       ),
       body: Stack(
         children: [

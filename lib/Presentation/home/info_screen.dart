@@ -19,6 +19,9 @@ class InfoScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
+              const Spacer(
+                flex: 2,
+              ),
               BuildImageWidget(
                 width: 500,
                 height: 150,
@@ -26,7 +29,7 @@ class InfoScreen extends StatelessWidget {
               ),
               //
               const BuildAboutDescriptionCard(),
-              const SizedBox(height: 30),
+              const Spacer(),
               BuildInfoTileCard(
                 mailTap: () async {
                   final Uri url =

@@ -17,10 +17,12 @@ dependencies:
   flutter_bloc: ^8.1.6
   flutter_cache_manager: ^3.3.2
 
+  flutter_svg: ^2.0.10+1
   google_fonts: ^6.1.0
   image_picker: ^1.1.0
   pdfx: ^2.6.0
   shared_preferences: ^2.2.3
+  syncfusion_flutter_pdfviewer: ^26.1.41
   url_launcher: ^6.3.0
 
 dev_dependencies:
@@ -49,6 +51,9 @@ flutter:
     - assets/actsData.json
     - assets/filtered_questions_with_images.json
     - assets/pdf/DrivingSyllabus.pdf
+    - assets/pdf/CMV.pdf
+    - assets/snack_bar.svg
+    
    
 
     

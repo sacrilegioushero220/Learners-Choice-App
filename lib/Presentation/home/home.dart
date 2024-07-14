@@ -39,9 +39,7 @@ class _HomeState extends State<Home> {
 
   PreferredSizeWidget? _selectWhichAppBar(BuildContext context) {
     if (_selectedIndex == 2) {
-      return AppBar(
-        backgroundColor: Colors.transparent,
-      );
+      return null;
     } else {
       return customAppBar(context);
     }
@@ -60,32 +58,31 @@ class _HomeState extends State<Home> {
           exit(0);
         }
       },
-      child: SafeArea(
-        child: Scaffold(
-          backgroundColor: context.onPrimary,
-          body: screens[_selectedIndex],
-          appBar: _selectWhichAppBar(context),
-          bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: context.surfaceVariant,
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home_outlined,
-                ),
-                label: "Home",
+      child: Scaffold(
+        backgroundColor: context.onPrimary,
+        body: screens[_selectedIndex],
+        appBar: _selectWhichAppBar(context),
+        bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: const Color(0xFF410002),
+          backgroundColor: const Color(0xFFF6EBEE),
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_outlined,
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.description_outlined),
-                label: "Docs",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.info_outlined),
-                label: "info",
-              ),
-            ],
-            currentIndex: _selectedIndex,
-            onTap: _onItemTapped,
-          ),
+              label: "Home",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.description_outlined),
+              label: "Docs",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.info_outlined),
+              label: "info",
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
         ),
       ),
     );

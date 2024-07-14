@@ -56,7 +56,7 @@ String hTrackIconPath = "assets/Images/docsscreen/Htrack.png";
 
 String docTilelabel1 = "Tips for Beginner Drivers";
 String docTilelabel2 = "Driving School Syllabus";
-String docTilelabel3 = "Traffic Regulation Act & Rules 1989";
+String docTilelabel3 = "The Motor Vehicles Act 1988";
 String docTilelabel4 = "Important Speed Limits of Indian Roads";
 String docTilelabel5 = " Rto Codes";
 String docTilelabel6 = "Driving Test Track";

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:learners_choice_app/Presentation/home/pdf_screen.dart';
 import 'package:learners_choice_app/Presentation/home/result_screen.dart';
+import 'package:learners_choice_app/Presentation/home/sync_pdf_screen.dart';
 import 'package:learners_choice_app/core/blocs/cubit/docLoaderCubit/doc_loader_cubit.dart';
 
 import 'package:learners_choice_app/core/constants/text.dart';
@@ -36,13 +37,26 @@ class DocsScreen extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (ctx) => const PdfScreen(),
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/DrivingSyllabus.pdf',
+                  appBarTitle: 'Driving School Syllabus',
+                ),
               ));
         },
       ),
       DocTile(
         iconPath: actsIconPath,
         title: docTilelabel3,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/CMV.pdf',
+                  appBarTitle: 'The Motor Vehicles Act 1988',
+                ),
+              ));
+        },
       ),
       DocTile(
         iconPath: carIconPath,
