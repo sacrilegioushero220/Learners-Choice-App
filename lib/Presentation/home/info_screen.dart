@@ -19,61 +19,64 @@ class InfoScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const Spacer(
-                flex: 2,
-              ),
               BuildImageWidget(
                 width: 500,
-                height: 150,
+                height: 120,
                 imagePath: choiceIconPath,
               ),
               //
               const BuildAboutDescriptionCard(),
-              const Spacer(),
-              BuildInfoTileCard(
-                mailTap: () async {
-                  final Uri url =
-                      Uri(scheme: 'mailto', path: "choicemdsvpr6669@gmail.com");
-                  if (await canLaunchUrl(url)) {
-                    await launchUrl(url);
-                  } else {
-                    throw Exception('url cannnot be launched');
-                  }
-                },
-                locateUsTap: () {
-                  const String googleMap =
-                      "https://maps.app.goo.gl/axwWHAoFEDbYASWE7";
-                  launchUrl(Uri.parse(googleMap));
-                },
-                phoneTap1: () async {
-                  final Uri url = Uri(scheme: 'tel', path: "+919846090270");
-                  if (await canLaunchUrl(url)) {
-                    await launchUrl(url);
-                  } else {
-                    throw Exception('url cannnot be launched');
-                  }
-                },
-                phoneTap2: () async {
-                  final Uri url = Uri(scheme: 'tel', path: "+919995543742");
-                  if (await canLaunchUrl(url)) {
-                    await launchUrl(url);
-                  } else {
-                    throw Exception('url cannnot be launched');
-                  }
-                },
-              ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
-              const Spacer(
-                flex: 1,
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    BuildInfoTileCard(
+                      mailTap: () async {
+                        final Uri url = Uri(
+                            scheme: 'mailto',
+                            path: "choicemdsvpr6669@gmail.com");
+                        if (await canLaunchUrl(url)) {
+                          await launchUrl(url);
+                        } else {
+                          throw Exception('url cannnot be launched');
+                        }
+                      },
+                      locateUsTap: () {
+                        const String googleMap =
+                            "https://maps.app.goo.gl/axwWHAoFEDbYASWE7";
+                        launchUrl(Uri.parse(googleMap));
+                      },
+                      phoneTap1: () async {
+                        final Uri url =
+                            Uri(scheme: 'tel', path: "+919846090270");
+                        if (await canLaunchUrl(url)) {
+                          await launchUrl(url);
+                        } else {
+                          throw Exception('url cannnot be launched');
+                        }
+                      },
+                      phoneTap2: () async {
+                        final Uri url =
+                            Uri(scheme: 'tel', path: "+919995543742");
+                        if (await canLaunchUrl(url)) {
+                          await launchUrl(url);
+                        } else {
+                          throw Exception('url cannnot be launched');
+                        }
+                      },
+                    ),
+                    BottomInfoCard(
+                      developerTap: () {
+                        const String website = "https://www.abhiramtsabu.com";
+                        launchUrl(Uri.parse(website));
+                      },
+                    )
+                  ],
+                ),
               ),
-              BottomInfoCard(
-                developerTap: () {
-                  const String website = "https://www.abhiramtsabu.com";
-                  launchUrl(Uri.parse(website));
-                },
-              )
             ],
           ),
         ),

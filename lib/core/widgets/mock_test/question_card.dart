@@ -99,9 +99,12 @@ Widget imageContainerBlack(String image) {
       width: 154,
       height: 154,
       fit: BoxFit.contain,
-      errorWidget: (context, url, error) {
-        return Text(error.toString());
-      },
+      placeholder: (context, url) =>
+          const Center(child: CircularProgressIndicator()),
+      errorWidget: (context, url, error) => const Icon(
+        Icons.error,
+        color: Colors.red,
+      ),
     ),
   );
 }

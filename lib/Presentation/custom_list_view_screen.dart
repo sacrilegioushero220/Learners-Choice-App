@@ -40,9 +40,17 @@ class CustomListViewScreen extends StatelessWidget {
                   },
                 );
               } else if (state is ApiError) {
-                return Center(child: Text('Error: ${state.message}'));
+                return Center(
+                    child: Text(
+                  'Error: ${state.message}',
+                  style: const TextStyle(color: Colors.black),
+                ));
               } else {
-                return const Center(child: Text('No data available'));
+                return const Center(
+                    child: Text(
+                  'No data available',
+                  style: TextStyle(color: Colors.black),
+                ));
               }
             },
           ),

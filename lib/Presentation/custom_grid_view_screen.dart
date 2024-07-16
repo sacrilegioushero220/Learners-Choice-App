@@ -47,7 +47,11 @@ class CustomGridViewScreen extends StatelessWidget {
               } else if (state is ApiError) {
                 return Center(child: Text('Error: ${state.message}'));
               } else {
-                return const Center(child: Text('No data available'));
+                return const Center(
+                    child: Text(
+                  'No data available',
+                  style: TextStyle(color: Colors.black),
+                ));
               }
             },
           ),

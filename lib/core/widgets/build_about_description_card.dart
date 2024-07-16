@@ -21,7 +21,7 @@ class BuildAboutDescriptionCard extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(19),
+        padding: const EdgeInsets.all(5),
         child: Text(
           choiceDescription,
           textAlign: TextAlign.center,
