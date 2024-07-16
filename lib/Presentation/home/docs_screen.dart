@@ -59,16 +59,32 @@ class DocsScreen extends StatelessWidget {
         },
       ),
       DocTile(
-        iconPath: carIconPath,
-        title: docTilelabel4,
-      ),
-      DocTile(
         iconPath: speedLimitIconPath,
-        title: docTilelabel5,
+        title: docTilelabel4,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/SpeedLimit.pdf',
+                  appBarTitle: 'Speed Limits of Indian Roads',
+                ),
+              ));
+        },
       ),
       DocTile(
         iconPath: codeIconPath,
-        title: docTilelabel6,
+        title: docTilelabel5,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/RegistartionCode.pdf',
+                  appBarTitle: 'Vehicle Registration Codes',
+                ),
+              ));
+        },
       ),
       DocTile(
         iconPath: hTrackIconPath,
@@ -77,6 +93,16 @@ class DocsScreen extends StatelessWidget {
       DocTile(
         iconPath: roadSignIconPath,
         title: docTilelabel7,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/roadTest.pdf',
+                  appBarTitle: 'Vehicle Registration Codes',
+                ),
+              ));
+        },
       ),
     ];
     return Scaffold(

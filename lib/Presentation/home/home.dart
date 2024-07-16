@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
 
   PreferredSizeWidget? _selectWhichAppBar(BuildContext context) {
     if (_selectedIndex == 2) {
-      return null;
+      return customAppBar(context);
     } else {
       return customAppBar(context);
     }

@@ -52,6 +52,9 @@ flutter:
     - assets/filtered_questions_with_images.json
     - assets/pdf/DrivingSyllabus.pdf
     - assets/pdf/CMV.pdf
+    - assets/pdf/RegistrationCode.pdf
+    - assets/pdf/SpeedLimit.pdf
+    - assets/pdf/roadTest.pdf
     - assets/snack_bar.svg
     
    
