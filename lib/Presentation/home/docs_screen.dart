@@ -5,7 +5,6 @@ import 'package:learners_choice_app/Presentation/home/pdf_screen.dart';
 import 'package:learners_choice_app/Presentation/home/result_screen.dart';
 import 'package:learners_choice_app/Presentation/home/sync_pdf_screen.dart';
 import 'package:learners_choice_app/core/blocs/cubit/docLoaderCubit/doc_loader_cubit.dart';
-
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/widgets/doc_tile.dart';
@@ -99,7 +98,7 @@ class DocsScreen extends StatelessWidget {
               MaterialPageRoute(
                 builder: (ctx) => const SyncPdfScreen(
                   documentPath: 'assets/pdf/roadTest.pdf',
-                  appBarTitle: 'Vehicle Registration Codes',
+                  appBarTitle: 'Road Test',
                 ),
               ));
         },

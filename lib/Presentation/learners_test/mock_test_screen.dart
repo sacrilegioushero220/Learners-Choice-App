@@ -66,7 +66,7 @@ class _MockTestBodyState extends State<MockTestBody> {
     });
   }
 
-  void _nextQuestion() {
+  void _nextQuestion() async {
     _timer?.cancel();
 
     if (context.read<QuizCubit>().state is QuizLoaded) {

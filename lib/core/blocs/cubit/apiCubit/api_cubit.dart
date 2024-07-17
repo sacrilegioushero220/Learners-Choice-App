@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
@@ -34,6 +35,14 @@ class ApiCubit extends Cubit<ApiState> {
   Future<void> fetchData(String collectionPath,
       {String? subCollectionPath}) async {
     emit(ApiLoading());
+
+    // Check for internet connectivity
+    var connectivityResult = await Connectivity().checkConnectivity();
+    if (connectivityResult == ConnectivityResult.none) {
+      emit(const ApiError('No internet connection'));
+      return;
+    }
+
     try {
       final cacheManager = DefaultCacheManager();
       final cacheKey = subCollectionPath != null
@@ -74,12 +83,14 @@ class ApiCubit extends Cubit<ApiState> {
         items.sort((a, b) => (int.parse(a['no'].toString()))
             .compareTo(int.parse(b['no'].toString())));
 
-        // Cache the fetched data
-        await cacheManager.putFile(
-          cacheKey,
-          utf8.encode(json.encode(items)),
-          fileExtension: 'json',
-        );
+        // Cache the fetched data only if there is valid data
+        if (items.isNotEmpty) {
+          await cacheManager.putFile(
+            cacheKey,
+            utf8.encode(json.encode(items)),
+            fileExtension: 'json',
+          );
+        }
 
         emit(ApiLoaded(items));
       }

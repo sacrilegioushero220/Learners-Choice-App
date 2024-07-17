@@ -15,6 +15,7 @@ class QuizCubit extends Cubit<QuizState> {
 
   Future<void> loadQuizQuestions() async {
     emit(QuizLoading());
+
     try {
       // Fetch questions from Firebase (or in this case, from local JSON file)
       List<QuizQuestion> allQuizQuestions = await fetchQuizQuestionsFromJson();
