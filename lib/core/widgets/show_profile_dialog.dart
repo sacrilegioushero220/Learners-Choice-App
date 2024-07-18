@@ -97,7 +97,6 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                         },
                         child: BuildImageWidget(
                           isCircleAvatar: true,
-                          isFileImage: profilePic.isNotEmpty,
                           boxFit: BoxFit.cover,
                           width: 50,
                           height: 60,

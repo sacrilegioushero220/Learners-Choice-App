@@ -59,7 +59,7 @@ String docTilelabel2 = "Driving School Syllabus";
 String docTilelabel3 = "The Motor Vehicles Act 1988";
 String docTilelabel4 = "Important Speed Limits of Indian Roads";
 String docTilelabel5 = "Vehicle Registration Codes";
-String docTilelabel6 = "Driving Test Track";
+String docTilelabel6 = "Driving Ground Test";
 String docTilelabel7 = "Road Test";
 String docTilelabel8 = "Important acts for drivers";
 

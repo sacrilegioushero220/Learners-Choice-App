@@ -57,6 +57,7 @@ flutter:
     - assets/pdf/RegistrationCode.pdf
     - assets/pdf/SpeedLimit.pdf
     - assets/pdf/roadTest.pdf
+    - assets/pdf/GroundTest.pdf
     - assets/snack_bar.svg
     
    

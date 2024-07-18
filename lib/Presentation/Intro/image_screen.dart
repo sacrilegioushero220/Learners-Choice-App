@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learners_choice_app/Presentation/home/home.dart';
 import 'package:learners_choice_app/core/blocs/cubit/localStorageCubit/local_storage_cubit.dart';
-import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
+import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
@@ -83,7 +83,7 @@ class ImageScreen extends StatelessWidget {
                               BlocProvider.of<LocalStorageCubit>(context)
                                   .pickAndSaveImage();
                             },
-                            child: buildImageWidget(
+                            child: BuildImageWidget(
                               width: 316,
                               height: 263.39,
                               imagePath: imageAvatar,

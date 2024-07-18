@@ -88,6 +88,16 @@ class DocsScreen extends StatelessWidget {
       DocTile(
         iconPath: hTrackIconPath,
         title: docTilelabel6,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/GroundTest.pdf',
+                  appBarTitle: 'DL Ground Test',
+                ),
+              ));
+        },
       ),
       DocTile(
         iconPath: roadSignIconPath,

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:learners_choice_app/Presentation/Intro/image_screen.dart';
 import 'package:learners_choice_app/core/blocs/cubit/localStorageCubit/local_storage_cubit.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
+import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
 import '../../../../core/widgets/customButtons/custom_fab_button.dart';
 
 class NameScreen extends StatefulWidget {
@@ -45,7 +47,7 @@ class _NameScreenState extends State<NameScreen> {
                   const SizedBox(
                     height: 44.0,
                   ),
-                  buildImageWidget(
+                  BuildImageWidget(
                     width: 134,
                     height: 57,
                     imagePath: choiceLogo,
@@ -73,7 +75,7 @@ class _NameScreenState extends State<NameScreen> {
                     height: 105.0,
                   ),
                   Center(
-                    child: buildImageWidget(
+                    child: BuildImageWidget(
                       width: 316,
                       height: 263.39,
                       imagePath: mobileLogo,
@@ -167,23 +169,6 @@ Widget nameTextField(
         fontWeight: FontWeight.w400,
         height: 0.09,
         letterSpacing: 0.50,
-      ),
-    ),
-  );
-}
-
-Widget buildImageWidget({
-  required double width,
-  required double height,
-  required String imagePath,
-}) {
-  return Container(
-    width: width,
-    height: height,
-    decoration: BoxDecoration(
-      image: DecorationImage(
-        image: AssetImage(imagePath),
-        fit: BoxFit.contain,
       ),
     ),
   );
