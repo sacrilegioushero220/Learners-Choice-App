@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 import 'package:learners_choice_app/core/widgets/build_image_widget.dart';
-import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 
 // ignore: must_be_immutable
 class DocTile extends StatelessWidget {

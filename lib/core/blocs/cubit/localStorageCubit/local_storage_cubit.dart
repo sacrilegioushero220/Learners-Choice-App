@@ -26,9 +26,7 @@ class LocalStorageCubit extends Cubit<LocalStorageState> {
         profilePic: profilePic,
         profileName: profileName,
       ));
-      print('Stored Name: $profileName and Stored Pic is : $profilePic');
     } else {
-      print('No profile is stored');
       log("This is a log file");
     }
   }
@@ -77,6 +75,5 @@ class LocalStorageCubit extends Cubit<LocalStorageState> {
     String? profilePic = prefs.getString('profilePic');
     emit(ProfileUpdatedState(
         profileName: name, profilePic: profilePic.toString()));
-    print("Profile is updatedstate");
   }
 }

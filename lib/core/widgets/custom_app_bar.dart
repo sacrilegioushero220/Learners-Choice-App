@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:learners_choice_app/core/blocs/cubit/localStorageCubit/local_storage_cubit.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
-import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/widgets/show_profile_dialog.dart';
 
 PreferredSizeWidget customAppBar(BuildContext context,

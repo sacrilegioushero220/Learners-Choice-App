@@ -26,7 +26,6 @@ class CustomGridViewScreen extends StatelessWidget {
             builder: (context, state) {
               if (state is ApiLoading) {
                 return const Center(child: CircularProgressIndicator());
-                print("current state");
               } else if (state is ApiLoaded) {
                 return GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

@@ -9,6 +9,7 @@ class QnaScreen extends StatefulWidget {
   final QuizCubit quizCubit;
 
   @override
+  // ignore: library_private_types_in_public_api
   _QnaScreenState createState() => _QnaScreenState();
 }
 
@@ -28,8 +29,6 @@ class _QnaScreenState extends State<QnaScreen> {
           if (state is QuizLoading) {
             return const Center(child: CircularProgressIndicator());
           } else if (state is QnALoaded) {
-            // Print the fetched data for debugging
-            print("QnA Data Loaded: ${state.qnAs}");
             return Padding(
               padding: const EdgeInsets.only(
                 left: 10,

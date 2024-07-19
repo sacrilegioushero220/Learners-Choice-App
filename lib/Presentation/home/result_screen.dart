@@ -36,12 +36,12 @@ class _ResultScreenState extends State<ResultScreen> {
           if (state is DocLoading) {
             return const Center(child: CircularProgressIndicator());
           } else if (state is DriverActsLoaded) {
-            // Print the fetched data for debugging
-            print("DriverActs Data Loaded: ${state.driverActs}");
             return Padding(
               padding: const EdgeInsets.only(
                 left: 10,
                 right: 10,
+                top: 20,
+                bottom: 20,
               ),
               child: ListView.separated(
                   itemBuilder: (context, index) {

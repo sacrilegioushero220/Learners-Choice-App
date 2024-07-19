@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:learners_choice_app/Presentation/Intro/image_screen.dart';
 import 'package:learners_choice_app/core/blocs/cubit/localStorageCubit/local_storage_cubit.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
@@ -13,6 +12,7 @@ class NameScreen extends StatefulWidget {
   const NameScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _NameScreenState createState() => _NameScreenState();
 }
 

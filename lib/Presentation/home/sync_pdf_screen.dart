@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class SyncPdfScreen extends StatefulWidget {
@@ -12,6 +11,7 @@ class SyncPdfScreen extends StatefulWidget {
       : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _SyncPdfScreenState createState() => _SyncPdfScreenState();
 }
 

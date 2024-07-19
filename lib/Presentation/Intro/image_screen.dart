@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -65,7 +67,6 @@ class ImageScreen extends StatelessWidget {
                   Center(
                     child: BlocBuilder<LocalStorageCubit, LocalStorageState>(
                       builder: (context, state) {
-                        print("current State is : $state");
                         if (state is ImagePicked) {
                           return InkWell(
                             onTap: () {

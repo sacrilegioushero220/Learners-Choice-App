@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
               );
             }
           },
-          child: Container(
+          child: SizedBox(
             child: Image.asset(applogo),
           ),
         ),

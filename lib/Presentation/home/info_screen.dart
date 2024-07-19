@@ -91,8 +91,8 @@ class BottomInfoCard extends StatelessWidget {
     this.privacyPolicyTap,
     this.developerTap,
   });
-  final privacyPolicyTap;
-  final developerTap;
+  final void Function()? privacyPolicyTap;
+  final void Function()? developerTap;
   @override
   Widget build(BuildContext context) {
     return Column(
