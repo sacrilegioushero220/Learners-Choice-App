@@ -30,7 +30,10 @@ class CustomListTile extends StatelessWidget {
               // placeholder: (context, url) => const CircularProgressIndicator(
               //   valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
               // ),
-              errorWidget: (context, url, error) => const Icon(Icons.error),
+              errorWidget: (context, url, error) => const Icon(
+                Icons.error,
+                color: Colors.red,
+              ),
             ),
           ),
           const SizedBox(height: 8),

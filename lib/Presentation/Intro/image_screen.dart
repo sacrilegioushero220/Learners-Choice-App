@@ -131,6 +131,7 @@ class ImageScreen extends StatelessWidget {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
                                   content: Text('Please pick an image first.'),
+                                  duration: Duration(seconds: 1),
                                 ),
                               );
                             }

@@ -79,7 +79,7 @@ class DocsScreen extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (ctx) => const SyncPdfScreen(
-                  documentPath: 'assets/pdf/RegistartionCode.pdf',
+                  documentPath: 'assets/pdf/RegistrationCode.pdf',
                   appBarTitle: 'Vehicle Registration Codes',
                 ),
               ));
