@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class QuestionCard extends StatelessWidget {
+class QuestionCard extends StatefulWidget {
   final String? image;
   final String question;
 
@@ -10,6 +10,27 @@ class QuestionCard extends StatelessWidget {
     this.image,
     required this.question,
   });
+
+  @override
+  _QuestionCardState createState() => _QuestionCardState();
+}
+
+class _QuestionCardState extends State<QuestionCard> {
+  bool _showError = false;
+  late String _imageKey;
+
+  @override
+  void initState() {
+    super.initState();
+    _imageKey = UniqueKey().toString();
+  }
+
+  void _refreshImage() {
+    setState(() {
+      _showError = false;
+      _imageKey = UniqueKey().toString(); // Generate a new key to force reload
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +49,7 @@ class QuestionCard extends StatelessWidget {
               width: 331,
               child: Text(
                 textAlign: TextAlign.justify,
-                question,
+                widget.question,
                 style: const TextStyle(
                   color: Colors.black,
                   fontSize: 18,
@@ -37,7 +58,7 @@ class QuestionCard extends StatelessWidget {
                 ),
               ),
             ),
-            if (image != null && image!.isNotEmpty)
+            if (widget.image != null && widget.image!.isNotEmpty)
               SizedBox(
                 height: 226,
                 width: MediaQuery.of(context).size.width,
@@ -48,7 +69,24 @@ class QuestionCard extends StatelessWidget {
                     right: 60,
                     left: 60,
                   ),
-                  child: imageContainerBlack(image!),
+                  child: _showError
+                      ? Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              'Failed to load image. Please check your internet connection and try again.',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.red),
+                            ),
+                            const SizedBox(height: 8),
+                            ElevatedButton(
+                              onPressed: _refreshImage,
+                              child: const Text('Refresh'),
+                            ),
+                          ],
+                        )
+                      : imageContainerBlack(
+                          widget.image!, _refreshImage, _imageKey),
                 ),
               )
             else
@@ -70,7 +108,8 @@ ShapeDecoration containerDecDefault() {
   );
 }
 
-Widget imageContainerBlack(String image) {
+Widget imageContainerBlack(
+    String image, VoidCallback onError, String imageKey) {
   return Container(
     padding: const EdgeInsets.all(10),
     clipBehavior: Clip.antiAlias,
@@ -95,16 +134,39 @@ Widget imageContainerBlack(String image) {
       ],
     ),
     child: CachedNetworkImage(
+      key: Key(imageKey), // Use the key to force reload
       imageUrl: image,
       width: 154,
       height: 154,
       fit: BoxFit.contain,
       placeholder: (context, url) =>
           const Center(child: CircularProgressIndicator()),
-      errorWidget: (context, url, error) => const Icon(
-        Icons.error,
-        color: Colors.red,
-      ),
+      errorWidget: (context, url, error) => RefreshWidget(onPressed: onError),
     ),
   );
+}
+
+class RefreshWidget extends StatelessWidget {
+  final VoidCallback onPressed;
+
+  const RefreshWidget({Key? key, required this.onPressed}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text(
+          'Failed to load image. Please check your internet connection and try again.',
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.red),
+        ),
+        const SizedBox(height: 8),
+        ElevatedButton(
+          onPressed: onPressed,
+          child: const Text('Refresh'),
+        ),
+      ],
+    );
+  }
 }

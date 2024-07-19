@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class QnaItem extends StatelessWidget {
+class QnaItem extends StatefulWidget {
   const QnaItem({
     super.key,
     required this.answer,
@@ -14,6 +14,27 @@ class QnaItem extends StatelessWidget {
   final String imagePath;
   final String question;
   final int number;
+
+  @override
+  _QnaItemState createState() => _QnaItemState();
+}
+
+class _QnaItemState extends State<QnaItem> {
+  late String _imagePath;
+
+  @override
+  void initState() {
+    super.initState();
+    _imagePath = widget.imagePath;
+  }
+
+  void _reloadImage() {
+    setState(() {
+      _imagePath =
+          '${widget.imagePath}?v=${DateTime.now().millisecondsSinceEpoch}';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +51,7 @@ class QnaItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Q$number: $question",
+            "Q${widget.number}: ${widget.question}",
             style: const TextStyle(
               color: Colors.black,
               fontSize: 18,
@@ -39,7 +60,7 @@ class QnaItem extends StatelessWidget {
             ),
             textAlign: TextAlign.justify,
           ),
-          if (imagePath.isNotEmpty)
+          if (widget.imagePath.isNotEmpty)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Container(
@@ -50,9 +71,24 @@ class QnaItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: CachedNetworkImage(
-                  imageUrl: imagePath,
+                  imageUrl: _imagePath,
                   fit: BoxFit.contain,
-                  errorWidget: (context, url, error) => Text(error.toString()),
+                  errorWidget: (context, url, error) {
+                    return Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'Failed to load image.',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        const SizedBox(height: 10),
+                        ElevatedButton(
+                          onPressed: _reloadImage,
+                          child: const Text('Retry'),
+                        ),
+                      ],
+                    );
+                  },
                 ),
               ),
             ),
@@ -73,7 +109,7 @@ class QnaItem extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: answer,
+                  text: widget.answer,
                   style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
