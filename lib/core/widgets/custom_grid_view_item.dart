@@ -25,24 +25,31 @@ class BuildCustomGridViewItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(height: 15),
-            BuildImageWidget(
-              width: 34,
-              height: 33,
-              imagePath: iconPath,
-            ),
-            const SizedBox(height: 10),
-            Expanded(
-              child: Text(
-                label,
-                style: context.captionLight,
-                textAlign: TextAlign.center,
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 5,
               ),
-            ),
-          ],
+              BuildImageWidget(
+                width: 34,
+                height: 33,
+                imagePath: iconPath,
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: SizedBox(
+                  child: Text(
+                    label,
+                    style: context.captionLight,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
