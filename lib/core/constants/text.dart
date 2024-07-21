@@ -35,11 +35,11 @@ String gridViewItemIcon6 = "assets/Images/homescreen/LLTestQna.png";
 
 //GridViewItemlabel
 String gridViewItemlabel1 = "Traffic Signs";
-String gridViewItemlabel2 = "Road Signs";
+String gridViewItemlabel2 = "Road Markings";
 String gridViewItemlabel3 = "Hazard Signs";
-String gridViewItemlabel4 = "Driver Signs";
-String gridViewItemlabel5 = "Hand Signals";
-String gridViewItemlabel6 = "LL Test QnA";
+String gridViewItemlabel4 = "Driver Hand Signals";
+String gridViewItemlabel5 = "Traffic Police Signals";
+String gridViewItemlabel6 = "Learner's Question Bank";
 
 //DocsScreen
 

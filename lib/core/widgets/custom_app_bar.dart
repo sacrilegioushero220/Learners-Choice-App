@@ -9,6 +9,7 @@ import 'package:learners_choice_app/core/widgets/show_profile_dialog.dart';
 
 PreferredSizeWidget customAppBar(BuildContext context,
     {String customAppBarTitle = "Learner's Choice"}) {
+  String profilePicPath = "";
   return PreferredSize(
     preferredSize: const Size.fromHeight(65.0),
     child: AppBar(
@@ -48,13 +49,15 @@ PreferredSizeWidget customAppBar(BuildContext context,
                     final profilePic = state is ProfileFetchedState
                         ? state.profilePic
                         : (state as ProfileUpdatedState).profilePic;
+                    profilePicPath = profilePic;
                     return CircleAvatar(
                       radius: 130, // Adjust the radius as needed
                       backgroundImage: FileImage(File(profilePic)),
                     );
                   }
                   return CircleAvatar(
-                    backgroundImage: AssetImage(avatar1Path),
+                    radius: 130,
+                    backgroundImage: FileImage(File(imageAvatar)),
                   );
                 },
               ),

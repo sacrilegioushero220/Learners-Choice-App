@@ -103,6 +103,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                           width: 50,
                           height: 60,
                           imagePath: profilePic,
+                          isFileImage: true,
                         ),
                       );
                     },
