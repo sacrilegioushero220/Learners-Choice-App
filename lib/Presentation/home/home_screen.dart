@@ -67,9 +67,13 @@ class HomeScreen extends StatelessWidget {
                 height: 25,
               ),
               SizedBox(
-                height: 250,
                 width: 330,
+                height: 270,
                 child: GridView.count(
+                  padding: const EdgeInsets.only(
+                    top: 5,
+                    bottom: 5,
+                  ),
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
                   crossAxisCount: 3,
@@ -148,7 +152,10 @@ class HomeScreen extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
+              const SizedBox(
+                height: 25,
+              ),
             ],
           ),
         ),

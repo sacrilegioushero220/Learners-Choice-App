@@ -64,34 +64,37 @@ class ImageScreen extends StatelessWidget {
                   const SizedBox(
                     height: 100,
                   ),
-                  Center(
-                    child: BlocBuilder<LocalStorageCubit, LocalStorageState>(
-                      builder: (context, state) {
-                        if (state is ImagePicked) {
-                          return InkWell(
-                            onTap: () {
-                              BlocProvider.of<LocalStorageCubit>(context)
-                                  .pickAndSaveImage();
-                            },
-                            child: CircleAvatar(
-                              radius: 130, // Adjust the radius as needed
-                              backgroundImage: FileImage(File(state.imagePath)),
-                            ),
-                          );
-                        } else {
-                          return InkWell(
-                            onTap: () {
-                              BlocProvider.of<LocalStorageCubit>(context)
-                                  .pickAndSaveImage();
-                            },
-                            child: BuildImageWidget(
-                              width: 316,
-                              height: 263.39,
-                              imagePath: imageAvatar,
-                            ),
-                          );
-                        }
-                      },
+                  Expanded(
+                    child: Center(
+                      child: BlocBuilder<LocalStorageCubit, LocalStorageState>(
+                        builder: (context, state) {
+                          if (state is ImagePicked) {
+                            return InkWell(
+                              onTap: () {
+                                BlocProvider.of<LocalStorageCubit>(context)
+                                    .pickAndSaveImage();
+                              },
+                              child: CircleAvatar(
+                                radius: 130, // Adjust the radius as needed
+                                backgroundImage:
+                                    FileImage(File(state.imagePath)),
+                              ),
+                            );
+                          } else {
+                            return InkWell(
+                              onTap: () {
+                                BlocProvider.of<LocalStorageCubit>(context)
+                                    .pickAndSaveImage();
+                              },
+                              child: BuildImageWidget(
+                                width: 316,
+                                height: 263.39,
+                                imagePath: imageAvatar,
+                              ),
+                            );
+                          }
+                        },
+                      ),
                     ),
                   ),
                   const SizedBox(

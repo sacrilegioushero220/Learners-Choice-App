@@ -20,6 +20,7 @@ class BuildInfoTileCard extends StatelessWidget {
       fontWeight: FontWeight.w600,
     );
     return Container(
+      height: 170,
       clipBehavior: Clip.antiAlias,
       decoration: ShapeDecoration(
         color: const Color(0xFFFCF1F3),

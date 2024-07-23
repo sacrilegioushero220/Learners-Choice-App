@@ -74,11 +74,12 @@ class _NameScreenState extends State<NameScreen> {
                   const SizedBox(
                     height: 105.0,
                   ),
-                  Center(
-                    child: BuildImageWidget(
-                      width: 316,
-                      height: 263.39,
-                      imagePath: mobileLogo,
+                  Expanded(
+                    child: Center(
+                      child: BuildImageWidget(
+                        height: 263.39,
+                        imagePath: mobileLogo,
+                      ),
                     ),
                   ),
                   Expanded(
