@@ -137,7 +137,8 @@ class _MockTestBodyState extends State<MockTestBody> {
           return const Center(child: CircularProgressIndicator());
         } else if (state is QuizLoaded) {
           final question = state.quizQuestions[currentQuestionIndex];
-          return Column(
+
+          return Stack(
             children: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
@@ -163,6 +164,7 @@ class _MockTestBodyState extends State<MockTestBody> {
                                   selectedOptionIndex = index;
                                 });
                               },
+                              optionLength: question.options.length,
                             ),
                             const SizedBox(height: 5),
                           ],
@@ -173,8 +175,10 @@ class _MockTestBodyState extends State<MockTestBody> {
                   ),
                 ),
               ),
-              Expanded(
-                flex: 10,
+              Positioned(
+                bottom: 2,
+                left: 2,
+                right: 2,
                 child: Container(
                   height: 60,
                   color: Colors.white,

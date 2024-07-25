@@ -7,16 +7,18 @@ class OptionCard extends StatelessWidget {
   final VoidCallback onTap;
   final double leadingFontSize;
   final double trailingFontSize;
+  final int optionLength;
 
-  const OptionCard(
-      {Key? key,
-      required this.optionDescription,
-      required this.optionNumber,
-      required this.onTap,
-      this.isSelected = false,
-      this.leadingFontSize = 35,
-      this.trailingFontSize = 15})
-      : super(key: key);
+  const OptionCard({
+    Key? key,
+    required this.optionDescription,
+    required this.optionNumber,
+    required this.onTap,
+    this.isSelected = false,
+    this.leadingFontSize = 35,
+    this.trailingFontSize = 15,
+    required this.optionLength,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,7 @@ class OptionCard extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: MediaQuery.of(context).size.width,
+        height: 72,
         clipBehavior: Clip.antiAlias,
         decoration: ShapeDecoration(
           color: isSelected ? Colors.green : const Color(0xFFFFF8F6),
@@ -41,7 +44,6 @@ class OptionCard extends StatelessWidget {
           children: [
             Container(
               width: 80,
-              height: 70,
               padding: const EdgeInsets.all(10),
               child: Center(
                 child: Text(
