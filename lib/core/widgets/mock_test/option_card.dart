@@ -41,7 +41,7 @@ class OptionCard extends StatelessWidget {
           children: [
             Container(
               width: 80,
-              height: 80,
+              height: 70,
               padding: const EdgeInsets.all(10),
               child: Center(
                 child: Text(
