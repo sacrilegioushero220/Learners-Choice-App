@@ -63,7 +63,7 @@ class OptionCard extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                padding: const EdgeInsets.only(bottom: 10, top: 10, right: 15),
+                padding: const EdgeInsets.only(bottom: 5, top: 5, right: 15),
                 child: Text(
                   optionDescription,
                   style: TextStyle(

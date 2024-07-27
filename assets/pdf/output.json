@@ -16,7 +16,7 @@
       "Take the vehicle to the nearest police station and report the accident",
       "Stop the vehicle and report to the police station",
       "Take all reasonable steps to secure medical attention to the injured and report to the nearest police station within 24 hours",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -60,7 +60,7 @@
       "By looking at the tyre size",
       "By colour of the vehicle",
       "By looking at the number plate of the vehicle",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -82,7 +82,7 @@
       "Police vehicles",
       "Ambulance and fire service vehicles",
       "Express, Super Express buses",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -104,7 +104,7 @@
       "Your right side",
       "Your left side",
       "The convenient side",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -126,7 +126,7 @@
       "First aid post",
       "Resting place",
       "Hospital",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2Ffirst%20aid%20box.jpg?alt=media&token=73da1d66-a976-4ae7-8b84-249a0ce48868"
@@ -137,7 +137,7 @@
       "The right side of the road",
       "The left side of the road",
       "The Center of the road",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -159,7 +159,7 @@
       "The vehicle should be locked",
       "The person having license to drive such a vehicle should be in the driver's seat",
       "The park light shall remain lit",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -170,7 +170,7 @@
       "Road closed",
       "No parking",
       "End of speed restriction",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FRESTRICTION%20ENDS%20SIGN.jpg?alt=media&token=2825e5ff-b4ab-4f0b-9420-8f5d24b1f624"
@@ -181,7 +181,7 @@
       "During night",
       "When there is mist",
       "When the opposite vehicle is not using dim light",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -203,7 +203,7 @@
       "Stopping vehicle",
       "Pedestrians crossing",
       "For giving preference to vehicle",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -214,7 +214,7 @@
       "Railway station near",
       "Level crossing unguarded",
       "Level crossing Guarded",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FUNGUARDED%20LEVEL%20CROSSING%20(200%20METERS).jpg?alt=media&token=e37a2e0f-c136-4a22-afa6-b554250b5b3a"
@@ -236,7 +236,7 @@
       "Entry through right side prohibited",
       "Entry through left prohibited",
       "Overtaking prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fovertakingprob.jpg?alt=media&token=3ca80b51-9c25-49b8-b658-40e93d8a8793"
@@ -258,7 +258,7 @@
       "Cross road",
       "No entry",
       "Hospital",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FCROSS%20ROAD.jpg?alt=media&token=90f9dd9d-a738-478b-872b-d2dccdbffc4b"
@@ -269,7 +269,7 @@
       "Proper",
       "Improper",
       "Proper if NO PARKING sign is not provided",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -291,7 +291,7 @@
       "reduce the speed by changing the gear",
       "apply brake",
       "proceed in the same speed",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -313,7 +313,7 @@
       "when it is likely to cause inconvenience or danger to other traffic",
       "when the vehicle in front is reducing speed",
       "during night",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -324,7 +324,7 @@
       "is permissible",
       "not permissible",
       "is permissible with care",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -346,7 +346,7 @@
       "allowed in private vehicles",
       "allowed during night time",
       "prohibited in all vehicles",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -368,7 +368,7 @@
       "Mosque,Church andTemple",
       "Near Hospital, Courts of Law",
       "Near Police Station",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -379,7 +379,7 @@
       "Go straight",
       "One way",
       "Prohibited in both direction",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FVehiclesProhibitedbothDirections.jpg?alt=media&token=11c6032c-da5e-4ec2-accd-df6bc6b7c514"
@@ -390,7 +390,7 @@
       "for seeing face",
       "for watching the traffic approaching from behind",
       "for seeing the back seat passenger",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -401,7 +401,7 @@
       "No entry for motor vehicles",
       "No entry for cars and motor cycles",
       "Entry allowed for cars and motor vehicles",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fallvehiclesproh.jpg?alt=media&token=2bd3d796-a157-421a-86fb-e993f02add29"
@@ -412,7 +412,7 @@
       "permitted in bus",
       "permitted in autorikshaw",
       "prohibited in all vehicles",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -423,7 +423,7 @@
       "Trucks Prohibited",
       "Bus Prohibited",
       "Heavy vehicles Prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Ftruckprohib.jpg?alt=media&token=752111ab-2b67-420d-a290-8434fb1bf9b6"
@@ -434,7 +434,7 @@
       "in turnings",
       "on foot paths",
       "where parking is not prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -445,7 +445,7 @@
       "Bullock cart prohibited",
       "Cycle prohibited",
       "All vehicles prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fbullocarprob.jpg?alt=media&token=0423b33f-a385-4c5a-8fd2-e85364ec50ab"
@@ -456,7 +456,7 @@
       "shall not check air pressure",
       "shall not smoke",
       "shall not use any light of the vehicle",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -478,7 +478,7 @@
       "in Government offices",
       "in Police Stations",
       "while driving a vehicle",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -489,7 +489,7 @@
       "Overtaking prohibited through the right side",
       "Turn left",
       "Left turn Prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fleftturnprob.jpg?alt=media&token=151b262a-9fc8-4c65-87b8-6938200d504b"
@@ -500,7 +500,7 @@
       "when the road ahead is not clearly visible",
       "when the road ahead is wide enough",
       "when the road center is marked with white broken lines",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -522,7 +522,7 @@
       "Inconvenience to other vehicles",
       "Inconvenience to other road users",
       "Drivers of other vehicles coming at a distance may not see persons crossing the road",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -533,7 +533,7 @@
       "Speed limit 2km/hr",
       "No entry for vehicles having more than 2 meters width",
       "No entry for vehicles having more than 2 meters height",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FWIDTH%20LIMIT.jpg?alt=media&token=ad18fb46-42a6-49dd-b9ca-1e6a4bdc44bf"
@@ -555,7 +555,7 @@
       "Entry only for vehicles with height above 3.5 meters",
       "Entry only for vehicles with width above 3.5 meters",
       "Entry for vehicles having height not exceeding 3.5 meters",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FHEIGHT%20LIMIT.jpg?alt=media&token=ccb3ca5b-a13b-40f3-ab70-71f94b3cc1d8"
@@ -566,7 +566,7 @@
       "Show the left turn signal, drive to the center and turn to the left",
       "Sound horn and turn to the left",
       "Show the left turn signal, keep to the left side of the road and turn to the left",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -599,7 +599,7 @@
       "proceed keeping to the left",
       "put the head light in dim and bright alternatively several times",
       "dim the head light till the vehicle passes",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -621,7 +621,7 @@
       "He is turning to the left",
       "He is slowing down the vehicle",
       "Allowing to overtake",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -643,7 +643,7 @@
       "18 years",
       "21 years",
       "16 years",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -665,7 +665,7 @@
       "Right hair pin bend",
       "Right ascend and descend",
       "Right descend",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FRIGHT%20HAIR%20PIN%20BAND.jpg?alt=media&token=6696f595-7609-493c-bfa3-37b9be79e151"
@@ -676,7 +676,7 @@
       "left turn signal",
       "Right turn signal",
       "Slow down signal",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -687,7 +687,7 @@
       "Left descend",
       "Left hair pin bend",
       "Keep left",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FLEFT%20HAIR%20PIN%20BAND.jpg?alt=media&token=4d038ef6-0999-4aa7-8a50-c58ef0f303ce"
@@ -698,7 +698,7 @@
       "In a road where there is no traffic restrictions",
       "In a busy road",
       "When there are vehicles passing through the left",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -720,7 +720,7 @@
       "Till the registration of the vehicle is cancelled",
       "15 years",
       "5 years",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -731,7 +731,7 @@
       "No vehicle is approaching from behind",
       "The road ahead is clearly visible and it is safe to overtake",
       "The vehicle in front is turning left",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -742,7 +742,7 @@
       "Side road left",
       "Speed limit",
       "Axle weight limit",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FAXLE%20LOAD%20LIMIT.jpg?alt=media&token=bd2f9534-3e31-4b4f-acf7-aa6690869b4f"
@@ -753,7 +753,7 @@
       "5 persons",
       "Sufficient persons for loading and unloading the goods",
       "As many persons as recorded in the Registration Certificate",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -764,7 +764,7 @@
       "Turn right",
       "Side road right",
       "Keep right",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSIDE%20ROAD%20RIGHT.jpg?alt=media&token=386cd2b5-3511-4b2f-a251-f78112e1ea78"
@@ -775,7 +775,7 @@
       "Stop your vehicle and let the vehicle to overtake",
       "Increase the speed of your vehicle",
       "Not obstruct the other vehicle from over taking",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -797,7 +797,7 @@
       "Turn right",
       "Turn left",
       "Round about",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FROUND%20ABOUT.jpg?alt=media&token=0b54f379-3b37-4736-b75a-c5c3ad10f8f4"
@@ -819,7 +819,7 @@
       "Narrow road ahead",
       "Dangerous dip",
       "Ferry",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FDANGEROUS%20DIP.jpg?alt=media&token=23189260-1f0c-4afb-beec-01ffeaf2a4ec"
@@ -841,7 +841,7 @@
       "Guarded level cross",
       "Unguarded level cross",
       "Barrier ahead",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FGUARDED%20LEVEL%20CROSSING%20(200%20METERS).jpg?alt=media&token=5022e510-590b-4743-8f61-72d13d4e248b"
@@ -852,7 +852,7 @@
       "Blow the hom continuously",
       "Not blow horn",
       "Blow the horn only intermittently",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -863,7 +863,7 @@
       "Y - inter section left",
       "Y-inter section right",
       "Side road left",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FY%20-%20INTERSECTION1.jpg?alt=media&token=9be8c959-2ade-4670-b574-a25cce72b056"
@@ -874,7 +874,7 @@
       "illegal",
       "Legal",
       "Legal if there is urgency",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -885,7 +885,7 @@
       "Y-inter section left",
       "Y- inter section right",
       "Side road right",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FY%20-%20INTERSECTION2.jpg?alt=media&token=e47c7f5a-242f-426f-af1d-544fe0468047"
@@ -896,7 +896,7 @@
       "25 years",
       "18 years",
       "20 years",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -907,7 +907,7 @@
       "Turn left",
       "Turn right",
       "Y-inter section",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FY%20-%20INTERSECTION3.jpg?alt=media&token=b475c649-5c24-431e-9da3-5367caf09aa0"
@@ -918,7 +918,7 @@
       "The driver shall stop the vehicle",
       "The driver shall proceed, blowing the horns",
       "The driver shall reduce the speed",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -929,7 +929,7 @@
       "Slippery road",
       "Gravel road",
       "No entry for motor car",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSLIPPERY%20ROAD.jpg?alt=media&token=45d43c99-dba2-46ea-889e-2400d7d7d196"
@@ -940,7 +940,7 @@
       "Road side",
       "Where parking is permitted",
       "Near traffic fight",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -951,7 +951,7 @@
       "Is an offence leading to suspension or cancellation of driving licence",
       "Is an offence leading to punishment by fine only",
       "Is not an offence",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -962,7 +962,7 @@
       "Cycle",
       "Cycle crossing prohibited",
       "No entry for cycles",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FCYCLE%20CROSSING.jpg?alt=media&token=fb49150e-4250-490b-93ba-e572754c8f0c"
@@ -973,7 +973,7 @@
       "Blow horn and proceed",
       "Proceed slowly and cautiously since there is chance of students suddenly crossing the road",
       "No special care is required",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -984,7 +984,7 @@
       "Cattle prohibited",
       "Possibility of cattle on road",
       "Vehicles carrying cattle prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FCATTLE.jpg?alt=media&token=244f6092-5770-4834-875e-5ad2c8a835e6"
@@ -995,7 +995,7 @@
       "The driver of a vehicle shall consider the white cane as a traffic sign to stop the vehicle",
       "Blow the horn and proceed",
       "Slow down and proceed with caution",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1006,7 +1006,7 @@
       "School ahead",
       "Pedestrians crossing",
       "Pedestrians crossing prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSCHOOL%20AHEAD.jpg?alt=media&token=d546d771-c57d-4fd9-a9c8-f6e88dd54a90"
@@ -1017,7 +1017,7 @@
       "Shall report to the nearest police station within 24 hours",
       "Shall report to the nearest police station within 12 hours",
       "Shall report to the nearest police station within 48 hours",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1028,7 +1028,7 @@
       "Driver shall report to the nearest police station within 24 hours",
       "Driver shall report to the nearest police station within 7 days",
       "Need not report to any police station",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1039,7 +1039,7 @@
       "Rough road",
       "Slippery road",
       "Falling rocks",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": "",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FFALLING%20ROCKS.jpg?alt=media&token=db8e75e7-e7ab-4efb-a91b-9270a099ff51"
@@ -1050,7 +1050,7 @@
       "We shall not overtake another vehicle,",
       "We can over take another vehicle",
       "We can overtake another vehicle blowing horn",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1061,7 +1061,7 @@
       "Bridge ahead",
       "Ferry",
       "Refreshment stall ahead",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FFERRY.jpg?alt=media&token=e9feb53d-fcb5-45fd-9346-d92cc4511f53"
@@ -1072,7 +1072,7 @@
       "We can overtake",
       "We shall not overtake",
       "We can overtake horn",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1083,7 +1083,7 @@
       "Steep ascend",
       "Steep descend",
       "Slippery road",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSTEEP%20ASCENT.jpg?alt=media&token=26e85898-25f4-429f-964b-b689abf7b10d"
@@ -1094,7 +1094,7 @@
       "We shall not increase speed",
       "We can increase speed",
       "We can increase speed with due care",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1105,7 +1105,7 @@
       "Steep ascend",
       "Steep descend",
       "Slippery road",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSTEEP%20DESCENT.jpg?alt=media&token=7d25867f-23dd-47c9-8af9-d3797ab88285"
@@ -1116,7 +1116,7 @@
       "Entrance of hospital",
       "Left side of the road",
       "Market area",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1127,7 +1127,7 @@
       "Blocking a fire hydrant",
       "Near a public well",
       "Left side of the road",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1149,7 +1149,7 @@
       "The vehicle shall be provided with foot rest, hand grip and sari guard",
       "The vehicle shall be provided with side car",
       "Vehicle shall be provided with rear view mirror",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1160,7 +1160,7 @@
       "can attract suspension of driving licence",
       "Can attract fine only",
       "None of the above",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1171,7 +1171,7 @@
       "The driving licence is liable to be suspended or cancelled",
       "Only fine is attracted",
       "None of the above",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1182,7 +1182,7 @@
       "the driving license liable to be suspended or cancelled",
       "only fine is attracted",
       "Legitimate right of driver",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1204,7 +1204,7 @@
       "Legally not punishable",
       "Only fine is attracted",
       "Can attract suspension or cancellation of driving licence",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1215,7 +1215,7 @@
       "Parking prohibited",
       "Parking both sides",
       "Police aid post",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2FparkingBothside.jpg?alt=media&token=b2f22014-443d-494d-b9a2-eb99689de13c"
@@ -1226,7 +1226,7 @@
       "No entry for private cars",
       "ParkingIot -Taxis",
       "Parking for police vehicles",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2FPARKING%20LOT%20TAXIS.jpg?alt=media&token=440eb442-b280-4af6-b423-0fdfb31dab36"
@@ -1248,7 +1248,7 @@
       "Petrol pump",
       "Parking lot - Autorikshaws",
       "Autorikshaw parking prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2FPARKING%20LOT%20AUTO%20RICKSHAWS.jpg?alt=media&token=60dca0b7-ec16-419f-8c44-4402dc3b6cff"
@@ -1259,7 +1259,7 @@
       "Not touch or cross the yellow line",
       "Allow to overtake only through the right side of yellow line",
       "Cross the line only when overtaking a vehicle in front",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1270,7 +1270,7 @@
       "Request to stop the vehicle coming behind",
       "Intends to turn right",
       "Request to stop the vehicle from opposite direction",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/driverSignals%2Fright.jpg?alt=media&token=f9cb368d-f535-4626-88c1-3bb93e0b0d38"
@@ -1281,7 +1281,7 @@
       "Give precedence to the vehicles coming down the hill",
       "Give precedence to the vehicles going up the hill",
       "Give precedence to the vehicles carrying heavy load",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1292,7 +1292,7 @@
       "Intends to turn left",
       "Intends to turn right",
       "Request to stop all other vehicles",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/driverSignals%2Fleft.jpg?alt=media&token=2ef2eb11-b01e-4d48-ad6d-11e7bebff12f"
@@ -1303,7 +1303,7 @@
       "Any person other than the driver",
       "More than three persons other than the driver",
       "More than two persons includingthe driver",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1314,7 +1314,7 @@
       "To the vehicles coming from the left",
       "To the vehicles coming from the right",
       "To all vehicles proceeding along the main road",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1325,7 +1325,7 @@
       "Intends to go straight",
       "Intends to stop the vehicle",
       "Intends to turn right",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/driverSignals%2Fstop.jpg?alt=media&token=881f0857-a51a-484a-a55f-c84cccb593eb"
@@ -1336,7 +1336,7 @@
       "The driver of that vehicle indicates his intention to turn right and proceeds to the center of the road",
       "There is sufficient space on the left side",
       "That vehicle moves slowly",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1358,7 +1358,7 @@
       "Driving too close behind a vehicle in a dangerous manner",
       "Keeping safe distance from the vehicle ahead regulating the speed proportionately",
       "Keeping a distance of at least 7 meters from the vehicle ahead",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1380,7 +1380,7 @@
       "The vehicle is not covered by a valid registration or permit",
       "The vehicle is not covered by a valid insurance",
       "The vehicle exceeds the speed limit",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1391,7 +1391,7 @@
       "Request to stop the vehicle from front",
       "Request to stop the vehicle from behind",
       "Request to pass the vehicle from front",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/handSignals%2FtoStopVehiclesComingFromtheFront.jpg?alt=media&token=f63295e5-1760-4afa-840f-eae3bcc43806"
@@ -1402,7 +1402,7 @@
       "Air - horn",
       "Multi - toned horn",
       "Electric horn",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1413,7 +1413,7 @@
       "One-way road",
       "Steep descending road",
       "Steep ascending road",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1435,7 +1435,7 @@
       "Ensure safety and drive away",
       "Slow down to stop",
       "Sound horn and proceed",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1446,7 +1446,7 @@
       "Life Insurance",
       "Third party Insurance",
       "Comprehensive Insurance",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1457,7 +1457,7 @@
       "10 meter",
       "5 meter",
       "Safe distance according to speed",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1468,7 +1468,7 @@
       "Registration Certificate",
       "Tax Token",
       "Permit",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1479,7 +1479,7 @@
       "The road is marked with broken center line in white colour",
       "The road is marked with continuous center line in yellow colour",
       "Vehicle is driven on a steep hill",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1490,7 +1490,7 @@
       "Stop the vehicle till green light glows",
       "Stop the vehicle and proceed if safe",
       "Reduce speed and proceed",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1501,7 +1501,7 @@
       "Driving cautiously anticipating violation of traffic rules and road signs both by drivers and other road users",
       "Driving with sole aim of reaching the destination with no regards to road signs",
       "Driving on the assumption that other road users will be cautious about their safety",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1512,7 +1512,7 @@
       "A line with 5 centimeters width in white or yellow colour at the approach of road junction or pedestrian crossing",
       "A fine drawn through the center of the road in yellow colour",
       "A broken white line through the center of the road",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1523,7 +1523,7 @@
       "Check radiator water level and engine oil level",
       "Check head fight",
       "Check brake",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1534,7 +1534,7 @@
       "The load can be projected to both sides within 30 cm",
       "The load shall not project on both sides",
       "The load can be projected to both sides within 50 cm",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1545,7 +1545,7 @@
       "15 meters",
       "5 meters",
       "10 meters",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1556,7 +1556,7 @@
       " 20 km/hour",
       "24 km/hour",
       "32 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1567,7 +1567,7 @@
       "During night",
       "During day time",
       "Under no circumstances",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1578,7 +1578,7 @@
       "No limit",
       "AIlowed as per permit",
       "10 ton",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1589,7 +1589,7 @@
       "Speed limit shall not be exceeded",
       "Shall not dive after consuming alcohol",
       "Shall not use vehicle on road without paying tax",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1600,7 +1600,7 @@
       "After consuming alcohol",
       "Exceeding the speed limit",
       "Exceeding the weight permitted to carry",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1611,7 +1611,7 @@
       "15 KM/hr",
       "25KM/hr",
       "35 KM/hr",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1622,7 +1622,7 @@
       "3.8 meters",
       "3 meters",
       "No limit",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1633,7 +1633,7 @@
       "Wear jerkins",
       "Wear helmet",
       "Wear shoes",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1644,7 +1644,7 @@
       "40Km/hr",
       "30 Km/hr",
       "20 Km/hr",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1655,7 +1655,7 @@
       "No limit",
       "90 km/Hour",
       "50km/Hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1666,7 +1666,7 @@
       "50 km/Hour",
       "25 km/hour",
       "40 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1677,7 +1677,7 @@
       "60 km/hour",
       "70 km/hour",
       "No limit",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1688,7 +1688,7 @@
       "30Km/hr",
       "50 Km/hr",
       "20 Km/hr",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1699,7 +1699,7 @@
       "20 km/hour",
       "30 km/hour",
       "50 km/Hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1710,7 +1710,7 @@
       "40 Km/hr",
       "45 Km/hr",
       "60 Km/hr",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1721,7 +1721,7 @@
       "25 Km/hr",
       "30 km/hr",
       "50 km/hr",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1732,7 +1732,7 @@
       "45 Km/hr",
       "40km/hour",
       "25 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1743,7 +1743,7 @@
       "60 km/hour",
       "90 km/Hour",
       "80 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1754,7 +1754,7 @@
       "No Limit",
       "70 km/hour",
       "60 Km/hr",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1765,7 +1765,7 @@
       "Motor Cycle",
       "Motor Car",
       "Stage Carriage",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1776,7 +1776,7 @@
       "40 km/hour",
       "30 km/hour",
       "20 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1787,7 +1787,7 @@
       "50 km/hour",
       "65 km/hour",
       "70 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1798,7 +1798,7 @@
       "30 km/hour",
       "25 km/hour",
       "40 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1809,7 +1809,7 @@
       "50 km/hour",
       "30 km/hour",
       "40 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1820,7 +1820,7 @@
       "During night",
       "During day time",
       "Under no circumstances",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1831,7 +1831,7 @@
       "35 km/hour",
       "30 km/hour",
       "20 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1842,7 +1842,7 @@
       "45 km/hour",
       "35 km/hour",
       "30 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1853,7 +1853,7 @@
       "45 km/hour",
       "30 km/hour",
       "20 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1864,7 +1864,7 @@
       "30 km/hour",
       "35 km/hour",
       "45 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1875,7 +1875,7 @@
       "40 km/hour",
       "30 km/hour",
       "50 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1886,7 +1886,7 @@
       "35 km/hour",
       "25 km/hour",
       "30 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1897,7 +1897,7 @@
       "35 km/hour",
       "25 km/hour",
       "30 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1908,7 +1908,7 @@
       "30 km/hour",
       "25 km/hour",
       "35 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1919,7 +1919,7 @@
       "35 km/hour",
       "40 km/hour",
       "20 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1930,7 +1930,7 @@
       "40 km/hour",
       "25 km/hour",
       "15 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1941,7 +1941,7 @@
       "45 km/hour",
       "40 km/hour",
       "25 km/hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1952,7 +1952,7 @@
       "Drive to the right carriageway",
       "Drive to the left carriageway",
       "Drive to the middle of the road",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1963,7 +1963,7 @@
       "You shall overtake from the right side",
       "You shall overtake from the left side",
       "You shall overtake from any side",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -1974,7 +1974,7 @@
       "Stop the vehicle",
       "Slow down and drive carefully",
       "Drive at a same speed if the road is clear",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -1985,7 +1985,7 @@
       "Make a U-Turn immediately if allowed",
       "First, stop the vehicle",
       "Watch front and rear if there are any other vehicles approaching, and turn when safe to do so",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -1996,7 +1996,7 @@
       "Drive at a speed not exceeding more than 15 kilometres an hour",
       "Drive at a speed not exceeding more than 25 kilometres an hour",
       "Drive at a speed not exceeding more than 35 kilometres an hour",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -2007,7 +2007,7 @@
       "Distance which is sufficient enough",
       "5 metres distance",
       "I0 metres distance",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": ""
@@ -2018,7 +2018,7 @@
       "8cm high, 7m Wide and 2cm thick",
       "9cm high, 8cm wide and 2cm thick",
       "10cm high, 9cm wide and 2cm thick",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -2029,7 +2029,7 @@
       "Extend right arm and rotate it in a clockwise direction",
       "Extend right arm and rotate it in an anticlockwise Direction",
       "Extend right arm and wave up and down",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -2040,7 +2040,7 @@
       "Extend right arm and rotate it in an anticlockwise Direction",
       "Extend right arm and rotate it in a clockwise direction",
       "Extend right arm and palm of the hand facing front",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -2051,7 +2051,7 @@
       "Vehicle travelling downhill",
       "Vehicle travelling uphill",
       "None of the vehicles",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -2062,7 +2062,7 @@
       "Heavy fines and/or an imprisonment for a term of up to one month",
       "Heavy fines and/or an imprisonment for a term of up to one year",
       "Heavy fines and/or an imprisonment for a term of up to Six months",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": ""
@@ -2073,7 +2073,7 @@
       "Heavy fines and/or an imprisonment for a term of up to six months",
       "Heavy fines and/or an imprisonment for a term of up to two years",
       "Heavy fines and/or an imprisonment for a term of up to Six months",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": ""
@@ -2084,7 +2084,7 @@
       "No parking",
       "Stop",
       "All motor vehicles prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fstop.jpg?alt=media&token=7bf89662-bc4c-4e5e-a16f-c795220c3ab9"
@@ -2095,7 +2095,7 @@
       "Straight prohibited or no entry",
       "Overtaking prohibited",
       "No parking",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FNO%20PARKING.jpg?alt=media&token=f6f6ed83-c491-43d0-839d-7b1c5367279b"
@@ -2106,7 +2106,7 @@
       "Bumpy road",
       "Falling rocks",
       "Damaged road",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FFALLING%20ROCKS.jpg?alt=media&token=db8e75e7-e7ab-4efb-a91b-9270a099ff51"
@@ -2117,7 +2117,7 @@
       "All motor vehicles prohibited",
       "Pedestrian prohibited",
       "pedestrian crossing",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FPEDESTRIAN%20CROSSING.jpg?alt=media&token=742ae910-8e2c-4bc8-aeb5-a3d1f82ca096"
@@ -2128,7 +2128,7 @@
       "Compulsory sound horn",
       "Loud horn prohibited",
       "Horn prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FCOMPULSORY%20SOUND%20HORN.jpg?alt=media&token=b7c5bad5-5fb7-4675-b69a-ea86d5591738"
@@ -2139,7 +2139,7 @@
       "No parking",
       "No stopping or standing",
       "Straight prohibited no entry",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FNoEntry.jpg?alt=media&token=4e1d34ca-1440-41d7-85ec-51b45455bb00"
@@ -2150,7 +2150,7 @@
       "Compulsory sound horn",
       "Loud horn prohibited",
       "Horn prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FHORN%20PROHIBITED.jpg?alt=media&token=fa4999b4-5053-4764-b488-fe2eb199b008"
@@ -2161,7 +2161,7 @@
       "No parking",
       "Restriction end",
       "Straight prohibited or no entry",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FRESTRICTION%20ENDS%20SIGN.jpg?alt=media&token=2825e5ff-b4ab-4f0b-9420-8f5d24b1f624"
@@ -2172,7 +2172,7 @@
       "Damaged road ahead",
       "No entry",
       "Men at work",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FMEN%20AT%20WORK.jpg?alt=media&token=58bfa801-dc18-4f58-af51-a2cf278f1cf4"
@@ -2183,7 +2183,7 @@
       "No parking",
       "No overtake",
       "Straight prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fovertakingprob.jpg?alt=media&token=3ca80b51-9c25-49b8-b658-40e93d8a8793"
@@ -2194,7 +2194,7 @@
       "No motor vehicles",
       "No overtake",
       "No parking",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Fallvehiclesproh.jpg?alt=media&token=2bd3d796-a157-421a-86fb-e993f02add29"
@@ -2205,7 +2205,7 @@
       "pedestrian crossing",
       "Pedestrian prohibited",
       "School ahead",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSCHOOL%20AHEAD.jpg?alt=media&token=d546d771-c57d-4fd9-a9c8-f6e88dd54a90"
@@ -2216,7 +2216,7 @@
       "No overtake",
       "Parking both sides",
       "No parking",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Finformatory%2FparkingBothside.jpg?alt=media&token=b2f22014-443d-494d-b9a2-eb99689de13c"
@@ -2227,7 +2227,7 @@
       "Road hump (slow down)",
       "Damaged road",
       "Straight prohibited",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FHUMP%20OR%20ROUGH%20ROAD.jpg?alt=media&token=81fe6424-b993-4cbb-aa69-d089646ed13c"
@@ -2238,7 +2238,7 @@
       "No entry",
       "No U-Turn",
       "No overtake",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2Futurnprob.jpg?alt=media&token=52309b13-8bf3-4dd0-9d57-2314de0ee27e"
@@ -2249,7 +2249,7 @@
       "Stop",
       "Go",
       "Wait/Slow down",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 1,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficlights%2Fgreen.png?alt=media&token=e961b42e-6491-4274-9352-796612d2b6d9"
@@ -2260,7 +2260,7 @@
       "Stop",
       "Go",
       "Wait/Slow down",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficlights%2Fyellow.png?alt=media&token=fa7071c4-29fa-40b4-8263-51fc997d6aac"
@@ -2271,7 +2271,7 @@
       "Stop",
       "Go",
       "Wait/Slow down",
-      "None of the Above"
+      ""
     ],
     "correctAnswerIndex": 0,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficlights%2Fred.png?alt=media&token=f7ca2809-b91f-4b7f-b187-afaa408e9233"
