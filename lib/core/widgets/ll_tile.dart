@@ -18,6 +18,9 @@ class BuildLLTile extends StatelessWidget {
           color: const Color(0xFFFCF1F3),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
+            side: const BorderSide(
+              color: Color(0xffd8c2bc),
+            ),
           ),
         ),
         child: Padding(

@@ -23,16 +23,15 @@ class BuildCustomGridViewItem extends StatelessWidget {
           color: const Color(0xFFF6EBEE),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
+            side: const BorderSide(
+              color: Color(0xffd8c2bc),
+            ),
           ),
         ),
-        child: Center(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 15),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: 5,
-              ),
               BuildImageWidget(
                 width: 34,
                 height: 33,

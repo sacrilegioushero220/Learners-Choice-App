@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const SizedBox(
-                height: 15,
+                height: 50,
               ),
               BuildImageWidget(
                 width: 278,
