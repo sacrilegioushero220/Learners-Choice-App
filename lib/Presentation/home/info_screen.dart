@@ -13,8 +13,8 @@ class InfoScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(
-          left: 20,
-          right: 20,
+          left: 10,
+          right: 10,
         ),
         child: SingleChildScrollView(
           child: Column(

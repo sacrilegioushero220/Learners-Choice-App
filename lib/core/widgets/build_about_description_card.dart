@@ -6,22 +6,28 @@ class BuildAboutDescriptionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
       padding: const EdgeInsets.only(
-        top: 10,
-        left: 15,
-        right: 15,
-        bottom: 17,
+        left: 10,
+        right: 10,
       ),
-      decoration: ShapeDecoration(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0xFFEBE0E2)),
-          borderRadius: BorderRadius.circular(15),
+      child: Container(
+        padding: const EdgeInsets.only(
+          top: 20,
+          left: 15,
+          right: 15,
+          bottom: 20,
         ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(5),
+        decoration: ShapeDecoration(
+          color: Colors.white,
+          shape: RoundedRectangleBorder(
+            side: const BorderSide(
+              width: 1,
+              color: Color(0xFFEBE0E2),
+            ),
+            borderRadius: BorderRadius.circular(15),
+          ),
+        ),
         child: Text(
           choiceDescription,
           textAlign: TextAlign.center,

@@ -18,7 +18,11 @@ class BuildCustomGridViewItem extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: 100,
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.only(
+          top: 5,
+          left: 2,
+          right: 2,
+        ),
         decoration: ShapeDecoration(
           color: const Color(0xFFF6EBEE),
           shape: RoundedRectangleBorder(

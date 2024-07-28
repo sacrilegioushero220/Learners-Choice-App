@@ -12,43 +12,105 @@ import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/extensions/text_extension.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({
     super.key,
   });
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  double gapOfCarImage() {
+    final screenSize = MediaQuery.of(context).size.height;
+    print("screenSize is this:$screenSize");
+    if (screenSize < 700 && screenSize >= 600) {
+      print("20");
+      return 20;
+    } else if (screenSize < 800 && screenSize >= 700) {
+      print(" this 10");
+      return 10;
+    }
+    print(" 60");
+    return 60;
+  }
+
+  Map<String, dynamic> viewPortSize() {
+    final screenSize = MediaQuery.of(context).size.height;
+    bool thumbVisibility;
+    double height;
+
+    if (screenSize < 700 && screenSize >= 600) {
+      thumbVisibility = true;
+      height = 130;
+    } else if (screenSize < 800 && screenSize >= 700) {
+      thumbVisibility = false;
+      height = 230;
+    } else {
+      thumbVisibility = false;
+      height = 260;
+    }
+
+    return {
+      'thumbVisibility': thumbVisibility,
+      'height': height,
+    };
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final scrollController = ScrollController();
+    final viewport = viewPortSize();
+    final thumbVisibility = viewport['thumbVisibility'];
+    final height = viewport['height'];
     return Scaffold(
       backgroundColor: context.onPrimary,
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(
-            left: 15,
-            right: 15,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const SizedBox(
-                height: 50,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(
+              height: gapOfCarImage(),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 15,
+                right: 15,
               ),
-              BuildImageWidget(
+              child: BuildImageWidget(
                 width: 278,
                 height: 138,
                 imagePath: carHomePage,
               ),
-              const SizedBox(
-                height: 35,
+            ),
+            const SizedBox(
+              height: 35,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 15,
+                right: 15,
               ),
-              Text(
+              child: Text(
                 "Mock Test",
                 style: context.lightTextTheme.headlineMedium,
               ),
-              const SizedBox(
-                height: 25,
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 15,
+                right: 15,
               ),
-              BuildLLTile(
+              child: BuildLLTile(
                 onPressed: () {
                   Navigator.push(
                       context,
@@ -56,108 +118,124 @@ class HomeScreen extends StatelessWidget {
                           builder: (context) => const MockTestScreen()));
                 },
               ),
-              const SizedBox(
-                height: 35,
+            ),
+            const SizedBox(
+              height: 35,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 15,
+                right: 15,
               ),
-              Text(
+              child: Text(
                 "Keep Learning",
                 style: context.lightTextTheme.headlineMedium,
               ),
-              const SizedBox(
-                height: 25,
-              ),
-              SizedBox(
-                width: 330,
-                height: 270,
-                child: GridView.count(
-                  padding: const EdgeInsets.only(
-                    top: 5,
-                    bottom: 5,
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+            Scrollbar(
+              thumbVisibility: thumbVisibility,
+              controller: scrollController,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  left: 15,
+                  right: 15,
+                ),
+                child: SizedBox(
+                  width: 330,
+                  height: height,
+                  child: GridView.count(
+                    controller: scrollController,
+                    padding: const EdgeInsets.only(
+                      top: 5,
+                      bottom: 5,
+                    ),
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    crossAxisCount: 3,
+                    children: [
+                      BuildCustomGridViewItem(
+                        iconPath: gridViewItemIcon1,
+                        label: gridViewItemlabel1,
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => const TrafficSignScreen()));
+                        },
+                      ),
+                      BuildCustomGridViewItem(
+                        iconPath: gridViewItemIcon2,
+                        label: gridViewItemlabel2,
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => CustomListViewScreen(
+                                      apiCubit: ApiCubit()..fetchRoadSigns())));
+                        },
+                      ),
+                      BuildCustomGridViewItem(
+                        iconPath: gridViewItemIcon3,
+                        label: gridViewItemlabel3,
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => CustomGridViewScreen(
+                                        apiCubit: ApiCubit()
+                                          ..fetchHazardSigns(),
+                                      )));
+                        },
+                      ),
+                      BuildCustomGridViewItem(
+                        iconPath: gridViewItemIcon4,
+                        label: gridViewItemlabel4,
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => CustomListViewScreen(
+                                        apiCubit: ApiCubit()
+                                          ..fetchDriverSignals(),
+                                      )));
+                        },
+                      ),
+                      BuildCustomGridViewItem(
+                        iconPath: gridViewItemIcon5,
+                        label: gridViewItemlabel5,
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => CustomListViewScreen(
+                                        apiCubit: ApiCubit()
+                                          ..fetchHandSignals(),
+                                      )));
+                        },
+                      ),
+                      BuildCustomGridViewItem(
+                        iconPath: gridViewItemIcon6,
+                        label: gridViewItemlabel6,
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => QnaScreen(
+                                        quizCubit:
+                                            QuizCubit(DefaultCacheManager())
+                                              ..fetchQnA(),
+                                      )));
+                        },
+                      )
+                    ],
                   ),
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  crossAxisCount: 3,
-                  children: [
-                    BuildCustomGridViewItem(
-                      iconPath: gridViewItemIcon1,
-                      label: gridViewItemlabel1,
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (ctx) => const TrafficSignScreen()));
-                      },
-                    ),
-                    BuildCustomGridViewItem(
-                      iconPath: gridViewItemIcon2,
-                      label: gridViewItemlabel2,
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (ctx) => CustomListViewScreen(
-                                    apiCubit: ApiCubit()..fetchRoadSigns())));
-                      },
-                    ),
-                    BuildCustomGridViewItem(
-                      iconPath: gridViewItemIcon3,
-                      label: gridViewItemlabel3,
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (ctx) => CustomGridViewScreen(
-                                      apiCubit: ApiCubit()..fetchHazardSigns(),
-                                    )));
-                      },
-                    ),
-                    BuildCustomGridViewItem(
-                      iconPath: gridViewItemIcon4,
-                      label: gridViewItemlabel4,
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (ctx) => CustomListViewScreen(
-                                      apiCubit: ApiCubit()
-                                        ..fetchDriverSignals(),
-                                    )));
-                      },
-                    ),
-                    BuildCustomGridViewItem(
-                      iconPath: gridViewItemIcon5,
-                      label: gridViewItemlabel5,
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (ctx) => CustomListViewScreen(
-                                      apiCubit: ApiCubit()..fetchHandSignals(),
-                                    )));
-                      },
-                    ),
-                    BuildCustomGridViewItem(
-                      iconPath: gridViewItemIcon6,
-                      label: gridViewItemlabel6,
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (ctx) => QnaScreen(
-                                      quizCubit:
-                                          QuizCubit(DefaultCacheManager())
-                                            ..fetchQnA(),
-                                    )));
-                      },
-                    )
-                  ],
                 ),
               ),
-              const SizedBox(
-                height: 25,
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
