@@ -18,9 +18,14 @@ class TrafficSignCategoryCard extends StatelessWidget {
       child: Container(
         width: 300,
         height: 150,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
+        decoration: ShapeDecoration(
           color: const Color(0xFFF6EBEE),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+            side: const BorderSide(
+              color: Color(0xffd8c2bc),
+            ),
+          ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

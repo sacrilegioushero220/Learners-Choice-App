@@ -92,7 +92,7 @@ class BottomInfoCard extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "Choice Driving School, Ayyapara Building, Chottupara PO, Vandiperiyar, Idukki, 685533",
+            "Choice Driving School, Ayyapara Building, Chottupara PO, Vandiperiyar, Idukki, Kerala, 685533",
             textAlign: TextAlign.center,
             style: context.captionLight,
           ),

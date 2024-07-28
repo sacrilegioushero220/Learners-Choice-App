@@ -111,6 +111,9 @@ class DocsScreen extends StatelessWidget {
               ));
         },
       ),
+      const SizedBox(
+        height: 10,
+      )
     ];
     return Scaffold(
       backgroundColor: context.onPrimary,
