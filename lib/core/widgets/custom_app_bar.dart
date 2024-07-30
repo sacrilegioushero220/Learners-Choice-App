@@ -26,7 +26,10 @@ PreferredSizeWidget customAppBar(BuildContext context,
           ),
         );
       }),
-      title: Text(customAppBarTitle),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text(customAppBarTitle),
+      ),
       centerTitle: true,
       actions: [
         Padding(

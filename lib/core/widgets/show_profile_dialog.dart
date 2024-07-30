@@ -125,6 +125,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                 children: [
                   FilledButton(
                     style: TextButton.styleFrom(
+                      backgroundColor: const Color(0xFF410002),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(24),
                       ),

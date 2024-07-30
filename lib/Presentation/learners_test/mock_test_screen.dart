@@ -108,12 +108,19 @@ class _MockTestBodyState extends State<MockTestBody> {
             TextButton(
               child: const Text('Repeat Test'),
               onPressed: () {
+                //code for rpeating the same test
+                // Navigator.of(context).pop();
+                // setState(() {
+                //   currentQuestionIndex = 0;
+                //   score = 0;
+                //   _startTimer();
+                // });
                 Navigator.of(context).pop();
-                setState(() {
-                  currentQuestionIndex = 0;
-                  score = 0;
-                  _startTimer();
-                });
+                Navigator.of(context).pop();
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MockTestScreen()));
               },
             ),
             TextButton(

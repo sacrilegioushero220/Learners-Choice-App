@@ -80,7 +80,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FRESTRICTION%20ENDS%20SIGN.jpg?alt=media&token=2825e5ff-b4ab-4f0b-9420-8f5d24b1f624"
   },
   {
-    "question": "Fog lamps are used„,",
+    "question": "Fog lamps are used...",
     "answer": "When there is mist",
     "imageUrl": ""
   },
@@ -100,7 +100,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FUNGUARDED%20LEVEL%20CROSSING%20(200%20METERS).jpg?alt=media&token=e37a2e0f-c136-4a22-afa6-b554250b5b3a"
   },
   {
-    "question": "When an ambulance is approaching„.",
+    "question": "When an ambulance is approaching....",
     "answer": "the driver shall allow free passage by drawing to the side of the road",
     "imageUrl": ""
   },
@@ -365,7 +365,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FROUND%20ABOUT.jpg?alt=media&token=0b54f379-3b37-4736-b75a-c5c3ad10f8f4"
   },
   {
-    "question": "The hand brake is to be used„.",
+    "question": "The hand brake is to be used...",
     "answer": "To park a vehicle",
     "imageUrl": ""
   },
@@ -415,7 +415,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FY%20-%20INTERSECTION3.jpg?alt=media&token=b475c649-5c24-431e-9da3-5367caf09aa0"
   },
   {
-    "question": "Ifa person in charge of an animal apprehending that the animal may become unmanageable, request to stop a vehicle...",
+    "question": "If a person in charge of an animal apprehending that the animal may become unmanageable, request to stop a vehicle...",
     "answer": "The driver shall stop the vehicle",
     "imageUrl": ""
   },
@@ -471,7 +471,7 @@
   },
   {
     "question": "This sign represents..",
-    "answer": null,
+    "answer": "Falling rocks",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FFALLING%20ROCKS.jpg?alt=media&token=db8e75e7-e7ab-4efb-a91b-9270a099ff51"
   },
   {
@@ -495,7 +495,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSTEEP%20ASCENT.jpg?alt=media&token=26e85898-25f4-429f-964b-b689abf7b10d"
   },
   {
-    "question": "When our vehicleis being over taken„.",
+    "question": "When our vehicleis being over taken...",
     "answer": "We shall not increase speed",
     "imageUrl": ""
   },
@@ -805,7 +805,7 @@
     "imageUrl": ""
   },
   {
-    "question": "Maximum permissible speed of a motor car near educational\r\ninstitution..",
+    "question": "Maximum permissible speed of a motor car near educational institution..",
     "answer": "30 km/hour",
     "imageUrl": ""
   },

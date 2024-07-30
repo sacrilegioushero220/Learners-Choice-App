@@ -176,7 +176,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fmandatory%2FRESTRICTION%20ENDS%20SIGN.jpg?alt=media&token=2825e5ff-b4ab-4f0b-9420-8f5d24b1f624"
   },
   {
-    "question": "Fog lamps are used\u201e,",
+    "question": "Fog lamps are used...",
     "options": [
       "During night",
       "When there is mist",
@@ -220,7 +220,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FUNGUARDED%20LEVEL%20CROSSING%20(200%20METERS).jpg?alt=media&token=e37a2e0f-c136-4a22-afa6-b554250b5b3a"
   },
   {
-    "question": "When an ambulance is approaching\u201e.",
+    "question": "When an ambulance is approaching....",
     "options": [
       "allow passage if there are no vehicles from front side",
       "no preference need be given",
@@ -541,7 +541,7 @@
   {
     "question": "Records of a private vehicle are...",
     "options": [
-      "registration Certificate, G.C.R., Insurance Certificate",
+      "registration Certificate, G.C.R, Insurance Certificate",
       "registration certificate, Insurance Certificate, Tax Token, Driving Licence",
       "registration Certificate, Permit, Trip Sheet",
       "None of above"
@@ -803,7 +803,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FROUND%20ABOUT.jpg?alt=media&token=0b54f379-3b37-4736-b75a-c5c3ad10f8f4"
   },
   {
-    "question": "The hand brake is to be used\u201e.",
+    "question": "The hand brake is to be used...",
     "options": [
       "To reduce the speed",
       "To apply sudden brake",
@@ -913,7 +913,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FY%20-%20INTERSECTION3.jpg?alt=media&token=b475c649-5c24-431e-9da3-5367caf09aa0"
   },
   {
-    "question": "Ifa person in charge of an animal apprehending that the animal may become unmanageable, request to stop a vehicle...",
+    "question": "If a person in charge of an animal apprehending that the animal may become unmanageable, request to stop a vehicle...",
     "options": [
       "The driver shall stop the vehicle",
       "The driver shall proceed, blowing the horns",
@@ -1041,7 +1041,7 @@
       "Falling rocks",
       "None of the Above"
     ],
-    "correctAnswerIndex": "",
+    "correctAnswerIndex": 2,
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FFALLING%20ROCKS.jpg?alt=media&token=db8e75e7-e7ab-4efb-a91b-9270a099ff51"
   },
   {
@@ -1089,7 +1089,7 @@
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/learners-choice-app.appspot.com/o/trafficSigns%2Fcautionary%2FSTEEP%20ASCENT.jpg?alt=media&token=26e85898-25f4-429f-964b-b689abf7b10d"
   },
   {
-    "question": "When our vehicleis being over taken\u201e.",
+    "question": "When our vehicleis being over taken...",
     "options": [
       "We shall not increase speed",
       "We can increase speed",
@@ -1771,7 +1771,7 @@
     "imageUrl": ""
   },
   {
-    "question": "Maximum permissible speed of a motor car near educational\r\ninstitution..",
+    "question": "Maximum permissible speed of a motor car near educational institution..",
     "options": [
       "40 km/hour",
       "30 km/hour",
