@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:learners_choice_app/Presentation/home/result_screen.dart';
+import 'package:learners_choice_app/Presentation/home/sync_pdf_screen.dart';
+import 'package:learners_choice_app/core/blocs/cubit/docLoaderCubit/doc_loader_cubit.dart';
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
 import 'package:learners_choice_app/core/widgets/doc_tile.dart';
@@ -9,88 +12,133 @@ class DocsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scrollController = ScrollController();
+
     final List<Widget> docTiles = [
-      docTile(
-        context: context,
-        iconPath: tipsIconPath,
-        title: tipsIconlabel,
-        points: 10,
+      DocTile(
+        iconPath: acts2IconPath,
+        title: docTilelabel8,
+        onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (ctx) => ResultScreen(
+                      appBarTitle: "Important acts for drivers",
+                      docsLoaderCubit: DocLoaderCubit(DefaultCacheManager())
+                        ..fetchDriverActs(),
+                    ))),
       ),
-      docTile(
-        context: context,
+      DocTile(
         iconPath: infoIconPath,
-        title: infoIconlabel1,
-        subtitle: infoIconlabel2,
-        points: 10,
+        title: docTilelabel2,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/DrivingSyllabus.pdf',
+                  appBarTitle: 'Driving School Syllabus',
+                ),
+              ));
+        },
       ),
-      docTile(
-        context: context,
+      DocTile(
         iconPath: actsIconPath,
-        title: actsIconlabel1,
-        subtitle: actsIconlabel2,
-        points: 10,
+        title: docTilelabel3,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/CMV.pdf',
+                  appBarTitle: 'The Motor Vehicles Act 1988',
+                ),
+              ));
+        },
       ),
-      docTile(
-        context: context,
-        iconPath: carIconPath,
-        title: carIconlabel1,
-        subtitle: carIconlabel2,
-        points: 10,
+      DocTile(
+        iconPath: speedLimitIconPath,
+        title: docTilelabel4,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/SpeedLimit.pdf',
+                  appBarTitle: 'Speed Limits of Indian Roads',
+                ),
+              ));
+        },
       ),
+      DocTile(
+        iconPath: codeIconPath,
+        title: docTilelabel5,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/RegistrationCode.pdf',
+                  appBarTitle: 'Vehicle Registration Codes',
+                ),
+              ));
+        },
+      ),
+      DocTile(
+        iconPath: hTrackIconPath,
+        title: docTilelabel6,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/GroundTest.pdf',
+                  appBarTitle: 'DL Ground Test',
+                ),
+              ));
+        },
+      ),
+      DocTile(
+        iconPath: roadSignIconPath,
+        title: docTilelabel7,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => const SyncPdfScreen(
+                  documentPath: 'assets/pdf/roadTest.pdf',
+                  appBarTitle: 'Road Test',
+                ),
+              ));
+        },
+      ),
+      const SizedBox(
+        height: 10,
+      )
     ];
     return Scaffold(
       backgroundColor: context.onPrimary,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: context.onPrimary,
-        leading: Builder(builder: (BuildContext context) {
-          return const Icon(Icons.menu);
-        }),
-        title: Text(appBarTitle),
-        centerTitle: true,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0),
-            child: SizedBox(
-              width: 30,
-              height: 30,
-              child: CircleAvatar(
-                backgroundImage: AssetImage(avatar1Path),
-              ),
-            ),
-          ),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                buildImageWidget(
-                  width: 283,
-                  height: 217,
-                  imagePath: learningIconPath,
+      body: Padding(
+        padding: const EdgeInsets.only(top: 20),
+        child: Scrollbar(
+          thumbVisibility: true,
+          controller: scrollController,
+          child: ListView.separated(
+            controller: scrollController,
+            itemCount: docTiles.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 20,
                 ),
-                SizedBox(
-                  width: 340,
-                  height: 410,
-                  child: ListView.separated(
-                    itemCount: docTiles.length,
-                    itemBuilder: (context, index) {
-                      return docTiles[index];
-                    },
-                    separatorBuilder: (context, index) {
-                      return const SizedBox(
-                        height: 15,
-                      );
-                    },
-                  ),
-                )
-              ],
-            ),
+                child: docTiles[index],
+              );
+            },
+            separatorBuilder: (context, index) {
+              return const SizedBox(
+                height: 15,
+              );
+            },
           ),
         ),
       ),

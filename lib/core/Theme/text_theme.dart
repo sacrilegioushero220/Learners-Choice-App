@@ -151,11 +151,10 @@ class CustomTextTheme {
       color: Colors.black,
       fontSize: 11.0,
       fontWeight: FontWeight.w500,
-      height: 1.30,
       letterSpacing: 0.50,
     ),
     labelLarge: GoogleFonts.roboto(
-      color: Colors.black.withOpacity(0.7599999904632568),
+      color: Colors.black.withValues(alpha: 0.7599999904632568),
       fontSize: 11.0,
       fontWeight: FontWeight.w500,
       height: 0.13,
@@ -165,7 +164,6 @@ class CustomTextTheme {
       color: Colors.black,
       fontSize: 14.0,
       fontWeight: FontWeight.w500,
-      height: 1.5,
       letterSpacing: 0.10,
     ),
   );

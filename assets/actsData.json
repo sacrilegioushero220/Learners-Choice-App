@@ -1,0 +1,74 @@
+[
+  {
+    "number": 1,
+    "sectionNumber": 112,
+    "title": "Exceeding the speed limit is prohibited",
+    "description": "No one shall drive a vehicle at a speed exceeding the limit specified in the Motor Vehicles Act"
+  },
+  {
+    "number": 2,
+    "sectionNumber": 113,
+    "title": "Exceeding weight limits is prohibited",
+    "description": "No one shall drive a vehicle carrying a load exceeding the weight limit specified in the Motor Vehicles Act"
+  },
+  {
+    "number": 3,
+    "sectionNumber": 114,
+    "title": "Officers authorized by the government have the right to check if the vehicle\u2019s weight exceeds the permitted limit",
+    "description": "Officers authorized by the government have the right to check if the vehicle\u2019s weight exceeds the permitted limit."
+  },
+  {
+    "number": 4,
+    "sectionNumber": 121,
+    "title": "Driving dangerously is prohibited",
+    "description": "No one shall drive a vehicle in a manner that is dangerous to the public."
+  },
+  {
+    "number": 5,
+    "sectionNumber": 122,
+    "title": "Leaving the vehicle in a dangerous position is prohibited",
+    "description": "No one shall abandon a vehicle in a manner that causes danger or obstruction to others."
+  },
+  {
+    "number": 6,
+    "sectionNumber": 123,
+    "title": "Prohibition on traveling on running boards, etc.",
+    "description": "No person should travel on the running board or outside the vehicle's body."
+  },
+  {
+    "number": 7,
+    "sectionNumber": 124,
+    "title": "Prohibition on traveling without a pass or ticket",
+    "description": "No person shall travel in a vehicle without a valid pass or ticket."
+  },
+  {
+    "number": 8,
+    "sectionNumber": 126,
+    "title": "Ensuring the stationary vehicle\u2019s safety",
+    "description": "The driver should ensure that the vehicle is not left in a dangerous position."
+  },
+  {
+    "number": 9,
+    "sectionNumber": 128,
+    "title": "Measures for the safety of drivers and pillion riders on two-wheelers",
+    "description": "A driver should not carry more than one person on a two-wheeler and must follow safety measures."
+  },
+  {
+    "number": 10,
+    "sectionNumber": 131,
+    "title": "Precautions at unguarded railway level crossings",
+    "description": "The driver must stop the vehicle and ensure that no train is approaching before crossing."
+  },
+  {
+    "number": 11,
+    "sectionNumber": 132,
+    "title": "Duty to stop in certain cases",
+    "description": "The driver must stop the vehicle when required by a police officer or other authorized persons."
+  },
+  {
+    "number": 12,
+    "sectionNumber": 134,
+    "title": "Duty of the driver in case of an accident",
+    "description": "The driver must secure medical aid for injured persons and report the accident to the police."
+  }
+]

@@ -1,3 +1,5 @@
+//splashscreen
+String applogo = "assets/icons/icon.png";
 //Intro
 String introTitle = "Learner's Choice";
 String introSubtitle = "Simple way to learn  and imporve driving skills";
@@ -27,17 +29,17 @@ String lIconPath = "assets/Images/homescreen/L.png";
 String gridViewItemIcon1 = "assets/Images/homescreen/TrafficSigns.png";
 String gridViewItemIcon2 = "assets/Images/homescreen/RoadSign.png";
 String gridViewItemIcon3 = "assets/Images/homescreen/HazardSigns.png";
-String gridViewItemIcon4 = "assets/Images/homescreen/Codes.png";
+String gridViewItemIcon4 = "assets/icons/driver.png";
 String gridViewItemIcon5 = "assets/Images/homescreen/HandSignals.png";
 String gridViewItemIcon6 = "assets/Images/homescreen/LLTestQna.png";
 
 //GridViewItemlabel
 String gridViewItemlabel1 = "Traffic Signs";
-String gridViewItemlabel2 = "Road Signs";
+String gridViewItemlabel2 = "Road Markings";
 String gridViewItemlabel3 = "Hazard Signs";
-String gridViewItemlabel4 = "Codes";
-String gridViewItemlabel5 = "Hand Signals";
-String gridViewItemlabel6 = "LL Test QnA";
+String gridViewItemlabel4 = "Driver Hand Signals";
+String gridViewItemlabel5 = "Traffic Police Signals";
+String gridViewItemlabel6 = "Learner's Question Bank";
 
 //DocsScreen
 
@@ -46,19 +48,26 @@ String actsIconPath = "assets/Images/docsscreen/acts.png";
 String carIconPath = "assets/Images/docsscreen/car.png";
 String infoIconPath = "assets/Images/docsscreen/info.jpg";
 String tipsIconPath = "assets/Images/docsscreen/tips.jpg";
+String codeIconPath = "assets/Images/docsscreen/Codes.png";
+String acts2IconPath = "assets/Images/docsscreen/acts2.png";
+String speedLimitIconPath = "assets/Images/docsscreen/speedLimit.png";
+String roadSignIconPath = "assets/Images/docsscreen/RoadSign.png";
+String hTrackIconPath = "assets/Images/docsscreen/Htrack.png";
 
-String tipsIconlabel = "Tips for Beginner Drivers";
-String infoIconlabel1 = "Important Information";
-String infoIconlabel2 = "regarding DL Test";
-String actsIconlabel1 = "Important Acts for all";
-String actsIconlabel2 = "Drivers";
-String carIconlabel1 = "Important Speed Limit of";
-String carIconlabel2 = "Indian Roads";
+String docTilelabel1 = "Tips for Beginner Drivers";
+String docTilelabel2 = "Driving School Syllabus";
+String docTilelabel3 = "The Motor Vehicles Act 1988";
+String docTilelabel4 = "Important Speed Limits of Indian Roads";
+String docTilelabel5 = "Vehicle Registration Codes";
+String docTilelabel6 = "Driving Ground Test";
+String docTilelabel7 = "Road Test";
+String docTilelabel8 = "Important acts for drivers";
 
 //InfoScreen
 String choiceIconPath = "assets/Images/choicelogo.png";
 String settingsIcon = "assets/icons/settings.png";
-String locationIcon = "assets/icons/location.png";
+String locationIcon = "assets/Images/locateUsIcon.png";
+
 String phoneIcon = "assets/icons/phone.png";
 String services = "LMV, MCWG, MCWOG, HMV , Vehicle Insurance";
 String mailId = "choicemdsvpr6669@gmail.com";

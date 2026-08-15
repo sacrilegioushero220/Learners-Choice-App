@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learners_choice_app/Presentation/Intro/name_screen.dart';
 
 import 'package:learners_choice_app/core/constants/text.dart';
 import 'package:learners_choice_app/core/extensions/color_extention.dart';
@@ -95,9 +96,8 @@ class OnboardingScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 24),
           child: CustomBigButton(
             onPressed: () {
-              // getIt
-              //     .get<Box<dynamic>>(instanceName: BoxType.settings.name)
-              //     .put(userIntroKey, true);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const NameScreen()));
             },
             title: "Get started",
           ),

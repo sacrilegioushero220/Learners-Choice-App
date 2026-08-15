@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "579041719091",
+    "project_id": "learners-choice-app",
+    "storage_bucket": "learners-choice-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579041719091:android:b516f9b0a4d0d5c82ac446",
+        "android_client_info": {
+          "package_name": "com.abhiramtsabu.learnersChoiceApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoDmZHJRsSmj0W7SUso_M4ltFVxKx4fXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learners_choice_app/core/Theme/color_schemes.g.dart';
 import 'package:learners_choice_app/core/Theme/text_theme.dart';
-import 'package:learners_choice_app/presentation/home/home.dart';
+import 'package:learners_choice_app/splash_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -13,9 +13,9 @@ class App extends StatelessWidget {
           useMaterial3: true,
           colorScheme: lightColorScheme,
           textTheme: CustomTextTheme.customDarkTextTheme),
-      // darkTheme: ThemeData(useMaterial3: true, colorScheme: da rkColorScheme),
+      // darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
       home: const Scaffold(
-        body: Home(),
+        body: SplashScreen(),
       ),
       debugShowCheckedModeBanner: false,
     );

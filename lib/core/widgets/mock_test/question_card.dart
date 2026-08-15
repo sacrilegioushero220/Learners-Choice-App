@@ -1,16 +1,42 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:learners_choice_app/presentation/Intro/name_screen.dart';
 
-class QuestionCard extends StatelessWidget {
-  final String image;
+class QuestionCard extends StatefulWidget {
+  final String? image;
   final String question;
-  const QuestionCard({super.key, required this.image, required this.question});
+
+  const QuestionCard({
+    super.key,
+    this.image,
+    required this.question,
+  });
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _QuestionCardState createState() => _QuestionCardState();
+}
+
+class _QuestionCardState extends State<QuestionCard> {
+  bool _showError = false;
+  late String _imageKey;
+
+  @override
+  void initState() {
+    super.initState();
+    _imageKey = UniqueKey().toString();
+  }
+
+  void _refreshImage() {
+    setState(() {
+      _showError = false;
+      _imageKey = UniqueKey().toString(); // Generate a new key to force reload
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 398,
       clipBehavior: Clip.antiAlias,
       decoration: containerDecDefault(),
       child: Padding(
@@ -22,34 +48,50 @@ class QuestionCard extends StatelessWidget {
           children: [
             SizedBox(
               width: 331,
-              height: 150,
-              child: Flexible(
-                child: Text(
-                  textAlign: TextAlign.justify,
-                  question,
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 13,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w500,
-                    height: 1.6,
-                  ),
+              child: Text(
+                textAlign: TextAlign.justify,
+                widget.question,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
-            SizedBox(
-              height: 226,
-              width: MediaQuery.of(context).size.width,
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 20,
-                  bottom: 20,
-                  right: 60,
-                  left: 60,
+            if (widget.image != null && widget.image!.isNotEmpty)
+              SizedBox(
+                height: 226,
+                width: MediaQuery.of(context).size.width,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 20,
+                    bottom: 20,
+                    right: 60,
+                    left: 60,
+                  ),
+                  child: _showError
+                      ? Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              'Failed to load image. Please check your internet connection and try again.',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.red),
+                            ),
+                            const SizedBox(height: 8),
+                            ElevatedButton(
+                              onPressed: _refreshImage,
+                              child: const Text('Refresh'),
+                            ),
+                          ],
+                        )
+                      : imageContainerBlack(
+                          widget.image!, _refreshImage, _imageKey),
                 ),
-                child: imageContainerBlack(image),
-              ),
-            )
+              )
+            else
+              const SizedBox(),
           ],
         ),
       ),
@@ -67,7 +109,8 @@ ShapeDecoration containerDecDefault() {
   );
 }
 
-Widget imageContainerBlack(String image) {
+Widget imageContainerBlack(
+    String image, VoidCallback onError, String imageKey) {
   return Container(
     padding: const EdgeInsets.all(10),
     clipBehavior: Clip.antiAlias,
@@ -91,10 +134,40 @@ Widget imageContainerBlack(String image) {
         )
       ],
     ),
-    child: buildImageWidget(
+    child: CachedNetworkImage(
+      key: Key(imageKey), // Use the key to force reload
+      imageUrl: image,
       width: 154,
       height: 154,
-      imagePath: image,
+      fit: BoxFit.contain,
+      placeholder: (context, url) =>
+          const Center(child: CircularProgressIndicator()),
+      errorWidget: (context, url, error) => RefreshWidget(onPressed: onError),
     ),
   );
+}
+
+class RefreshWidget extends StatelessWidget {
+  final VoidCallback onPressed;
+
+  const RefreshWidget({super.key, required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text(
+          'Failed to load image. Please check your internet connection and try again.',
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.red),
+        ),
+        const SizedBox(height: 8),
+        ElevatedButton(
+          onPressed: onPressed,
+          child: const Text('Refresh'),
+        ),
+      ],
+    );
+  }
 }
