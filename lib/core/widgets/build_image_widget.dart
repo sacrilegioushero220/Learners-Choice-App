@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 class BuildImageWidget extends StatelessWidget {
   const BuildImageWidget({
-    Key? key,
+    super.key,
     this.width,
     this.height,
     required this.imagePath,
     this.isCircleAvatar = false,
     this.boxFit = BoxFit.contain,
     this.isFileImage = false,
-  }) : super(key: key);
+  });
 
   final bool isCircleAvatar;
 

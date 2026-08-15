@@ -10,7 +10,7 @@ class OptionCard extends StatelessWidget {
   final int optionLength;
 
   const OptionCard({
-    Key? key,
+    super.key,
     required this.optionDescription,
     required this.optionNumber,
     required this.onTap,
@@ -18,7 +18,7 @@ class OptionCard extends StatelessWidget {
     this.leadingFontSize = 35,
     this.trailingFontSize = 15,
     required this.optionLength,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: _canPop(),
-      onPopInvoked: (canPop) {
+      onPopInvokedWithResult: (didPop, result) {
         if (_selectedIndex > 0) {
           setState(() {
             _selectedIndex = 0;

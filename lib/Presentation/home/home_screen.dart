@@ -29,15 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   double gapOfCarImage() {
     final screenSize = MediaQuery.of(context).size.height;
-    print("screenSize is this:$screenSize");
     if (screenSize < 700 && screenSize >= 600) {
-      print("20");
       return 20;
     } else if (screenSize < 800 && screenSize >= 700) {
-      print(" this 10");
       return 10;
     }
-    print(" 60");
     return 60;
   }
 

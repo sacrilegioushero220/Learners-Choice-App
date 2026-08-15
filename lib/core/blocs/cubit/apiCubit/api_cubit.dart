@@ -37,9 +37,8 @@ class ApiCubit extends Cubit<ApiState> {
     emit(ApiLoading());
 
     // Check for internet connectivity
-    var connectivityResult = await Connectivity().checkConnectivity();
-    // ignore: unrelated_type_equality_checks
-    if (connectivityResult == ConnectivityResult.none) {
+    final connectivityResult = await Connectivity().checkConnectivity();
+    if (connectivityResult.every((r) => r == ConnectivityResult.none)) {
       emit(const ApiError('No internet connection'));
       return;
     }

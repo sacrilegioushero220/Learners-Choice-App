@@ -30,7 +30,7 @@ class MockTestScreen extends StatelessWidget {
 }
 
 class MockTestBody extends StatefulWidget {
-  const MockTestBody({Key? key}) : super(key: key);
+  const MockTestBody({super.key});
 
   @override
   _MockTestBodyState createState() => _MockTestBodyState();

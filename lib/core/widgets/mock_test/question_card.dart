@@ -150,7 +150,7 @@ Widget imageContainerBlack(
 class RefreshWidget extends StatelessWidget {
   final VoidCallback onPressed;
 
-  const RefreshWidget({Key? key, required this.onPressed}) : super(key: key);
+  const RefreshWidget({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

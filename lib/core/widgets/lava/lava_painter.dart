@@ -47,7 +47,7 @@ class Lava {
 
   double get sy => (height ~/ step).floor().toDouble();
 
-  updateSize(Size size) {
+  void updateSize(Size size) {
     this.size = size;
     sRect = Rect.fromCenter(
         center: Offset.zero, width: sx.toDouble(), height: sy.toDouble());
@@ -146,7 +146,7 @@ class Lava {
     return [sx + ix[dir + 4], sy + ix[dir + 8], dir];
   }
 
-  draw(Canvas canvas, Size size, Color color, {bool debug = false}) {
+  void draw(Canvas canvas, Size size, Color color, {bool debug = false}) {
     for (Ball ball in balls) {
       ball.moveIn(size);
     }
@@ -181,7 +181,7 @@ class Lava {
     if (debug) {
       for (final ball in balls) {
         canvas.drawCircle(Offset(ball.pos.x.toDouble(), ball.pos.y.toDouble()),
-            ball.size, Paint()..color = Colors.black.withOpacity(0.5));
+            ball.size, Paint()..color = Colors.black.withValues(alpha: 0.5));
       }
 
       matrix.forEach(

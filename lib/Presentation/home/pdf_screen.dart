@@ -6,10 +6,10 @@ class PdfScreen extends StatefulWidget {
   final String appBarTitle;
 
   const PdfScreen({
-    Key? key,
+    super.key,
     required this.documentPath,
     required this.appBarTitle,
-  }) : super(key: key);
+  });
 
   @override
   // ignore: library_private_types_in_public_api

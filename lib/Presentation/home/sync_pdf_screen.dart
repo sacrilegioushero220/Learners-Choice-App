@@ -7,8 +7,7 @@ class SyncPdfScreen extends StatefulWidget {
   final String appBarTitle;
 
   const SyncPdfScreen(
-      {Key? key, required this.documentPath, required this.appBarTitle})
-      : super(key: key);
+      {super.key, required this.documentPath, required this.appBarTitle});
 
   @override
   // ignore: library_private_types_in_public_api

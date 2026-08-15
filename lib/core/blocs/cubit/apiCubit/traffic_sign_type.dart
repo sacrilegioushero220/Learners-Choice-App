@@ -13,8 +13,6 @@ extension TrafficSignTypeExtension on TrafficSignType {
         return 'cautionarySigns';
       case TrafficSignType.informatory:
         return 'informatorySigns';
-      default:
-        return 'mandatorySigns';
     }
   }
 }
